@@ -13,5 +13,5 @@ Users, developers and organizations can contribute in different ways:
   [Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) 
   of the University "[Politecnico di Milano](https://www.polimi.it/)" on a specific task. 
 
-Read this [FAQ](/Documentation/FAQ) for guidelines to software/documentation contributions.
-For further information [contact the developers' team](https://www.mbdyn.org/Contacts).
+Read this [FAQ]({{ "Documentation/FAQ" | relative_url }}) for guidelines to software/documentation contributions.
+For further information [contact the developers' team](mailto:mbdyn@aero.polimi.it).

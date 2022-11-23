@@ -37,9 +37,9 @@ and 2022! We are eager to participate in future editions.
 ## Feedback 
 Are you using **MBDyn** for a research or an industrial project? 
 Would you like to share your experience with other users? 
-[Send](mbdyn@aero.polimi.it) us a link to a webpage describing your work, 
+[Send](mailto:mbdyn@aero.polimi.it) us a link to a webpage describing your work, 
 and a brief description to be listed in the 
-[research page](/Documentation/Research). 
+[research page]({{ "Documentation/Research" | relative_url }}). 
 
 ## About 
 
@@ -53,11 +53,11 @@ and a brief description to be listed in the
   - a 24/7 supported software
 
  
-![WRATS Model](/Images/tiltrotor.jpg)
+![WRATS Model]({{ "Images/tiltrotor.jpg" | relative_url }})
 
 Semispan Wing WRATS Tiltrotor Model &nbsp;
 (rendered by 
-[ADAMS/View](http://www.mscsoftware.com/product/adams))
+[ADAMS/View](https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams))
 
 <a name="Free"></a>*
 Free means freedom (quoting GNU's philosophy, 
