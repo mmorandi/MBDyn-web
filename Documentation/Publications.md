@@ -6,7 +6,7 @@
 [Journal Papers](#journal-papers)  
 [Conference Papers](#conference-papers)  
 [Dissertations](#dissertations)  
-[Talking about MBDyn...](#talking-about-mbdyn...)
+[Talking about MBDyn...](#talking-about-mbdyn)
 
 _If your work uses **MBDyn**, please cite these papers as appropriate_:
 
