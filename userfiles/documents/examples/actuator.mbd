@@ -1,0 +1,440 @@
+/*
+ * $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/actuator,v 1.5 2008/11/07 23:16:07 masarati Exp $
+
+Jari M\"{a}kinen, Asko Ellman, and Robert Pich\'{e},
+"Dynamic Simulation of Flexible Hydraulic-Driven Multibody 
+Systems Using Finite Strain Beam Theory",
+submitted to Fifth Scandinavian International Conference 
+on Fluid Power, Link\"{o}ping, 1997.
+
+Problem: 
+
+  - Pinned-free beam operated by an actuator pinned at 
+    a quarter beam.
+
+Data:
+
+    Beam:
+  - linear density:                       13.      kg/m
+  - flexural inertia per unit length:      1.7e-3  kgm
+  - length:                                2.      m
+  - axial stiffness:                       3.36e8  N
+  - bending stiffness:                  8960.      Nm^2
+  - transverse shear stiffness:            1.47e8  N
+  - tip mass:                             20.      Kg
+  - actuator orientation:                 45.      deg
+
+    Fluid:
+  - kinematic viscosity:                   8.e-5   m^2/s
+  - density:                             870.      kg/m^2
+  - sound celerity:                        1.4e3   m/s
+
+    Pipe:
+  - length:                               20.      m
+  - radius:                                6.e-3   m
+
+    Orifice:
+  - diameter:                              6.e-3   m
+  - coefficient:                           0.6
+  - transition Reynolds number:         1000.
+
+    Actuator:
+  - area:                                  0.01    m^2
+  - initial volume:                        1.e-3   m^3
+  - critical displacement (friction):      0.5e-3  m
+  - static force:                        100.      N
+  - dynamic friction coefficient:       2500.      N s/m
+
+Note: 
+
+  - no gravity
+  - flow starts from 0., grows linearly to 2.e-3 m^3/s 
+    in one second, then decreases linearly to 0. in another 
+    second.
+ */
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	set: real DT = 1.e-3;
+	time step: DT;
+	initial time: 0.;
+	final time: 5.;
+
+	method: ms, .6;
+
+	max iterations: 50;
+	tolerance: 1.e-5;
+
+	derivatives coefficient: 1.e-6;
+	derivatives max iterations: 20;
+	derivatives tolerance: 1.e-6;
+
+	newton raphson: modified, 4;
+end: initial value;
+
+begin: control data;
+	skip initial joint assembly;
+
+	structural nodes: 
+		+1       # first node, grounded by revolute pin
+		+1       # node that grounds the actuator
+		+1       # node that connects actuator and beam
+		+8       # beam nodes
+	;
+
+	joints: 
+		+1       # ground beam with revolute pin
+		+1       # ground actuator with revolute pin
+		+1       # prismatic for actuator (total joint, replaces inline+prismatic)
+		+1       # connection between actuator and beam
+		+1       # viscous damping in actuator
+	;
+
+	rigid bodies: 
+		+9       # beam nodal masses
+	;
+
+	beams: 
+		+4       # 4 beam elements
+	;
+
+	hydraulic nodes: 
+		+1       # upper chamber, empty
+		+1       # lower chamber
+		+1       # pipe start point
+		+1       # pipe end point
+	;
+
+	hydraulic elements:
+		+1       # actuator
+		+1       # orifice
+		+1       # pipe
+	;
+
+	genels: 
+		+1       # imposed pressure in upper chamber
+	;
+
+	forces:   
+		+1       # imposed flow in pipe
+	;
+end: control data;
+
+set: integer BEAM = 100;
+set: integer ACTUATOR = 200;
+
+set: integer UPPER_CH = 1100;
+set: integer LOWER_CH = 1200;
+set: integer PIPE_START = 1300;
+set: integer PIPE_END = 1400;
+set: integer FLUID = 5000;
+
+set: real L = 2.;
+set: real EA = 3.36e8;
+set: real EJy = 8.96e3;
+set: real GAz = 1.47e8;
+set: real m = 13.;
+set: real J = 1.7e-3;
+set: real M = 20.;
+set: real damp = 1.8e-3;
+
+set: real fi = 1./sqrt(3.);
+set: real fe = 1.-fi;
+
+set: real dm = m*L/8.;
+set: real dmi = dm*fi;
+set: real dme = dm*fe;
+set: real dli = L/8.*fi;
+set: real dle = L/8.*fe;
+
+set: real p0 = 1.01325e5;
+set: real rho = 870.;
+set: real c = 1.4e3;
+set: real beta = c^2*rho;
+set: real nu = 8.e-5;
+set: real mu = nu*rho;
+
+reference: BEAM,
+	reference, global, null,
+	reference, global, eye,
+	reference, global, null,
+	reference, global, null;
+reference: ACTUATOR,
+	reference, BEAM, 0.,0.,-1./4.*L,
+	reference, BEAM, 2, 0.,1.,0., 3, 1.,0.,1., # 45 deg
+	reference, BEAM, null,
+	reference, BEAM, null;
+
+begin: nodes;
+	# beam nodes
+	structural: BEAM, dynamic,
+		reference, BEAM, null,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+1, dynamic,
+		reference, BEAM, 1./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+2, dynamic,
+		reference, BEAM, 2./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+3, dynamic,
+		reference, BEAM, 3./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+4, dynamic,
+		reference, BEAM, 4./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+5, dynamic,
+		reference, BEAM, 5./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+6, dynamic,
+		reference, BEAM, 6./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+7, dynamic,
+		reference, BEAM, 7./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+	structural: BEAM+8, dynamic,
+		reference, BEAM, 8./8.*L,0.,0.,
+		reference, BEAM, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+
+	# actuator nodes
+	structural: ACTUATOR, static,
+		reference, ACTUATOR, null,
+		       reference, ACTUATOR, eye,
+		reference, ACTUATOR, null,
+		reference, ACTUATOR, null;
+	structural: ACTUATOR+1, dynamic,
+		reference, BEAM, 2./8.*L,0.,0.,
+		       reference, ACTUATOR, eye,
+		reference, BEAM, null,
+		reference, BEAM, null;
+
+	# upper chamber
+	hydraulic: UPPER_CH, p0;
+
+	# lower chamber
+	hydraulic: LOWER_CH, p0;
+
+	# pipe start
+	hydraulic: PIPE_START, p0;
+
+	# pipe end
+	hydraulic: PIPE_END, p0;
+end: nodes;
+
+begin: elements;
+	# beam ground constraint
+	/*
+	joint: BEAM, revolute pin,
+		BEAM, reference, node, null,
+		hinge, reference, node, 1, 1.,0.,0., 3, 0.,1.,0.,
+		reference, BEAM, null,
+		hinge, reference, BEAM, 1, 1.,0.,0., 3, 0.,1.,0.;
+	*/
+	joint: BEAM, total pin joint,
+		BEAM,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		# ground
+			position, reference, other node, null,
+			position orientation, reference, other node, eye,
+			rotation orientation, reference, other node, eye,
+		position constraint, 1, 1, 1, null,
+		orientation constraint, 1, 0, 1, null;
+
+	# actuator ground point
+	/*
+	joint: ACTUATOR, revolute pin,
+		ACTUATOR, reference, node, null,
+		hinge, reference, node, 1, 1.,0.,0., 3, 0.,1.,0.,
+		reference, ACTUATOR, null,
+		hinge, reference, ACTUATOR, 1, 1.,0.,0., 3, 0.,1.,0.;
+	*/
+	joint: ACTUATOR, total pin joint,
+		ACTUATOR,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		# ground
+			position, reference, other node, null,
+			position orientation, reference, other node, eye,
+			rotation orientation, reference, other node, eye,
+		position constraint, 1, 1, 1, null,
+		orientation constraint, 1, 0, 1, null;
+
+	# actuator constraints
+	/*
+	joint: ACTUATOR+1, inline,
+		ACTUATOR, reference, ACTUATOR, null, 
+		reference, ACTUATOR, eye,
+		ACTUATOR+1;
+	joint: ACTUATOR+2, prismatic,
+		ACTUATOR, ACTUATOR+1;
+	*/
+	joint: ACTUATOR+1, total joint,
+		ACTUATOR,
+			position, reference, node, null,
+			position orientation, reference, ACTUATOR, eye,
+			rotation orientation, reference, ACTUATOR, eye,
+		ACTUATOR+1,
+			position, reference, node, null,
+			position orientation, reference, ACTUATOR, eye,
+			rotation orientation, reference, ACTUATOR, eye,
+		position constraint, 1, 1, 0, null,
+		orientation constraint, 1, 1, 1, null;
+
+	joint: ACTUATOR+3, rod,
+		ACTUATOR, ACTUATOR+1, from nodes,
+		linear viscous, 2.5e3;
+
+	# constraint between beam and actuator
+	joint: ACTUATOR+10, spherical hinge,
+		ACTUATOR+1, reference, node, null,
+		BEAM+2, reference, node, null;
+
+	# beam elements
+	beam: BEAM+1,
+		BEAM, null,
+		BEAM+1, null,
+		BEAM+2, null,
+		reference, BEAM, eye,
+		linear viscoelastic generic, 
+		    diag, EA, 1.e9, GAz, 1.e6, EJy, 1.e6,
+		proportional, damp,
+		same,
+		same;
+	beam: BEAM+2,
+		BEAM+2, null,
+		BEAM+3, null,
+		BEAM+4, null,
+		reference, BEAM, eye,
+		linear viscoelastic generic, 
+		    diag, EA, 1.e9, GAz, 1.e6, EJy, 1.e6,
+		proportional, damp,
+		same,
+		same;
+	beam: BEAM+3,
+		BEAM+4, null,
+		BEAM+5, null,
+		BEAM+6, null,
+		reference, BEAM, eye,
+		linear viscoelastic generic, 
+		    diag, EA, 1.e9, GAz, 1.e6, EJy, 1.e6,
+		proportional, damp,
+		same,
+		same;
+	beam: BEAM+4,
+		BEAM+6, null,
+		BEAM+7, null,
+		BEAM+8, null,
+		reference, BEAM, eye,
+		linear viscoelastic generic, 
+		    diag, EA, 1.e9, GAz, 1.e6, EJy, 1.e6,
+		proportional, damp,
+		same,
+		same;
+
+	# beam inertia
+	body: BEAM, BEAM,
+		dme,
+		reference, node, dle/2.,0.,0.,
+		diag, 1., J*dle+1./12.*dme*dle^2, 1.;
+	body: BEAM+1, BEAM+1,
+		2.*dmi,
+		reference, node, null,
+		diag, 1., 2.*J*dli+1./12.*(2.*dmi)*(2.*dli)^2, 1.;
+	body: BEAM+2, BEAM+2,
+		2.*dme,
+		reference, node, null,
+		diag, 1., 2.*J*dle+1./12.*(2.*dme)*(2.*dle)^2, 1.;
+	body: BEAM+3, BEAM+3,
+		2.*dmi,
+		reference, node, null,
+		diag, 1., 2.*J*dli+1./12.*(2.*dmi)*(2.*dli)^2, 1.;
+	body: BEAM+4, BEAM+4,
+		2.*dme,
+		reference, node, null,
+		diag, 1., 2.*J*dle+1./12.*(2.*dme)*(2.*dle)^2, 1.;
+	body: BEAM+5, BEAM+5,
+		2.*dmi,
+		reference, node, null,
+		diag, 1., 2.*J*dli+1./12.*(2.*dmi)*(2.*dli)^2, 1.;
+	body: BEAM+6, BEAM+6,
+		2.*dme,
+		reference, node, null,
+		diag, 1., 2.*J*dle+1./12.*(2.*dme)*(2.*dle)^2, 1.;
+	body: BEAM+7, BEAM+7,
+		2.*dmi,
+		reference, node, null,
+		diag, 1., 2.*J*dli+1./12.*(2.*dmi)*(2.*dli)^2, 1.;
+	body: BEAM+8, BEAM+8,
+		condense, 2,
+		dme,
+		reference, node, -dle/2.,0.,0.,
+		diag, 1., J*dle+1./12.*dme*dle^2, 1.,
+		M,
+		reference, node, null, 
+		null;
+
+	# fluid
+	hydraulic fluid: FLUID, linear compressible, 
+		density, rho, beta, p0,
+		viscosity, mu;
+
+	# actuator
+	hydraulic: ACTUATOR, actuator,
+		LOWER_CH, UPPER_CH,     # hydraulic nodes
+		ACTUATOR, null,         # structural nodes
+		ACTUATOR+1, reference, ACTUATOR, 0.,0.,.1,
+		direction, reference, ACTUATOR, 0.,0.,1.,
+		0.01,                   # area 1
+		0.01,                   # area 2
+		L/2.,                   # actuator length
+		fluid, reference, FLUID, # fluid in the first chamber
+		fluid, incompressible, density, 1.e-12, viscosity, mu; # fluid in the secon chamber, nearly vacuum; irrelevant
+
+	# orifice
+	hydraulic: ACTUATOR+1, orifice,
+		PIPE_END, LOWER_CH,
+		12.e-3,
+		pi*(6.e-3/2.)^2,
+		fluid, reference, FLUID;
+
+	# pipe
+	hydraulic: ACTUATOR+2, dynamic pipe,
+		PIPE_START, PIPE_END,
+		12.e-3,
+		pi*6.e-3^2,
+		fluid, reference, FLUID;
+
+	# upper chamber atmospheric pressure
+	genel: UPPER_CH, clamp,
+		UPPER_CH, hydraulic,
+		const, p0;
+
+	# flow forced upstream into the pipe
+	force: 1, abstract, PIPE_START, hydraulic,
+		double ramp, -0.002*rho, 0., 1., 0.002*rho, 1., 2., 0.;
+end: elements;
+
+# vim:ft=mbd

@@ -1,0 +1,293 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/planemech,v 1.3 2009/07/04 17:36:08 masarati Exp $
+#
+# MBDyn (C) is a multibody analysis code. 
+# http://www.mbdyn.org
+# 
+# Copyright (C) 1996-2008
+# 
+# Pierangelo Masarati	<masarati@aero.polimi.it>
+# Paolo Mantegazza	<mantegazza@aero.polimi.it>
+# 
+# Dipartimento di Ingegneria Aerospaziale - Politecnico di Milano
+# via La Masa, 34 - 20156 Milano, Italy
+# http://www.aero.polimi.it
+# 
+# Changing this copyright notice is forbidden.
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation (version 2 of the License).
+# 
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# 
+
+# Plane mechanism from "MBDyn-Primer.pdf"
+#
+# "Cinematica e Dinamica dei Sistemi Multibody" - Vol. 2
+# Ed. E. Pennestri' and F. Cheli, C.E.A., in press.
+#
+# Author: Pierangelo Masarati
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 5.;
+	time step: 1.e-2;
+
+	max iterations: 10;
+	tolerance: 1.e-6;
+end: initial value;
+
+begin: control data;
+	structural nodes:
+		+1		# ground
+		+1		# follower link
+		+1		# coupler link
+		+1		# input link
+	;
+
+	joints:
+		+1		# ground
+		+1		# hinge at point "A"
+		+1		# spring at point "A"
+		+1		# hinge at point "C"
+		+1		# hinge at point "E"
+		+1		# hinge at point "F"
+	;
+	rigid bodies:
+		+1		# follower link
+		+1		# coupler link
+		+1		# input link
+	;
+	forces:
+		+1		# force at point "I"
+	;
+
+	model: static;
+end: control data;
+
+set: (
+	integer GROUND = 0;
+
+	integer FOLLOWER_LINK = 100;
+	integer COUPLER_LINK = 200;
+	integer INPUT_LINK = 300;
+
+	integer POINT_A = 10;
+	integer POINT_B = 20;
+	integer POINT_C = 30;
+	integer POINT_D = 40;
+	integer POINT_E = 50;
+	integer POINT_F = 60;
+	integer POINT_G = 70;
+	integer POINT_H = 80;
+	integer POINT_I = 90;
+
+	real X_POINT_A = 0.921;
+	real Z_POINT_A = 1.124;
+	real X_POINT_B = 0.918;
+	real Z_POINT_B = 1.114;
+	real X_POINT_C = 0.915;
+	real Z_POINT_C = 1.104;
+	real X_POINT_D = 0.896;
+	real Z_POINT_D = 1.106;
+	real X_POINT_E = 0.878;
+	real Z_POINT_E = 1.108;
+	real X_POINT_F = 0.878;
+	real Z_POINT_F = 1.118;
+	real X_POINT_G = 0.830;
+	real Z_POINT_G = 1.080;
+	real X_POINT_H = 0.790;
+	real Z_POINT_H = 1.088;
+	real X_POINT_I = 0.825;
+	real Z_POINT_I = 1.109;
+0);
+
+reference: GROUND,
+	reference, global, null,
+	reference, global, eye,
+	reference, global, null,
+	reference, global, null;
+
+reference: POINT_A,
+	reference, GROUND, X_POINT_A, 0., Z_POINT_A,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_B,
+	reference, GROUND, X_POINT_B, 0., Z_POINT_B,
+	reference, GROUND,
+		2, 0., 1., 0.,
+		1, X_POINT_C - X_POINT_A, 0., Z_POINT_C - Z_POINT_A,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_C,
+	reference, GROUND, X_POINT_C, 0., Z_POINT_C,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_D,
+	reference, GROUND, X_POINT_D, 0., Z_POINT_D,
+	reference, GROUND,
+		2, 0., 1., 0.,
+		1, X_POINT_E - X_POINT_C, 0., Z_POINT_E - Z_POINT_C,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_E,
+	reference, GROUND, X_POINT_E, 0., Z_POINT_E,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_F,
+	reference, GROUND, X_POINT_F, 0., Z_POINT_F,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_G,
+	reference, GROUND, X_POINT_G, 0., Z_POINT_G,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_H,
+	reference, GROUND, X_POINT_H, 0., Z_POINT_H,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: POINT_I,
+	reference, GROUND, X_POINT_I, 0., Z_POINT_I,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+begin: nodes;
+	structural: GROUND, static,
+		reference, GROUND, null,
+		reference, GROUND, eye,
+		reference, GROUND, null,
+		reference, GROUND, null,
+		output, no;
+
+	structural: FOLLOWER_LINK, dynamic,
+		reference, POINT_C, null,
+		reference, POINT_C, eye,
+		reference, POINT_C, null,
+		reference, POINT_C, null;
+
+	structural: COUPLER_LINK, dynamic,
+		reference, POINT_E, null,
+		reference, POINT_E, eye,
+		reference, POINT_E, null,
+		reference, POINT_E, null;
+
+	structural: INPUT_LINK, dynamic,
+		reference, POINT_I, null,
+		reference, POINT_I, eye,
+		reference, POINT_I, null,
+		reference, POINT_I, null;
+end: nodes;
+
+begin: elements;
+	# ground the ground node
+	joint: GROUND, clamp, GROUND, node, node;
+
+	# hinge in A
+	joint: POINT_A, revolute hinge,
+		GROUND,
+			reference, POINT_A, null,
+			hinge, reference, POINT_A,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		FOLLOWER_LINK,
+			reference, POINT_A, null,
+			hinge, reference, POINT_A,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.;
+	# spring in A
+	joint: POINT_A + 1, deformable hinge,
+		GROUND,
+			hinge, reference, POINT_A,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		FOLLOWER_LINK,
+			hinge, reference, POINT_A,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		linear elastic isotropic, 1e2;
+	# hinge in C
+	joint: POINT_C, revolute hinge,
+		FOLLOWER_LINK,
+			reference, POINT_C, null,
+			hinge, reference, POINT_C,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		COUPLER_LINK,
+			reference, POINT_C, null,
+			hinge, reference, POINT_C,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.;
+	# hinge in E; should be a revolute hinge; use inline to make
+	# the system statically determined (alternative: use constraint
+	# regularization)
+	joint: POINT_E, inline,
+		INPUT_LINK,
+			reference, POINT_E, null,
+			reference, POINT_E,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		COUPLER_LINK,
+			offset, reference, POINT_E, null;
+	# hinge in F
+	joint: POINT_F, revolute hinge,
+		GROUND,
+			reference, POINT_F, null,
+			hinge, reference, POINT_F,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		INPUT_LINK,
+			reference, POINT_F, null,
+			hinge, reference, POINT_F,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.;
+
+	# bodies have fake mass and inertia
+	body: FOLLOWER_LINK, FOLLOWER_LINK,
+		1.,
+		reference, POINT_B, NULL,
+		diag, 1., 1., 1.;
+
+	body: COUPLER_LINK, COUPLER_LINK,
+		1.,
+		reference, POINT_D, NULL,
+		diag, 1., 1., 1.;
+
+	body: INPUT_LINK, INPUT_LINK,
+		1.,
+		reference, POINT_G, NULL,
+		diag, 1., 1., 1.;
+
+	# force: ramp
+	force: POINT_I, absolute,
+		INPUT_LINK,
+			position, reference, POINT_I, null,
+		0., 0., 1.,
+		linear, 0., 100.;
+end: elements;

@@ -1,0 +1,139 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/pendulum,v 1.1 2008/11/12 23:51:46 masarati Exp $
+#
+# MBDyn (C) is a multibody analysis code. 
+# http://www.mbdyn.org
+# 
+# Copyright (C) 1996-2008
+# 
+# Pierangelo Masarati	<masarati@aero.polimi.it>
+# Paolo Mantegazza	<mantegazza@aero.polimi.it>
+# 
+# Dipartimento di Ingegneria Aerospaziale - Politecnico di Milano
+# via La Masa, 34 - 20156 Milano, Italy
+# http://www.aero.polimi.it
+# 
+# Changing this copyright notice is forbidden.
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation (version 2 of the License).
+# 
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# 
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 10.;
+	time step: 1.e-2;
+
+	max iterations: 10;
+	tolerance: 1.e-6;
+
+	derivatives coefficient: 1.e-6;
+end: initial value;
+
+begin: control data;
+	structural nodes:
+		+1	# ground
+		+1	# pendulum
+	;
+	rigid bodies:
+		+1	# pendulum
+	;
+	joints:
+		+1	# clamp
+		+1	# revolute hinge
+	;
+	gravity;
+end: control data;
+
+set: integer GROUND = 10;
+set: integer PENDULUM = 20;
+
+set: real THETA_0 = 15*deg2rad;		# radian; initial angle
+set: real THETA_P_0 = 0.;		# radian/s; initial angular velocity
+set: real L = 5.;			# m; length
+
+reference: GROUND,
+	null,
+	eye,
+	null,
+	null;
+
+reference: PENDULUM + 1,
+	reference, GROUND, null,
+	reference, GROUND,
+		2, 0., 1., 0.,
+		1, cos(THETA_0), 0., sin(THETA_0),
+	reference, GROUND, null,
+	reference, GROUND, 0., THETA_P_0, 0.;
+
+reference: PENDULUM,
+	reference, PENDULUM + 1, 0., 0., -L,
+	reference, PENDULUM + 1, eye,
+	reference, PENDULUM + 1, null,
+	reference, PENDULUM + 1, null;
+
+begin: nodes;
+	structural: GROUND, static,
+		reference, GROUND, null,
+		reference, GROUND, eye,
+		reference, GROUND, null,
+		reference, GROUND, null,
+		output, no;
+
+	structural: PENDULUM, dynamic,
+		reference, PENDULUM, null,
+		reference, PENDULUM, eye,
+		reference, PENDULUM, null,
+		reference, PENDULUM, null;
+end: nodes;
+
+begin: elements;
+	body: PENDULUM,
+		PENDULUM,			# node label
+		10.,				# mass
+		reference, node, null,		# C.M. location
+		diag, 1.e-3, 1.e-3, 1.e-3;	# inertia tensor (wrt/ C.M.)
+
+	joint: GROUND, clamp,
+		GROUND, node, node;
+
+	joint: PENDULUM, revolute hinge,
+		GROUND,
+			reference, GROUND, null,
+			hinge, reference, GROUND,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.,
+		PENDULUM,
+			reference, GROUND, null,
+			hinge, reference, GROUND,
+				3, 0., 1., 0.,
+				1, 1., 0., 0.;
+
+	gravity: 0., 0., -1., const, 9.81;
+end: elements;
+
+
+
+
+
+
+
+
+
+
+
+

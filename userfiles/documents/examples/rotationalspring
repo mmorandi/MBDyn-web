@@ -1,0 +1,153 @@
+/*
+ * $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/rotationalspring,v 1.4 2009/07/04 17:36:08 masarati Exp $
+ *
+ * Rotational Spring System
+ *
+ * Author: Roger Polston
+ */
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 10.;
+	time step: 1.e-2;
+
+	max iterations: 10;
+	tolerance: 1.e-6;
+	method: crank nicholson;
+	# method: bdf;
+end: initial value;
+
+begin: control data;
+	structural nodes: 
+		+1    # Ground
+		+1    # Pendulum_1
+		+1    # Pendulum_2
+		+1    # Pendulum_3
+	;
+	rigid bodies:
+		+1    # Pendulum_1
+		+1    # Pendulum_2
+		+1    # Pendulum_3
+	;
+	joints:
+		+1    # Ground clamp
+		+1    # Pendulum_1 revolute hinge
+		+1    # Pendulum_2 revolute pin
+		+2    # Pendulum_3 revolute hinge + deformable hinge
+	;
+	forces:
+		+1    # Pendulum_1 linear rotational spring via couple
+		+1    # Pendulum_2 linear rotational spring via couple
+	;
+end: control data;
+
+set: integer PIVOT = 1;
+set: integer GROUND = 1000;
+set: integer PENDULUM_1 = 2000;
+set: integer PENDULUM_2 = 3000;
+set: integer PENDULUM_3 = 4000;
+set: real M = 1.;
+set: real J = 1.;
+set: real K = 100.;
+set: real Vel0 = .2;
+
+reference: PIVOT,
+	reference, global, null,
+	reference, global, eye,
+	reference, global, null,
+	reference, global, 0., 0., Vel0;
+
+begin: nodes;
+	structural: GROUND, static,
+		reference, global, null,
+		reference, global, eye,
+		reference, global, null,
+		reference, global, null,
+		output, no;
+
+	structural: PENDULUM_1, dynamic, 
+		reference, PIVOT, null, 
+		reference, PIVOT, eye, 
+		reference, PIVOT, null, 
+		reference, PIVOT, null;
+
+	structural: PENDULUM_2, dynamic, 
+		reference, PIVOT, null, 
+		reference, PIVOT, eye, 
+		reference, PIVOT, null, 
+		reference, PIVOT, null;
+
+	structural: PENDULUM_3, dynamic, 
+		reference, PIVOT, null, 
+		reference, PIVOT, eye, 
+		reference, PIVOT, null, 
+		reference, PIVOT, null;
+end: nodes;
+
+begin: elements;
+	joint: GROUND, clamp, GROUND,
+		position, node,
+		orientation, node;
+
+	body: PENDULUM_1, PENDULUM_1, 
+		M,
+		reference, PIVOT, null,
+		reference, PIVOT, diag, J, J, J;
+	joint: PENDULUM_1, revolute hinge,
+		GROUND, 
+		reference, PIVOT, null,
+		hinge, reference, PIVOT, eye,
+		PENDULUM_1,
+		reference, PIVOT, null,
+		hinge, reference, PIVOT, eye;
+	couple: PENDULUM_1, follower internal,
+		PENDULUM_1,
+		GROUND,
+		reference, PIVOT, 0., 0., 1.,
+		element, PENDULUM_1, joint, string, "rz",
+			string, "-K*Var";
+
+	body: PENDULUM_2, PENDULUM_2, 
+		M,
+		reference, PIVOT, null,
+		reference, PIVOT, diag, J, J, J;
+#           joint: PENDULUM_2, revolute hinge,
+#               GROUND, 
+#               reference, PIVOT, null,
+#               hinge, reference, PIVOT, eye,
+#               PENDULUM_2,
+#               reference, PIVOT, null,
+#               hinge, reference, PIVOT, eye;
+	joint: PENDULUM_2, revolute pin,
+		PENDULUM_2, 
+		reference, PIVOT, null,
+		hinge, reference, PIVOT, eye,
+		reference, PIVOT, null;
+	couple: PENDULUM_2, follower,
+		PENDULUM_2,
+		reference, PIVOT, 0., 0., 1.,
+		element, PENDULUM_2, joint, string, "rz",
+		string, "-K*Var";
+
+	body: PENDULUM_3, PENDULUM_3, 
+		M,
+		reference, PIVOT, null,
+		reference, PIVOT, diag, J, J, J;
+	joint: PENDULUM_3, revolute hinge,
+		GROUND, 
+		reference, PIVOT, null,
+		hinge, reference, PIVOT, eye,
+		PENDULUM_3,
+		reference, PIVOT, null,
+		hinge, reference, PIVOT, eye;
+	joint: PENDULUM_3+1, deformable hinge,
+		PENDULUM_3,
+		hinge, reference, PIVOT, eye,
+		GROUND,
+		hinge, reference, PIVOT, eye,
+			linear elastic isotropic, K;
+end: elements;

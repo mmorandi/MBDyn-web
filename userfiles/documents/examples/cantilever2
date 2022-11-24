@@ -1,0 +1,88 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/cantilever2,v 1.4 2009/07/04 17:36:08 masarati Exp $
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 1.;
+	time step: 1.e-3;
+
+	method: ms, .6;
+
+	max iterations: 10;
+	tolerance: 1.e-5;
+
+	linear solver: naive, colamd, mt, 1;
+
+end: initial value;
+
+set: integer N = 5;
+
+begin: control data;
+	structural nodes: 
+		+1    # clamped node
+		+2*N  # other nodes
+	;
+	rigid bodies:
+		+2*N  # mass of other nodes
+	;
+	joints:
+		+1    # clamp
+	;
+	beams:
+		+N    # the whole beam
+	;
+	forces:
+		+1    # loads the beam
+	;
+end: control data;
+
+set: real m = 1.;
+set: real j = 1.e-2;
+set: real L = .5;
+set: real dL = L/N;
+
+set: integer curr_elem;
+
+begin: nodes;
+	structural: 1, static,
+		null, 
+		eye, 
+		null, 
+		null;
+
+	set: curr_elem = 2;
+	include: "beam.nod";
+	set: curr_elem = 4;
+	include: "beam.nod";
+	set: curr_elem = 6;
+	include: "beam.nod";
+	set: curr_elem = 8;
+	include: "beam.nod";
+	set: curr_elem = 10;
+	include: "beam.nod";
+end: nodes;
+
+begin: elements;
+	joint: 1, clamp, 1, node, node;
+
+	set: curr_elem = 2;
+	include: "beam.elm";
+	set: curr_elem = 4;
+	include: "beam.elm";
+	set: curr_elem = 6;
+	include: "beam.elm";
+	set: curr_elem = 8;
+	include: "beam.elm";
+	set: curr_elem = 10;
+	include: "beam.elm";
+
+	# constant follower force in node 3
+	force: 2 * N + 1, follower, 
+		2 * N + 1,
+		position,  null,
+		0., 0., 1.,
+		cosine, 0., pi/2., 10., half, 0.;
+end: elements;

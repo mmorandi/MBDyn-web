@@ -1,0 +1,13 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/beam.nod,v 1.2 2008/11/05 20:47:14 masarati Exp $
+
+structural: curr_elem, dynamic,
+	(curr_elem - 1) * dL, 0., 0.,
+	eye, 
+	null, 
+	null;
+
+structural: curr_elem + 1, dynamic,
+	curr_elem * dL, 0., 0., 
+	eye, 
+	null, 
+	null;

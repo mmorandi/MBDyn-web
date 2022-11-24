@@ -1,0 +1,67 @@
+/*
+ * $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/privdataoutput,v 1.2 2008/11/05 21:02:01 masarati Exp $
+ *
+ * MBDyn 1.2
+ *
+ * Plot the relative angle and angular velocity of a revolute joint
+ *
+ * Pierangelo Masarati <pierangelo.masarati at polimi.it>
+ */
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 1.;
+	time step: 1.e-3;	
+
+	tolerance: 1.e-6;
+	max iterations: 10;
+
+	method: ms, .6;
+
+	derivatives coefficient: 1.e-9;
+end: initial value;
+
+begin: control data;
+	structural nodes: 2;
+	parameter nodes: 2;
+	joints: 2;
+	rigid bodies: 1;
+	forces: 1;
+end: control data;
+
+begin: nodes;
+	structural: 1, static,
+		null,
+		eye,
+		null,
+		null;
+	structural: 2, dynamic,
+		null,
+		eye,
+		null,
+		null;
+	parameter: 11, /* bound to */ element;
+	parameter: 12, /* bound to */ element;
+end: nodes;
+
+begin: elements;
+	# node 1 is clamped
+	joint: 1, clamp, 1, node, node;
+	# node 2 is connected to node 1 by a revolute
+	joint: 2, revolute hinge,
+		1, null,
+		2, null;
+	# the relative rotation (in rad) and the relativr velocity (in rad/s)
+	# of the revolute are bound to parameters 11 and 12; their output
+	# is available in file ".prm"
+	bind: 2, joint, 11, name, "rz";
+	bind: 2, joint, 12, name, "wz";
+	# body 2 inertia
+	body: 2, 2, 1., null, eye;
+	# a constant couple uniformly accelerates body 2 about axis 3
+	couple: 2, follower, 2, 0.,0.,1., const, 100.;
+end: elements;

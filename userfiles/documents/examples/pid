@@ -1,0 +1,89 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/tests/genel/statespace/pid,v 1.2 2016/02/17 16:38:55 masarati Exp $
+#
+# MBDyn (C) is a multibody analysis code. 
+# http://www.mbdyn.org
+# 
+# Copyright (C) 1996-2015
+# 
+# Pierangelo Masarati	<masarati@aero.polimi.it>
+# Paolo Mantegazza	<mantegazza@aero.polimi.it>
+# 
+# Dipartimento di Ingegneria Aerospaziale - Politecnico di Milano
+# via La Masa, 34 - 20156 Milano, Italy
+# http://www.aero.polimi.it
+# 
+# Changing this copyright notice is forbidden.
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation (version 2 of the License).
+# 
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+# Simple PID example
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 10.;
+	time step: 1e-2;
+
+	tolerance: 1e-6;
+	max iterations: 10;
+
+	derivatives tolerance: 1e-6;
+	derivatives max iterations: 10;
+end: initial value;
+
+begin: control data;
+	structural nodes: 1;
+	abstract nodes: 1;
+
+	rigid bodies: 1;
+	forces: 1;
+	genels: 1;
+end: control data;
+
+begin: nodes;
+	structural: 1, dynamic, 1., 0., 0., eye, null, null;
+	abstract: 1;
+end: nodes;
+
+begin: elements;
+	body: 1, 1, 1., null, eye;
+	
+	genel: 1, state space SISO,
+		1, abstract, algebraic,
+			drive, node, 1, structural, string, "X[1]", direct,
+		1,
+		matrix A,
+			-.001, # pseudo-integrator pole
+		matrix B,
+			1.,
+		matrix C,
+			1.;
+
+	set: real KP = 2.e1;
+	set: real KD = 1.e1;
+	set: real KI = 1.e-3;
+	force: 1, absolute,
+		1, position, null,
+		-1., 0., 0.,
+		array, 3,
+			node, 1, structural, string, "X[1]", linear, 0., KP,
+			node, 1, structural, string, "XP[1]", linear, 0., KD,
+			node, 1, abstract, string, "x", linear, 0., KI;
+end: elements;
+
+# vim:ft=mbd

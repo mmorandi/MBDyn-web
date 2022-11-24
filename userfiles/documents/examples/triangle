@@ -1,0 +1,384 @@
+# MBDyn (C) is a multibody analysis code. 
+# http://www.mbdyn.org
+# 
+# Copyright (C) 1996-2009
+# 
+# Pierangelo Masarati	<masarati@aero.polimi.it>
+# Paolo Mantegazza	<mantegazza@aero.polimi.it>
+# 
+# Dipartimento di Ingegneria Aerospaziale - Politecnico di Milano
+# via La Masa, 34 - 20156 Milano, Italy
+# http://www.aero.polimi.it
+# 
+# Changing this copyright notice is forbidden.
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation (version 2 of the License).
+# 
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# 
+# Author: Pierangelo Masarati <masarati@aero.polimi.it>
+# From: "Benefits of a rotationless rigid body formulation
+# to computational flexible multibody dynamics"
+# P. Betsch, S. Uhlar, N. Saeger, R. Siebert & M. Franke 
+# 1st ESA Workshop on Multibody Dynamics for Space Applications
+# 2nd and 3rd February 2010, ESTEC, NL
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 10.;
+	time step: 1e-3;
+	tolerance: 1e-9;
+	max iterations: 10;
+	
+	derivatives coefficient: 1.e-6;
+
+	linear solver: naive, colamd;
+
+	method: ms, 0.;
+
+	/*
+	eigenanalysis: 0.,
+		use lapack,
+		lower frequency limit, 1.e-3,
+		upper frequency limit, 1.e+1;
+	*/
+
+	# output: iterations;
+	# output: residual;
+end: initial value;
+
+begin: control data;
+	# print: dof stats;
+	structural nodes:
+		+1		# ground
+		+1		# chassis
+		+1		# end effector
+		+3		# actuators
+	;
+	rigid bodies:
+		+1		# chassis
+		+1		# end effector
+		+3		# actuators
+	;
+	joints:
+		+1		# ground clamp
+		+3		# total joints
+		+3		# hinges
+		+3*2		# total equation + total internal reaction
+	;
+
+	# default output: none;
+	# output precision: 16;
+	output frequency: 10;
+end: control data;
+
+set: integer GROUND = 0;
+set: integer CHASSIS = 1000;
+set: integer END_EFFECTOR = 2000;
+
+set: integer EQ_X = 3100;
+set: integer EQ_Y = 3200;
+set: integer EQ_T = 3300;
+
+set: integer ACT_1 = 4100;
+set: integer ACT_2 = 4200;
+set: integer ACT_3 = 4300;
+
+set: integer HINGE_1 = 5100;
+set: integer HINGE_2 = 5200;
+set: integer HINGE_3 = 5300;
+
+set: integer PRISM_1 = 6100;
+set: integer PRISM_2 = 6200;
+set: integer PRISM_3 = 6300;
+
+set: real AD = 1.;
+set: real HD = .5;
+
+drive caller: 0,
+	string, "(Time <= 6) * (Time >= 0) * (
+		  126*(Time/6)^5
+		 -420*(Time/6)^6
+		 +540*(Time/6)^7
+		 -315*(Time/6)^8
+		  +70*(Time/6)^9) * 2. 
+		 + (Time > 6) * 2.";
+drive caller: EQ_X,
+	# const, 0.;
+	drive, string, ".2*sin(20.*pi*Var)", reference, 0;
+drive caller: EQ_Y,
+	# const, 0.;
+	drive, string, ".2*sin(40.*pi*Var)", reference, 0;
+drive caller: EQ_T,
+	const, 0.;
+
+reference: GROUND,
+	null,
+	eye,
+	null,
+	null;
+
+reference: CHASSIS,
+	reference, GROUND, null,
+	reference, GROUND, eye,
+	reference, GROUND, null,
+	reference, GROUND, null;
+
+reference: END_EFFECTOR,
+	reference, CHASSIS, null,
+	reference, CHASSIS, eye,
+	reference, CHASSIS, null,
+	reference, CHASSIS, null;
+
+reference: ACT_1 + 1,
+	reference, CHASSIS, null,
+	reference, CHASSIS,
+		1, cos(0.), sin(0.), 0.,
+		3, 0., 0., 1.,
+	reference, CHASSIS, null,
+	reference, CHASSIS, null;
+
+reference: ACT_1,
+	reference, ACT_1 + 1, AD, 0., 0.,
+	reference, ACT_1 + 1, eye,
+	reference, ACT_1 + 1, null,
+	reference, ACT_1 + 1, null;
+
+reference: ACT_2 + 1,
+	reference, CHASSIS, null,
+	reference, CHASSIS,
+		1, cos(-2./3.*pi), sin(-2./3.*pi), 0.,
+		3, 0., 0., 1.,
+	reference, CHASSIS, null,
+	reference, CHASSIS, null;
+
+reference: ACT_2,
+	reference, ACT_2 + 1, AD, 0., 0.,
+	reference, ACT_2 + 1, eye,
+	reference, ACT_2 + 1, null,
+	reference, ACT_2 + 1, null;
+
+reference: ACT_3 + 1,
+	reference, CHASSIS, null,
+	reference, CHASSIS,
+		1, cos(2./3.*pi), sin(2./3.*pi), 0.,
+		3, 0., 0., 1.,
+	reference, CHASSIS, null,
+	reference, CHASSIS, null;
+
+reference: ACT_3,
+	reference, ACT_3 + 1, AD, 0., 0.,
+	reference, ACT_3 + 1, eye,
+	reference, ACT_3 + 1, null,
+	reference, ACT_3 + 1, null;
+
+begin: nodes;
+	structural: GROUND, static,
+		reference, GROUND, null,
+		reference, GROUND, eye,
+		reference, GROUND, null,
+		reference, GROUND, null;
+
+	structural: CHASSIS, dynamic,
+		reference, CHASSIS, null,
+		reference, CHASSIS, eye,
+		reference, CHASSIS, null,
+		reference, CHASSIS, null;
+
+	structural: END_EFFECTOR, dynamic,
+		reference, END_EFFECTOR, null,
+		reference, END_EFFECTOR, eye,
+		reference, END_EFFECTOR, null,
+		reference, END_EFFECTOR, null;
+
+	structural: ACT_1, dynamic,
+		reference, ACT_1, null,
+		reference, ACT_1, eye,
+		reference, ACT_1, null,
+		reference, ACT_1, null;
+
+	structural: ACT_2, dynamic,
+		reference, ACT_2, null,
+		reference, ACT_2, eye,
+		reference, ACT_2, null,
+		reference, ACT_2, null;
+
+	structural: ACT_3, dynamic,
+		reference, ACT_3, null,
+		reference, ACT_3, eye,
+		reference, ACT_3, null,
+		reference, ACT_3, null;
+end: nodes;
+
+begin: elements;
+	joint: GROUND, clamp, GROUND, node, node;
+
+	body: CHASSIS, CHASSIS,
+		100.,
+		reference, node, null,
+		diag, 1.e2, 1.e2, 2.e2;
+
+	body: END_EFFECTOR, END_EFFECTOR,
+		1.,
+		reference, node, null,
+		diag, 1., 1., 2.;
+
+	body: ACT_1, ACT_1,
+		1.e-2,
+		reference, node, null,
+		diag, 1.e-3, 2.e-3, 2.e-3;
+
+	body: ACT_2, ACT_2,
+		1.e-2,
+		reference, node, null,
+		diag, 1.e-3, 2.e-3, 2.e-3;
+
+	body: ACT_3, ACT_3,
+		1.e-2,
+		reference, node, null,
+		diag, 1.e-3, 2.e-3, 2.e-3;
+
+	joint: HINGE_1, inline,
+		END_EFFECTOR,
+			reference, ACT_1 + 1, HD, 0., 0.,
+			reference, ACT_1 + 1, eye,
+		ACT_1,
+			offset,
+			reference, ACT_1 + 1, HD, 0., 0.;
+
+	joint: HINGE_2, inline,
+		END_EFFECTOR,
+			reference, ACT_2 + 1, HD, 0., 0.,
+			reference, ACT_2 + 1, eye,
+		ACT_2,
+			offset,
+			reference, ACT_2 + 1, HD, 0., 0.;
+
+	joint: HINGE_3, inline,
+		END_EFFECTOR,
+			reference, ACT_3 + 1, HD, 0., 0.,
+			reference, ACT_3 + 1, eye,
+		ACT_3,
+			offset,
+			reference, ACT_3 + 1, HD, 0., 0.;
+
+	joint: EQ_X, total equation,
+		GROUND,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		END_EFFECTOR,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		position constraint, active, inactive, inactive,
+			component, 
+				reference, EQ_X,
+				0.,
+				0.;
+
+	joint: EQ_Y, total equation,
+		GROUND,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		END_EFFECTOR,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		position constraint, inactive, active, inactive,
+			component,
+				0.,
+				reference, EQ_Y,
+				0.;
+
+	joint: EQ_T, total equation,
+		GROUND,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		END_EFFECTOR,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		orientation constraint, inactive, inactive, active,
+			component,
+				0.,
+				0.,
+				reference, EQ_T;
+
+	joint: ACT_1, total internal reaction,
+		CHASSIS,
+			#position, reference, node, null,
+			#position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		ACT_1,
+			#position, reference, node, null,
+			#position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		orientation constraint, inactive, inactive, active,
+			total equation, EQ_X;
+
+	joint: ACT_2, total internal reaction,
+		CHASSIS,
+			#position, reference, node, null,
+			#position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		ACT_2,
+			#position, reference, node, null,
+			#position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		orientation constraint, inactive, inactive, active,
+			total equation, EQ_Y;
+
+	joint: ACT_3, total internal reaction,
+		CHASSIS,
+			#position, reference, node, null,
+			#position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		ACT_3,
+			#position, reference, node, null,
+			#position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		orientation constraint, inactive, inactive, active,
+			total equation, EQ_T;
+
+	joint: PRISM_1, inline,
+		ACT_1,
+			reference, ACT_1, null,
+			reference, ACT_1, 3, 1., 0., 0., 1, guess,
+		CHASSIS,
+			offset,
+			reference, ACT_1, null;
+
+	joint: PRISM_2, inline,
+		ACT_2,
+			reference, ACT_2, null,
+			reference, ACT_2, 3, 1., 0., 0., 1, guess,
+		CHASSIS,
+			offset,
+			reference, ACT_2, null;
+
+	joint: PRISM_3, inline,
+		ACT_3,
+			reference, ACT_3, null,
+			reference, ACT_3, 3, 1., 0., 0., 1, guess,
+		CHASSIS,
+			offset,
+			reference, ACT_3, null;
+end: elements;
+

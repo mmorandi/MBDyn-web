@@ -1,0 +1,77 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/modalbody,v 1.5 2009/07/04 17:36:08 masarati Exp $
+
+begin: data;
+	problem: initial value;	# the default
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 10.;
+	time step: 1.e-2;
+
+	max iterations: 10;
+	tolerance: 1.e-6;
+
+	derivatives coefficient: 1.e-6;
+end: initial value;
+
+begin: control data;
+	structural nodes: 2 + 2;
+	joints: 1 + 1;
+	forces: 1 + 1;
+end: control data;
+
+begin: nodes;
+	structural: 11, modal,
+		null,
+		eye,
+		null,
+		null; 
+	structural: 12, static,
+		0.,2.,0.,
+		eye,
+		null,
+		null; 
+
+	structural: 21, modal,
+		1.,0.,0.,
+		eye,
+		null,
+		null; 
+	structural: 22, static,
+		1.,2.,0.,
+		eye,
+		null,
+		null; 
+end: nodes;
+
+begin: elements;
+	joint: 10, modal,
+		11,
+		2,      # modes number
+		3,      # FEM node number
+		no damping,
+		"hand-made-static.fem",
+		1,      # interface nodes
+			1003, 12, null;
+	force: 10, follower,
+		12,
+		position, null,
+		0.,0.,1.,
+		sine, 0.,pi/.1,1.,one,0.;
+
+	joint: 20, modal,
+		21,
+		2,      # modes number
+		3,      # FEM node number
+		no damping,
+		"hand-made-dynamic.fem",
+		1,      # interface nodes
+			1003, 22, null;
+	force: 20, follower,
+		22,
+		position, null,
+		0.,0.,1.,
+		sine, 0.,pi/.1,1.,one,0.;
+end: elements;
+

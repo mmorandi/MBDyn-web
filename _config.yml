@@ -55,8 +55,8 @@ defaults:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - userfiles/downloads/
+exclude:
+  - userfiles/documents/examples/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

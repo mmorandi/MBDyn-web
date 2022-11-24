@@ -1,0 +1,134 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/cantilever1piezo,v 1.4 2009/07/04 17:36:08 masarati Exp $
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 1.;
+	time step: 1.e-3;
+
+	max iterations: 100;
+	tolerance: 1.e-6;
+end: initial value;
+
+begin: control data;
+	structural nodes: 
+		+1    # clamped node
+		+2    # other nodes
+	;
+	rigid bodies:
+		+2    # mass of other nodes
+	;
+	joints:
+		+1    # clamp
+	;
+	beams:
+		+1    # the whole beam
+	;
+	abstract nodes:
+		+1    # piezo electrode
+	;
+	genels:
+		+1    # electrode shunt
+	;
+	forces:
+		+1    # loads the beam
+		+1    # shunt
+	;
+end: control data;
+
+set: real m = 1.;
+set: real j = 1.e-2;
+set: real L = .5;
+
+begin: nodes;
+	structural: 1, static,
+		null, 
+		eye, 
+		null, 
+		null;
+
+	structural: 2, dynamic,
+		L/2., 0., 0.,
+		eye, 
+		null, 
+		null;
+
+	structural: 3, dynamic,
+		L, 0., 0., 
+		eye, 
+		null, 
+		null;
+
+	abstract:
+		11;
+end: nodes;
+
+begin: elements;
+	joint: 1, clamp, 1, node, node;
+
+	body: 2, 2,
+		(L/2.)*m,
+		null,
+		diag, (L/2.)*j, 1./12.*(L/2.)^3*m, 1./12.*(L/2.)^3*m;
+
+	body: 3, 3,
+		(L/4.)*m,
+		-(L/8.), 0., 0.,
+		diag, (L/4.)*j, 1./12.*(L/4.)^3*m, 1./12.*(L/4.)^3*m;
+
+	beam: 1,
+		1, null,
+		2, null,
+		3, null,
+		eye,
+		linear elastic generic,
+			diag, 1.e9, 1.e9, 1.e9, 1.e4, 1.e4, 1.e5,
+		same,
+		same,
+		piezoelectric actuator, 1,
+			11,
+			0., 0., 0., 0., 1e0, 0.,
+	same;
+
+	genel: 12, spring support,
+		11, abstract, algebraic,
+		linear elastic, 1.;
+
+	force: 11, abstract,
+	11, abstract,
+	dof, 3, structural, 3, differential,
+			linear, 0., -8e1;
+
+	/*
+	# constant absolute force in node 3
+	force: 3, absolute, 
+		3, 0., 0., 1., null,
+		const, 100.;
+	*/
+	/*
+	# constant follower force in node 3
+	force: 3, follower, 
+		3, 0., 0., 1., null,
+		const, 100.;
+	*/
+
+	set: real initial_time = 0.;
+	set: real frequency = 10./pi; # radians
+	set: real amplitude = 100.;
+	set: real initial_value = 0.;
+	# absolute force in node 3
+	# with different amplification factors
+	force: 3, absolute, 
+		3,
+		position, null,
+		0., 0., 1.,
+		array, 2,
+			sine, initial_time, frequency, amplitude, 
+				forever, initial_value,
+			cosine, initial_time+.1, frequency/2., amplitude, 
+				half, initial_value;
+
+end: elements;

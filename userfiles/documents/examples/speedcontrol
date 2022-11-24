@@ -1,0 +1,169 @@
+/*
+ * $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/speedcontrol,v 1.3 2009/07/04 17:36:08 masarati Exp $
+
+A simple rigid rotor, made of a rigid body hinged to the ground
+with some high damping, is controlled by means of an integral
+controller that zeroes out the error on the angular speed.
+
+A control proportional to the angular speed could be implemented
+by directly feeding back the angular speed measure; the same
+can be done for the angular rotation of the joint.
+However, to use an integral of the error on the angular speed,
+the measure of the angular speed must be passed thru a filter
+that integrates it.
+
+For this purpose, the error measure is put by an abstract force
+into an abstract node that is "grounded" by a unit stiffness 
+spring support.
+Then the error measure is fed into a first order state space SISO 
+filter with unit input and output coefficients (matrices B and C),
+and with one pole in the origin.  If the pole is moved from zero,
+a low-pass first order filter is obtained, whose behavior is very 
+close to an ideal integrator, but with some drift compensation.
+
+The integral of the error is then fed to the rotor by means of a
+couple, whose amplitude is collected from the output of the
+state space SISO element and multiplied by a gain.
+
+ */
+
+begin: data;
+	problem: initial value;
+end: data;
+
+# inertia
+set: real Ix = 10.;		# kg m^2
+# damping
+set: real damping_coef = 4e+0;	# N m s/rad
+# desired angular velocity
+set: real OmegaRef = 10.;	# rad/s
+# integral gain
+set: real Gi = 5.;		# N m/rad
+
+begin: initial value;
+	initial time: 0.;
+	final time: 60.;
+	time step: 1e-2;
+
+	derivatives max iterations: 20.;
+	derivatives tolerance: 1e-6;
+
+	max iterations: 20.;
+	tolerance: 1e-6;
+
+	# output: iterations;
+end: initial value;
+
+begin: control data;
+	structural nodes:
+		+1	# ground
+		+1	# rotor
+	;
+
+	rigid bodies:
+		+1	# rotor
+	;
+
+	joints:
+		+1	# ground
+		+1	# revolute hinge
+		+1	# damping...
+	;
+
+	forces:
+		+1	# torque
+		+1	# measure
+	;
+
+	abstract nodes:
+		+1	# error measure
+		+1	# integrator output
+	;
+
+	genels:
+		+1	# spring support for error measure
+		+1	# integrator (state space SISO)
+	;
+end: control data;
+
+begin: nodes;
+	structural: 1, static,
+		null,
+		eye,
+		null,
+		null;
+
+	structural: 2, dynamic,
+		null,
+		eye,
+		null,
+		null;
+
+	abstract: 1001;
+	abstract: 1002;
+end: nodes;
+
+begin: elements;
+	# ground
+	joint: 1, clamp, 1, node, node;
+
+	# horizontal axis hinge
+	joint: 2, revolute hinge,
+		1, reference, node, null,
+			hinge, reference, node,
+				3, 1.,0.,0.,
+				2, 0.,1.,0.,
+		2, reference, node, null,
+			hinge, reference, node,
+				3, 1.,0.,0.,
+				2, 0.,1.,0.;
+
+	# mechanical damping...
+	joint: 3, deformable hinge,
+		1,
+			hinge, reference, node,
+				3, 1.,0.,0.,
+				2, 0.,1.,0.,
+		2,
+			hinge, reference, node,
+				3, 1.,0.,0.,
+				2, 0.,1.,0.,
+		linear viscous, damping_coef;
+
+	# rotor inertia
+	body: 2, 2,
+		1.,	# does not matter...
+		null,
+		diag, Ix, Ix/2., Ix/2.;
+
+	# torque
+	couple: 2, follower,
+		2, 1.,0.,0.,
+		# it is the composition of two contributions:
+		array, 2,
+			# a (constant) disturbance
+			const, -10.,
+			# the integral of the angular speed error
+			dof, 1002, abstract, algebraic, linear, 0., 1.;
+
+	# controller:
+
+	# put the angular speed error measure in an abstract node
+	force: 1000, abstract,
+		1001, abstract,
+			element, 2, joint, string, "wz",
+			linear, OmegaRef, -1.;
+	# ground the angular speed error measure abstract node
+	genel: 1001, spring support,
+		1001, abstract, algebraic,
+		linear elastic, 1.;
+	# integrate the angular speed error measure
+	genel: 1002, state space SISO,
+		1002, abstract, algebraic,
+		node dof, 1001, abstract, algebraic,
+		1,
+		matrix A, 0.,		# ideal integrator
+		# matrix A, -1e-3,	# low-pass filter
+		matrix B, 1.,
+		matrix C, Gi;
+end: elements;

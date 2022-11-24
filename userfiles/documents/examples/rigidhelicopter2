@@ -1,0 +1,353 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/rigidhelicopter2,v 1.2 2011/10/13 12:56:20 masarati Exp $
+
+begin: data;
+	problem: initial value;
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 10.;
+	time step: 1.e-3;
+	method: ms, .6;
+
+	max iterations: 10;
+	tolerance: 1.e-6;
+	newton raphson: modified, 4;
+
+	derivatives coefficient: 1.e-6;
+	derivatives max iterations: 10;
+	derivatives tolerance: 1.e-6;
+end: initial value;
+
+begin: control data;
+	structural nodes: 1 + 1 + 2 + 4;
+	joints: 1 + 1 + 3 + 4 + 4 + 4 + 4;
+	rigid bodies: 4;
+	air properties;
+	aerodynamic elements: 4;
+	induced velocity elements: 1;
+end: control data;
+
+set: real CutOut = 1.;              # m
+set: real Omega = 40.;              # rad/s
+# set: real Omega0 = Omega;              # rad/s
+set: real Omega0 = 0.;              # rad/s
+set: real StartTime = 2.;           # s
+set: real InitialDamp = 1.e4;       # Nm/rad/s
+set: real Mblade = 30.;             # Kg
+set: real Rblade = 5.5;             # m
+set: real Cblade = .06*Rblade;	# m
+set: real Theta0 = 9.;              # deg
+set: real Thetaf = -8.;		# deg
+set: real V0 = 70.;                 # m/s
+set: real Damper = 1e4;		# Ns/m
+
+reference: 1,
+	reference, global, null,
+	reference, global, eye,
+	reference, global, null,
+	reference, global, null;
+reference: 2,
+	reference, 1, null,
+	reference, 1, eye,
+	reference, 1, null,
+	reference, 1, 0.,0.,Omega0;
+
+reference: 11,
+	reference, 2, null,
+	reference, 2, 1, 1.,0.,0., 3, 0.,0.,1.,
+	reference, 2, null,
+	reference, 2, null;
+reference: 21,
+	reference, 11, CutOut,0.,0.,
+	reference, 11, eye,
+	reference, 11, null,
+	reference, 11, null;
+
+reference: 12,
+	reference, 2, null,
+	reference, 2, 1, 0.,-1.,0., 3, 0.,0.,1.,
+	reference, 2, null,
+	reference, 2, null;
+reference: 22,
+	reference, 12, CutOut,0.,0.,
+	reference, 12, eye,
+	reference, 12, null,
+	reference, 12, null;
+
+reference: 13,
+	reference, 2, null,
+	reference, 2, 1, -1.,0.,0., 3, 0.,0.,1.,
+	reference, 2, null,
+	reference, 2, null;
+reference: 23,
+	reference, 13, CutOut,0.,0.,
+	reference, 13, eye,
+	reference, 13, null,
+	reference, 13, null;
+
+reference: 14,
+	reference, 2, null,
+	reference, 2, 1, 0.,1.,0., 3, 0.,0.,1.,
+	reference, 2, null,
+	reference, 2, null;
+reference: 24,
+	reference, 14, CutOut,0.,0.,
+	reference, 14, eye,
+	reference, 14, null,
+	reference, 14, null;
+
+begin: nodes;
+	# ground
+	structural: 1, static,
+		reference, 1, null,
+		reference, 1, eye,
+		reference, 1, null,
+		reference, 1, null;
+	# hub
+	structural: 2, static,
+		reference, 2, null,
+		reference, 2, eye,
+		reference, 2, null,
+		reference, 2, null;
+	# fixed plate
+	structural: 3, static,
+		reference, 2, null,
+		reference, 2, eye,
+		reference, 2, null,
+		reference, 2, null;
+	# rotating plate
+	structural: 4, static,
+		reference, 2, null,
+		reference, 2, eye,
+		reference, 2, null,
+		reference, 2, null;
+
+	# blades
+	structural: 11, dynamic,
+		reference, 11, Rblade,0.,0.,
+		reference, 11, eye,
+		reference, 11, null,
+		reference, 11, null;
+	structural: 12, dynamic,
+		reference, 12, Rblade,0.,0.,
+		reference, 12, eye,
+		reference, 12, null,
+		reference, 12, null;
+	structural: 13, dynamic,
+		reference, 13, Rblade,0.,0.,
+		reference, 13, eye,
+		reference, 13, null,
+		reference, 13, null;
+	structural: 14, dynamic,
+		reference, 14, Rblade,0.,0.,
+		reference, 14, eye,
+		reference, 14, null,
+		reference, 14, null;
+end: nodes;
+
+begin: elements;
+	# ground
+	joint: 1, clamp, 1, node, node;
+	# hub
+	joint: 2, axial rotation,
+		1, reference, node, null,
+			hinge, reference, node, 1, 1.,0.,0., 3, 0.,0.,1.,
+		2, reference, node, null,
+			hinge, reference, node, 1, 1.,0.,0., 3, 0.,0.,1.,
+		cosine, 0., pi/StartTime, (Omega-Omega0)/2., half, Omega0;
+
+	# relative (prescribed) motion between ground and fixed plate
+	joint: 3, total joint,
+		1,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		3,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		position constraint, active, active, active,
+			0., 0., 1.,
+				# collective pitch
+				const, 0.,
+				# cosine, StartTime + 2, pi/1., 4*deg2rad/CutOut/2, half, 0.,
+		orientation constraint, active, active, active,
+			component,
+				# lateral cyclic pitch
+				const, 0.,
+				# longitudinal cyclic pitch
+				const, -0.,
+				0.;
+
+	# relative motion between hub and rotating plate
+	joint: 4, total joint,
+		2,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		4,
+			position, reference, node, null,
+			position orientation, reference, node, eye,
+			rotation orientation, reference, node, eye,
+		# allow vertical displacement
+		position constraint, inactive, inactive, inactive, null,
+		# anti-torque
+		orientation constraint, inactive, inactive, active, null;
+
+	# relative rotation between fixed and rotating plates
+	joint: 5, revolute hinge,
+		3,
+			position, reference, node, null,
+			orientation, reference, node, eye,
+		4,
+			position, reference, node, null,
+			orientation, reference, node, eye;
+
+	air properties: 1.225, 340.,
+		1.,0.,0., cosine, 0., pi/StartTime, V0/2., half, 0.;
+	induced velocity: 1, rotor, 1, 2, induced velocity,
+		uniform, Omega, Rblade, delay, .99, correction, 1.2, 1.8;
+
+	joint: 11, spherical hinge,
+		2, reference, 21, null,
+		11, reference, 21, null;
+	joint: 21, distance with offset,
+		4, reference, 21, 0.,CutOut,-CutOut,
+		11, reference, 21, 0.,CutOut,0.,
+		CutOut;
+	joint: 41, rod with offset,
+		2, reference, 21, .05*Rblade,CutOut,0.,
+		11, reference, 21, .05*Rblade,0.,0.,
+		CutOut,
+		linear viscous, Damper*CutOut;
+	driven: 31, string, "Time < (StartTime + 1.)",
+	joint: 31, deformable hinge,
+		2, hinge, reference, 21, eye,
+		11, hinge, reference, 21, eye,
+		linear viscous, InitialDamp;
+	body: 11, 11,
+		Mblade,
+		reference, 21, (Rblade-CutOut)/2.,0.,0.,
+		diag,
+			1.,
+			((Rblade-CutOut)^2)/12.*Mblade,
+			((Rblade-CutOut)^2)/12.*Mblade;
+	aerodynamic body: 11, 11, induced velocity, 1,
+		reference, 21, (Rblade-CutOut)/2.,0.,0.,
+		reference, 21, 1, 0.,1.,0., 2, 0.,0.,1.,
+		Rblade-CutOut,
+		const, Cblade,
+		const, 0.,
+		const, 0.,
+		linear, Theta0*deg2rad, (Theta0+Thetaf)*deg2rad,
+		4,
+		naca0012;
+
+	joint: 12, spherical hinge,
+		2, reference, 22, null,
+		12, reference, 22, null;
+	joint: 22, distance with offset,
+		4, reference, 22, 0.,CutOut,-CutOut,
+		12, reference, 22, 0.,CutOut,0.,
+		CutOut;
+	joint: 42, rod with offset,
+		2, reference, 22, .05*Rblade,CutOut,0.,
+		12, reference, 22, .05*Rblade,0.,0.,
+		CutOut,
+		linear viscous, Damper*CutOut;
+	driven: 32, string, "Time < (StartTime + 1.)",
+	joint: 32, deformable hinge,
+		2, hinge, reference, 22, eye,
+		12, hinge, reference, 22, eye,
+		linear viscous, InitialDamp;
+	body: 12, 12,
+		Mblade,
+		reference, 22, (Rblade-CutOut)/2.,0.,0.,
+		diag,
+			1.,
+			((Rblade-CutOut)^2)/12.*Mblade,
+			((Rblade-CutOut)^2)/12.*Mblade;
+	aerodynamic body: 12, 12, induced velocity, 1,
+		reference, 22, (Rblade-CutOut)/2.,0.,0.,
+		reference, 22, 1, 0.,1.,0., 2, 0.,0.,1.,
+		Rblade-CutOut,
+		const, Cblade,
+		const, 0.,
+		const, 0.,
+		linear, Theta0*deg2rad, (Theta0+Thetaf)*deg2rad,
+		4,
+		naca0012;
+
+	joint: 13, spherical hinge,
+		2, reference, 23, null,
+		13, reference, 23, null;
+	joint: 23, distance with offset,
+		4, reference, 23, 0.,CutOut,-CutOut,
+		13, reference, 23, 0.,CutOut,0.,
+		CutOut;
+	joint: 43, rod with offset,
+		2, reference, 23, .05*Rblade,CutOut,0.,
+		13, reference, 23, .05*Rblade,0.,0.,
+		CutOut,
+		linear viscous, Damper*CutOut;
+	driven: 33, string, "Time < (StartTime + 1.)",
+	joint: 33, deformable hinge,
+		2, hinge, reference, 23, eye,
+		13, hinge, reference, 23, eye,
+		linear viscous, InitialDamp;
+	body: 13, 13,
+		Mblade,
+		reference, 23, (Rblade-CutOut)/2.,0.,0.,
+		diag,
+			1.,
+			((Rblade-CutOut)^2)/12.*Mblade,
+			((Rblade-CutOut)^2)/12.*Mblade;
+	aerodynamic body: 13, 13, induced velocity, 1,
+		reference, 23, (Rblade-CutOut)/2.,0.,0.,
+		reference, 23, 1, 0.,1.,0., 2, 0.,0.,1.,
+		Rblade-CutOut,
+		const, Cblade,
+		const, 0.,
+		const, 0.,
+		linear, Theta0*deg2rad, (Theta0+Thetaf)*deg2rad,
+		4,
+		naca0012;
+
+	joint: 14, spherical hinge,
+		2, reference, 24, null,
+		14, reference, 24, null;
+	joint: 24, distance with offset,
+		4, reference, 24, 0.,CutOut,-CutOut,
+		14, reference, 24, 0.,CutOut,0.,
+		CutOut;
+	joint: 44, rod with offset,
+		2, reference, 24, .05*Rblade,CutOut,0.,
+		14, reference, 24, .05*Rblade,0.,0.,
+		CutOut,
+		linear viscous, Damper*CutOut;
+	driven: 34, string, "Time < (StartTime + 1.)",
+	joint: 34, deformable hinge,
+		2, hinge, reference, 24, eye,
+		14, hinge, reference, 24, eye,
+		linear viscous, InitialDamp;
+	body: 14, 14,
+		Mblade,
+		reference, 24, (Rblade-CutOut)/2.,0.,0.,
+		diag,
+			1.,
+			((Rblade-CutOut)^2)/12.*Mblade,
+			((Rblade-CutOut)^2)/12.*Mblade;
+	aerodynamic body: 14, 14, induced velocity, 1,
+		reference, 24, (Rblade-CutOut)/2.,0.,0.,
+		reference, 24, 1, 0.,1.,0., 2, 0.,0.,1.,
+		Rblade-CutOut,
+		const, Cblade,
+		const, 0.,
+		const, 0.,
+		linear, Theta0*deg2rad, (Theta0+Thetaf)*deg2rad,
+		4,
+		naca0012;
+end: elements;
+
+# vim:ft=mbd

@@ -1,0 +1,125 @@
+# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/rigidpendulum,v 1.4 2009/07/08 09:17:24 masarati Exp $
+
+begin: data;
+	problem: initial value; # the default
+end: data;
+
+begin: initial value;
+	initial time: 0.;
+	final time: 1.;
+	time step: 1.e-3;
+
+	max iterations: 10;
+	tolerance: 1.e-6;
+end: initial value;
+
+begin: control data;
+	structural nodes: 
+		+1    # node in the constraint
+		+1    # node in the mass
+		+2    # distance: mass+ground
+	;
+	rigid bodies:
+		+1    # node in the constraint
+		+1    # node in the mass
+		+1    # distance: mass
+	;
+	joints:
+		+1    # node in the constraint: revolute
+		+1    # node in the mass: revolute
+		+2    # distance: distance+ground
+	;
+	gravity;
+end: control data;
+
+set: integer Pendulum = 1;
+set: integer Mass = 2;
+set: real M = 1.;
+set: real L = .5;
+set: real Omega0 = .2;
+
+reference: Pendulum,
+	reference, global, null,
+	reference, global, eye,
+	reference, global, null,
+	reference, global, 0., Omega0, 0.;
+reference: Mass,
+	reference, Pendulum, 0., 0., -L,
+	reference, Pendulum, eye,
+	reference, Pendulum, null,
+	reference, Pendulum, null;
+
+begin: nodes;
+	structural: 1000+Pendulum, dynamic, 
+		reference, Pendulum, null, 
+		reference, Pendulum, eye, 
+		reference, Pendulum, null, 
+		reference, Pendulum, null;
+
+	structural: 2000+Mass, dynamic,
+		reference, Mass, null,
+		reference, Mass, eye,
+		reference, Mass, null,
+		reference, Mass, null;
+
+	# no dynamic dofs (it will be fully grounded)
+	structural: 3000+Pendulum, static, 
+		reference, Pendulum, null,
+		reference, Pendulum, eye,
+		reference, Pendulum, null,
+		reference, global, null;
+	# "global" means no angular velocity!
+
+	structural: 3000+Mass, dynamic,
+		reference, Mass, null,
+		reference, Mass, eye,
+		reference, Mass, null,
+		reference, global, null;
+	# "global" means no angular velocity!
+end: nodes;
+
+begin: elements;
+	body: 1000+Mass, 1000+Pendulum, 
+		M,
+		reference, Mass, null,
+		# the problem is non-singular, despite the null inertia,
+		# because of the constraint that does not allow rotation
+		null;
+	joint: 1000+Mass, revolute pin,
+		1000+Pendulum, 
+			reference, Pendulum, null,
+			hinge, reference, Pendulum, 
+				1, 1.,0.,0., 3, 0.,1.,0.,
+		reference, Pendulum, null,
+		hinge, reference, Pendulum, 
+			1, 1.,0.,0., 3, 0.,1.,0.;
+
+	body: 2000+Mass, 2000+Mass,
+		M,
+		reference, Mass, null,
+		# the problem is non-singular, despite the null inertia,
+		# because of the constraint that does not allow rotation
+		null;
+	joint: 2000+Mass, revolute pin,
+		2000+Mass, 
+			reference, Pendulum, null,
+			hinge, reference, Pendulum, 
+				1, 1.,0.,0., 3, 0.,1.,0.,
+		reference, Pendulum, null,
+		hinge, reference, Pendulum, 
+			1, 1.,0.,0., 3, 0.,1.,0.;
+
+	body: 3000+Mass, 3000+Mass,
+		M,
+		reference, Mass, null,
+		# otherwise the problem would be singular ...
+		eye;
+	joint: 3000+Pendulum, clamp,
+		3000+Pendulum, node, node;
+	joint: 3000+Mass, distance,
+		3000+Pendulum,
+		3000+Mass,
+		const, L;
+
+	gravity: 0., 0., -1., const, 9.81;
+end: elements;
