@@ -9,8 +9,9 @@
   page and the documentation of the 
   [software version]({{ "Download" | relative_url }}) you're using. 
 * [Tutorials](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/tutorials.pdf)
-  <.  
-* Applications.  
+  ![pdf]({{ "/Images/pdf.gif" | relative_url }}).  
+* [Applications](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/applications.pdf)
+  ![pdf]({{ "/Images/pdf.gif" | relative_url }}).  
 * [Examples]({{ "Documentation/Examples" | relative_url }}). 
 * [FAQ]({{ "Documentation/FAQ" | relative_url }}). 
 * Browse some [publications]({{ "Documentation/Miscellanea" | relative_url }}) on the subject. 
