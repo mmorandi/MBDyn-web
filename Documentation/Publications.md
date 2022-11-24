@@ -103,7 +103,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   <a href="http://dx.doi.org/10.1126/science.1229163">doi:10.1126/science.1229163</a>.
 * P. Masarati "**Estimation of Lyapunov Exponents from Multibody Dynamics in Differential-Algebraic Form**" 
   <a href="http://www.uk.sagepub.com/journals/Journal202024">_Proc. IMechE Part K: J. Multi-body Dynamics_</a>, 
-  227(1):23-33, March 2013<br> 
+  227(1):23-33, March 2013 
   <a href="http://dx.doi.org/10.1177/1464419312455754">doi:10.1177/1464419312455754</a>.
 * P. Masarati "**A Formulation of Kinematic Constraints Imposed by Kinematic Pairs Using Relative Pose in Vector Form**" 
   _<a href="http://www.springer.com/engineering/journal/11044">Multibody System Dynamics</a>_, 
@@ -113,7 +113,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   "**Multibody Simulation of Integrated Tiltrotor Flight Mechanics, Aeroelasticity and Control**" 
   _<a href="http://www.aiaa.org/">AIAA</a> 
   <a href="http://www.aiaa.org/JournalDetail.aspx?id=3436">Journal of Guidance, Control, and Dynamics</a>_, 
-  35(5):1391-1405, September/October 2012<br> 
+  35(5):1391-1405, September/October 2012 
   <a href="http://dx.doi.org/10.2514/1.57309">doi:10.2514/1.57309</a>.
 * M. Mattaboni, P. Masarati, P. Mantegazza 
   "**Multibody Simulation of a Generalized Predictive Controller for Tiltrotor Active Aeroelastic Control**" 
@@ -124,12 +124,12 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * M. Benedict, M. Mattaboni, I. Chopra, P. Masarati 
   "**Aeroelastic Analysis of a Micro-Air-Vehicle-Scale Cycloidal Rotor**" 
   _<a href="http://www.aiaa.org/">AIAA</a> <a href="http://www.aiaa.org/JournalDetail.aspx?id=3050">Journal</a>_, 
-  2011, 49(11):2430-2443<br> 
+  2011, 49(11):2430-2443 
   <a href="http://dx.doi.org/10.2514/1.J050756">doi:10.2514/1.J050756</a>.
 * M. Ripepi, P. Masarati 
   "**Reduced Order Models Using Generalized Eigenanalysis**" 
   <a href="http://www.uk.sagepub.com/journals/Journal202024">_Proc. IMechE Part K: J. Multi-body Dynamics_</a>, 
-  2011, 225(1):52-65<br> <a href="http://dx.doi.org/10.1177/14644193JMBD254">doi:10.1177/14644193JMBD254</a>
+  2011, 225(1):52-65 <a href="http://dx.doi.org/10.1177/14644193JMBD254">doi:10.1177/14644193JMBD254</a>
 * L. Cavagna, P. Masarati, G. Quaranta 
   "**Coupled Multibody/CFD Simulation of Maneuvering Flexible Aircraft**" 
   _<a href="http://www.aiaa.org/JournalDetail.aspx?id=3435">Journal of Aircraft</a>_, 
@@ -149,23 +149,23 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * P. Masarati, M. Morandini 
   "**Intrinsic Deformable Joints**" 
   _<a href="http://www.springer.com/engineering/journal/11044">Multibody System Dynamics</a>_, 
-  23(4), 361-386.<br> <a href="http://dx.doi.org/10.1007/s11044-010-9194-y">doi:10.1007/s11044-010-9194-y</a>.
+  23(4), 361-386. <a href="http://dx.doi.org/10.1007/s11044-010-9194-y">doi:10.1007/s11044-010-9194-y</a>.
 * P. Masarati "**Direct Eigenanalysis of Constrained System Dynamics**" 
   <a href="http://www.uk.sagepub.com/journals/Journal202024">_Proc. IMechE Part K: J. Multi-body Dynamics_</a>, 
-  223(4), 335-342, 2009.<br> <a href="http://dx.doi.org/10.1243/14644193JMBD211">doi:10.1243/14644193JMBD211</a>.
+  223(4), 335-342, 2009. <a href="http://dx.doi.org/10.1243/14644193JMBD211">doi:10.1243/14644193JMBD211</a>.
 * William J. O'Connor and Alessandro Fumagalli 
   "**Refined Wave-Based Control Applied to Nonlinear, Bending, and Slewing Flexible Systems**" 
   _<a href="http://scitation.aip.org/ASMEJournals/AppliedMechanics">Journal of Applied Mechanics</a>_ 
-  Volume 76, Issue 4, 041005 (9 pages), July 2009.<br> 
+  Volume 76, Issue 4, 041005 (9 pages), July 2009. 
   <a href="http://dx.doi.org/10.1115/1.3086434">doi:10.1115/1.3086434</a>.
 * Alessandro Fumagalli and Pierangelo Masarati 
   "**Real-Time Computed Torque Control Using General-Purpose Multibody Software**" 
   _<a href="http://www.springer.com/engineering/journal/11044">Multibody System Dynamics</a>_ 
-  22(1), 47-68.<br> <a href="http://dx.doi.org/10.1007/s11044-009-9153-7">doi:10.1007/s11044-009-9153-7</a>.
+  22(1), 47-68. <a href="http://dx.doi.org/10.1007/s11044-009-9153-7">doi:10.1007/s11044-009-9153-7</a>.
 * Pierangelo Masarati and Marco Morandini 
   "**<a href="http://dx.doi.org/10.1007/s11044-008-9112-8">An Ideal Homokinetic Joint Formulation for General-Purpose Multibody Real-Time Simulation</a>**" 
   _<a href="http://www.springer.com/engineering/journal/11044">Multibody System Dynamics</a>_, 
-  Vol. 20, No. 3, October 2008, pp. 251-270.<br> 
+  Vol. 20, No. 3, October 2008, pp. 251-270. 
   <a href="http://dx.doi.org/10.1007/s11044-008-9112-8">doi:10.1007/s11044-008-9112-8</a>
 * Stefania Gualdi, Marco Morandini, Gian Luca Ghiringhelli 
   "**<a href="http://dx.doi.org/10.1016/j.ast.2008.02.002">Anti-skid induced aircraft landing gear instability</a>**" 
@@ -262,7 +262,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   <a href="http://eccomas-multibody.fsb.hr/">Multibody 2013</a>, Zagreb, July 1-4, 2013.
 * R. Malhan, P. Masarati, J. Baeder, I. Chopra 
   "**CFD-CSD Coupled Aeroelastic Analysis of Flexible Flapping Wings for MAV Applications**" 
-  54th AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference 2013, Boston, Massachusetts, 8-11 April 2013<br> 
+  54th AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference 2013, Boston, Massachusetts, 8-11 April 2013 
   <a href="http://dx.doi.org/10.2514/6.2013-1644">doi:10.2514/6.2013-1644</a>.
 * J. Sitaraman, C. Gundling, B. Roget, P. Masarati 
   "**Computational Study of Wind Turbine Performance and Loading Response to Turbulent Inflow Conditions**" 
@@ -548,7 +548,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * Michele Frumusa,
   "**Sviluppo di metodi per la modellazione e l'analisi gerarchica di sollecitazioni dinamiche in strutture aeronautiche**"
   ("Development of methods for the hierarchical modeling and analysis of dynamic loads in aeronautical structures",
-  in Italian)<br> Thesis, _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_,
+  in Italian) Thesis, _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_,
   A.A. 2006-2007 (April 24, 2008).
 * Fabio Maffei,
   "**<a href="http://www.fedoa.unina.it/1470/01/Maffei_Ingegneria_Aerospaziale_Navale_e_della_Qualita.pdf">Analisi di whirl flutter per un convertiplano di nuova generazione</a>**"
@@ -566,13 +566,14 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   Ph.D. Thesis, _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, 2004.
 * C. Mastai and M. Mastai
   "**Studio Numerico delle Manovre Simmetriche di un Convertiplano in Ambito Multicorpo**"
-  ("Numerical Investigation of Symmetric Maneuvers of a Tiltrotor within a Multibody Framework", in Italian)<br> _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 2002-2003.
+  ("Numerical Investigation of Symmetric Maneuvers of a Tiltrotor within a Multibody Framework", in Italian) _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 2002-2003.
 * F. Veronelli
   "**Analisi Numerica di Stabilità a Whirl-Flutter su un Modello Multicorpo di Convertiplano Tramite un Metodo di Decomposizione**"
-  ("Numerical Analysis of Whirl-Flutter Stability a Tiltrotor Multibody Model by Means of a Decomposition Method", in Italian)<br> _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 2002-2003.
+  ("Numerical Analysis of Whirl-Flutter Stability a Tiltrotor Multibody Model by Means of a Decomposition Method", in Italian)
+  _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 2002-2003.
 * M. Fava, S. Magnani
   "**Messa a Punto di un Modello Multicorpo di Convertiplano per Analisi di Stabilità a Whirl-Flutter**"
-  ("Set up of a Tiltrotor Multibody Model for Whirl-Flutter Stability Analysis", in Italian)<br> _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 2001-2002.
+  ("Set up of a Tiltrotor Multibody Model for Whirl-Flutter Stability Analysis", in Italian) _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 2001-2002.
 * P. Masarati
   "**<a href="http://www.aero.polimi.it/~masarati/Publications/thesis.pdf">Comprehensive Multibody AeroServoElastic Analysis of Integrated Rotorcraft Active Controls</a>**"
   Ph.D. Thesis, _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, February 2, 2000.
@@ -604,13 +605,14 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * Pierangelo Masarati
   **<a href="http://sbel.wisc.edu/documents/mbdyn_magic2.pdf">Flexible Body Simulation in MBDyn</a>**
   Machine Ground Interaction Consortium 2014, Univ. of Wisconsin, Madison, WI, December 9, 2014
-* Wayne Johnson<br>
+* Wayne Johnson
   **<a href="http://rotorcraft.arc.nasa.gov/Johnson_TP-2011-215971.pdf">Milestones in Rotorcraft Aeromechanics</a>**
   NASA/TP-2011-215971, May 2011.
-* Wayne Johnson<br>
+* Wayne Johnson
   **<a href="http://dx.doi.org/10.4050/JAHS.56.031001">Milestones in Rotorcraft Aeromechanics</a>**
-  (2010's Alexander A. Nikolsky Honorary Lecture)<br> _<a href="http://ahsjournal.org/">Journal of the American Helicopter Society</a>_, January 2011
-* Frank Colucci<br>
+  (2010's Alexander A. Nikolsky Honorary Lecture)
+  _<a href="http://ahsjournal.org/">Journal of the American Helicopter Society</a>_, January 2011
+* Frank Colucci
   **<a href="http://www.baldwintechnology.com/VertifliteSummer2011.pdf">The Mono Tiltrotor</a>**
   _<a href="http://www.vtol.org/vertiflite/">VERTIFLITE</a>_, Summer 2011
 * Kathy Barnstorff
@@ -701,7 +703,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   <a href="http://polimi.it">Politenico di Milano</a> (DAE/POLIMI)
   <a href="http://www.aero.polimi.it">Dipartimento di Ingegneria Aerospaziale</a>.
 * **<a href="http://sonicboom.larc.nasa.gov/wrats/gvtplan.html">GVT Test Plan</a>**
-  for the WRATS Soft-Inplane Rotor System<br> in the
+  for the WRATS Soft-Inplane Rotor System in the
   _Wing and Rotor Aeroelastic Testing System_ page at
   <a href="http://www.nasa.gov">NASA</a> <a href="http://www.larc.nasa.gov">LaRC</a>'s
   Aeroelasticity Branch (sometimes unreachable, sorry)
