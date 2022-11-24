@@ -5,7 +5,7 @@
 
 Users, developers and organizations can contribute in different ways:
 
-- improving the code; 
+- improving the code, fixing bugs, etc.; 
 - adding new packages/modules of general usefulness; 
 - improving the documentation, adding tutorials and test cases; 
 - suggesting generally useful add-ons to the todo list; 
