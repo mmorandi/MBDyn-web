@@ -7,7 +7,7 @@ Users, developers and organizations can contribute in different ways:
 
 - improving the code, fixing bugs, etc.; 
 - adding new packages/modules of general usefulness; 
-- improving the documentation, adding tutorials and test cases; 
+- improving the documentation, adding tutorials and test cases of general usefulness; 
 - suggesting generally useful add-ons to the todo list; 
 - establishing a grant with the 
   [Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) 
