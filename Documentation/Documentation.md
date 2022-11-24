@@ -14,7 +14,7 @@
   ![pdf]({{ "/Images/pdf.gif" | relative_url }}).  
 * [Examples]({{ "Documentation/Examples" | relative_url }}). 
 * [FAQ]({{ "Documentation/FAQ" | relative_url }}). 
-* Browse some [publications]({{ "Documentation/Miscellanea" | relative_url }}) on the subject. 
+* Browse some [publications]({{ "Documentation/Publications" | relative_url }}) on the subject. 
 * Here is some [research]({{ "Documentation/Research" | relative_url }}) involving MBDyn. 
 * Here are some links [links]({{ "Documentation/Links" | relative_url }}) about MBDyn. 
 

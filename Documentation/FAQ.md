@@ -351,7 +351,7 @@ By increasing this parameter from 0.0 (Backward Differentiation Formulas) to a h
 the local error of the algorithm is reduced. Practical values of 0.6 showed the 
 best trade-off between accuracy and stability of the algorithm. 
 More details may be found in the paper 
-"[Multistep Integration of Ordinary, Stiff and Differential-Algebraic Problems for Multibody Dynamics Applications]({{ "Documentation/Miscellanea#INTEGRATOR2001" | relative_url }})".
+"[Multistep Integration of Ordinary, Stiff and Differential-Algebraic Problems for Multibody Dynamics Applications]({{ "Documentation/Publications#INTEGRATOR2001" | relative_url }})".
 
 ## Can I compute eigenvalues with MBDyn?
 **MBDyn** performs direct time integration of Initial Value Problems (IVP), where the problem is written as a system of nonlinear Differential Algebraic Equations (DAE). Eigenvalues make little sense for this type of problems; all one could expect is the capability to solve the eigenproblem of the system obtained by linearizing the problem about an equilibrium solution. MBDyn implements this type of analysis with some limitations: 
