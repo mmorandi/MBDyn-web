@@ -325,7 +325,7 @@ and bug reports and feature requests to the issue tracking system, instead of ma
   * when you mail to the mailing, list more people will read your message, and thus you increase your chances of reaching someone that can actually help you solve your problem faster (and maybe better); 
   * the next time others encounter the same problem, they will have a chance to find the solution in the list archives, or in the issue tracking system; 
   * by submitting requests to the developers, you subtract their time from development; if you submit requests to the list, they may think answering to the list is a good investment, since the correspondence is directed to the whole community of users, and meant to stay because it gets archived. On the contrary, if you directly contact them, they may give your problem low priority, since it is no longer an investment; your request will end up at the bottom of their todo list, and eventually fade away. 
-Please note that the address [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it) 
+Please note that the address [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it) <i>(does not work!)</i>
 is intended to directly contact the **MBDyn** project in order to establish a <u>commercial relationship</u>; 
 it is by no means for direct private help.
  
