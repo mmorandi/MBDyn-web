@@ -77,7 +77,7 @@ and a brief description to appear in this list.
   * [REpower Systems AG]("http://www.repower.de/")
   * the **SI PARTE!** project 
  
-* [2006-...] [LIGO]({{ "https://www.mbdyn.org/userfiles/documents/research/ligo.html" | relative_url }})
+* [2006-...] [LIGO]({{ "userfiles/documents/research/ligo.html" | relative_url }})
 
   **MBDyn** is used to model the seismic support of the LIGO experiment.  
   Author: **Valerio Boschi** (vboschi AT ligo.caltech.edu) 
