@@ -35,7 +35,7 @@ Note: in command examples below, a `$` prefix means you can run the command as a
         - in other distros you should be able to locate the corresponding packages.
     - get **MBDyn**'s source code: you can use tarballs of official releases, or snapshots from the git repository
         - either get the **(OBSOLETE, UNTIL A NEW RELEASE IS OUT!)** official release: tarball from the website:
-            - `$ wget https://www.mbdyn.org/userfiles/downloads/mbdyn-1.7.3.tar.gz`
+            - `$ wget https://www.mbdyn.org/userfiles/downloads/mbdyn-1.7.3.tar.gz` `mbdyn-<version>`
               (replace `1.7.3` with the desired version)
             - untar and change directory into the source tree:
                   
