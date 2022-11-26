@@ -15,16 +15,16 @@
   ![pdf]({{ "/Images/pdf.gif" | relative_url }}).  
 * [Examples]({{ "Documentation/Examples" | relative_url }}). 
 * [FAQ]({{ "Documentation/FAQ" | relative_url }}). 
-* Browse some [publications]({{ "Documentation/Publications" | relative_url }}) on the subject. 
-* Here is some [research]({{ "Documentation/Research" | relative_url }}) involving MBDyn. 
-* Here are some links [links]({{ "Documentation/Links" | relative_url }}) about MBDyn. 
+* [Publications]({{ "Documentation/Publications" | relative_url }}) on the subject. 
+* [Research]({{ "Documentation/Research" | relative_url }}) involving MBDyn. 
+* [Links]({{ "Documentation/Links" | relative_url }}) about MBDyn. 
 
 ## Presentations
 
-* [MBDyn Overview](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/MBDyn-Overview.pdf): a general overview of multibody dynamics and MBDyn implementation and capabilities.
-* [MBDyn Primer](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/MBDyn-Primer.pdf): a primer, ideal to familiarize with MBDyn, before starting with the tutorials.
-* [MBDyn Hydraulics Modeling](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/MBDyn-Hydr.pdf): a quick introduction to the theory of the hydraulics library, with modeling examples.
-* [MBDyn Inverse Dynamics Modeling](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/MBDyn-InvDyn.pdf): a lecture on using multibody (and MBDyn) for trajectory planning of manipulators.
+* [MBDyn Overview](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/presentations/MBDyn-Overview.pdf): a general overview of multibody dynamics and MBDyn implementation and capabilities.
+* [MBDyn Primer](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/presentations/MBDyn-Primer.pdf): a primer, ideal to familiarize with MBDyn, before starting with the tutorials.
+* [MBDyn Hydraulics Modeling](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/presentations/MBDyn-Hydr.pdf): a quick introduction to the theory of the hydraulics library, with modeling examples.
+* [MBDyn Inverse Dynamics Modeling](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/presentations/MBDyn-InvDyn.pdf): a lecture on using multibody (and MBDyn) for trajectory planning of manipulators.
 
 ## Third Party Links
 
