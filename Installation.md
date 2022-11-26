@@ -15,7 +15,7 @@ The favourite installation method is by compiling it yourself. You can compile *
 - (GNU's) make,
 - a C++ compiler (e.g. GNU's g++) and
 - a C compiler (e.g. GNU's gcc);
-(Until **MBDyn** 1.7.3 you also needed a Fortran compiler, which is now optional; if not available, some legacy Fortran code will not be built.)
+(Until **MBDyn** 1.7.3 you also needed a Fortran compiler, which is now optional; if not available, some legacy Fortran code - of little usefulness - will not be built.)
  
 ## Linux users:
 
