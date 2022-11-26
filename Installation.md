@@ -11,8 +11,10 @@ The favourite installation method is by compiling it yourself. You can compile *
     - most Windows versions: using specific build environments (Cygwin, MSYS/MinGW; instructions at the very bottom)
 - in Mac: in progress. 
 
-[//]: <> commento
- 
+<!---
+commento
+-->
+
 **MBDyn** compilation and installation is based on GNU's autotools. You need:
 - (GNU's) make,
 - a C++ compiler (e.g. GNU's g++) and
