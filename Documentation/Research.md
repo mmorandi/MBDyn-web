@@ -7,8 +7,8 @@
 rotorcraft research. It has been used in the past, 
 and is currently used, in a number of research projects, 
 partly funded by the 
-"[Dipartimento di Ingegneria Aerospaziale]("https://www.aero.polimi.it")" 
-of the University "[Politecnico di Milano]("https://www.polimi.it")" 
+"[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it)" 
+of the University "[Politecnico di Milano](https://www.polimi.it)" 
 and partly funded by the industry and the national and European Institutions. 
 Research performed by independent institutions, 
 where **MBDyn** plays an important role, is also listed.
@@ -31,35 +31,35 @@ and a brief description to appear in this list.
   
   Grant agreement no. 323047 
  
-* [2010-2013] [ARISTOTEL - Aircraft and Rotorcraft Pilot Couplings - Tools and Techniques for Alleviation and Detection]({{ "/userfiles/documents/research/rpc/" | reletive_url }})
+* [2010-2013] [ARISTOTEL - Aircraft and Rotorcraft Pilot Couplings - Tools and Techniques for Alleviation and Detection]({{ "/userfiles/documents/research/rpc/" | relative_url }})
   
   Contract Number 266073
   ![ARISTOTEL logo]({{ "/userfiles/documents/research/rpc/aristotel_logo.png" | relative_url }})
  
-* [2010-...] [Fluid-Structure Interaction: TURNS]({{ "/userfiles/documents/research/fsi-turns/" | reletive_url }})
+* [2010-...] [Fluid-Structure Interaction: TURNS]({{ "/userfiles/documents/research/fsi-turns/" | relative_url }})
   
   **MBDyn** is being interfaced to TURNS, a compressible URANS solver developed by Jay Sitaraman, University of Wyoming. 
  
-* [2008-...] [MBMAC]({{ "/userfiles/documents/research/mbmac/" | reletive_url }})
+* [2008-...] [MBMAC]({{ "/userfiles/documents/research/mbmac/" | relative_url }})
 
   **MBDyn** represents the core of MBMAC - MultiBody 
-  Microsystems Analysis Code within [MAST/CTA]("http://www.mast-cta.org/"), 
+  Microsystems Analysis Code within [MAST/CTA](http://www.mast-cta.org/), 
   in cooperation with 
-  [University of Maryland's Microsystem Mechanics Center]("http://www.microsystems.umd.edu/")
+  [University of Maryland's Microsystem Mechanics Center](http://www.microsystems.umd.edu/)
  
 * [2008-...] Blender & MBDyn 
 
   Graphical User Interface for **MBDyn** based on blender.  
   Author: **Doug Baldwin**
-  Source: [http://sourceforge.net/projects/blenderandmbdyn/]("http://sourceforge.net/projects/blenderandmbdyn/")
+  Source: [http://sourceforge.net/projects/blenderandmbdyn/](http://sourceforge.net/projects/blenderandmbdyn/)
  
 * [2007-...] [Fluid-Structure Interaction: EDGE]({{ "/userfiles/documents/research/fsi-edge/" | relative_url }})
 
-  **MBDyn** is being interfaced to [EDGE]("http://www.foi.se/edge"), a compressible 
+  **MBDyn** is being interfaced to [EDGE](http://www.foi.se/edge), a compressible 
   URANS solver developed by FOI (Swedish Defense Research Agency).  
   Author: **Luca Cavagna**
  
-* [...-2007] [Package mbdyn]("http://mbdynsimsuite.sourceforge.net/project_doc/api/html/mbdyn-module.html")
+* [...-2007] [Package mbdyn](http://mbdynsimsuite.sourceforge.net/project_doc/api/html/mbdyn-module.html)
   
   This package motivation is to turn **MBDyn** into a 
   multibody dynamics library for Python, so then the user 
@@ -71,10 +71,10 @@ and a brief description to appear in this list.
   Graphical User Interface for **MBDyn** based on blender.  
   Author: John Kollman (mbdynug AT osengineer.com) 
  
-* [2007-...] [Wind Turbines]({{ "/userfiles/documents/research/windturbine/" | reletive_url }})
+* [2007-...] [Wind Turbines]({{ "/userfiles/documents/research/windturbine/" | relative_url }})
   An open effort; partially sponsored by: 
   * **The Italian Ministry of Foreign Affairs**: Con il contributo del Ministero degli Affari Esteri, Direzione Generale per la Promozione del Sistema Paese. 
-  * [REpower Systems AG]("http://www.repower.de/")
+  * [REpower Systems AG](http://www.repower.de/)
   * the **SI PARTE!** project 
  
 * [2006-...] [LIGO]({{ "userfiles/documents/research/ligo.html" | relative_url }})
@@ -88,11 +88,11 @@ and a brief description to appear in this list.
   Contract Number 030944
   ![NICETRIP logo]({{ "/userfiles/documents/research/NICETRIP-LOGO.png" | relative_url }})
  
-* [2006-2007] [ANTASME]("http://www.aero.polimi.it/Antasme/") - AdvaNced modelling Techniques for Aerospace SMEs 
+* [2006-2007] [ANTASME](http://www.aero.polimi.it/Antasme/) - AdvaNced modelling Techniques for Aerospace SMEs 
           A MATEO (<u>Ma</u>tching <u>Te</u>chnologies and <u>O</u>pportunities) project. 
 
   ANTASME uses **MBDyn** to simulate the deployment of deformable satellites.  
-  **MBDyn** is being extended to use [CppAD]("http://www.coin-or.org/CppAD/")
+  **MBDyn** is being extended to use [CppAD](http://www.coin-or.org/CppAD/)
   for automatic differentiation of  Jacobian matrix contributions.
 
   ![MATEO logo]({{ "/userfiles/documents/research/ANTASME.png" | relative_url }}){: width="150" }

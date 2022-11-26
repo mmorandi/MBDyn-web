@@ -90,7 +90,7 @@ Contributions from users are warmly welcome (there is a dedicated FAQ here).
 ##  Where can I get MBDyn? 
 You may get the latest release of the source code from the [download]({{ "Download" | relative_url }})
 page of this site; authorized users may also browse the 
-[git repository]("https://public.gitlab.polimi.it/DAER/mbdyn"). 
+[git repository](https://public.gitlab.polimi.it/DAER/mbdyn). 
  
 ##  Where can I get MBDyn binaries? 
 We do not distribute official binaries (basically, for lack of resources). Occasionally, we

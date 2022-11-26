@@ -10,8 +10,8 @@ Contract Number G4RD-CT-2002-00773 (Project Number GRD1-2001-40126)
 European Research Project. 
 
 The research contribution from 
-"[Dipartimento di Ingegneria Aerospaziale]("https://www.aero.polimi.it")" 
-of "[Politecnico di Milano]("https://www.polimi.it")" 
+"[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it)" 
+of "[Politecnico di Milano](https://www.polimi.it)" 
 is focused on the use of multibody 
 analysis to accurately predict the stability boundaries and the 
 dynamics of a tiltrotor wind tunnel model. 
