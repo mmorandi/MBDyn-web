@@ -107,7 +107,7 @@ and a brief description to appear in this list.
   Contract Number AIP3-CT-2003-502773
   ![FRIENDCOPTER logo]({{ "/userfiles/documents/research/FC-LOGO.gif" | relative_url }}){: width="250" }
  
-* [2003-... (defunct)] [LMS-DADS frontend]({{ "/userfiles/documents/research/dads-frontend.md.todo" | relative_url }})
+* [2003-... (defunct)] [LMS-DADS frontend]({{ "/userfiles/documents/research/dads-frontend.html" | relative_url }})
 
   by the PET Integrated Modeling and Test Environments Team 
   at the Army Research Laboratory/Aeronautical 
