@@ -34,28 +34,20 @@ Note: in command examples below, a `$` prefix means you can run the command as a
       (Note: the name of the latter package might change; for example, libnetcdf-c++4-dev)
         - in other distros you should be able to locate the corresponding packages.
     - get **MBDyn**'s source code: you can use tarballs of official releases, or snapshots from the git repository
-        - either get the **(OBSOLETE, UNTIL A NEW RELEASE IS OUT!)** official release: tarball from the website:
-            - `$ wget https://www.mbdyn.org/userfiles/downloads/mbdyn-1.7.3.tar.gz` `mbdyn-<version>`
-              (replace `1.7.3` with the desired version)
-            - untar and change directory into the source tree:
-                  
-	          `$ tar xzvf mbdyn-1.7.3.tar.gz`
-                  
-	          `$ cd mbdyn-1.7.3/`
-        - or obtain a snapshot from the git repository:
+        - either **(preferred!)** obtain a snapshot from the git repository:
             - visit the website https://gitlab.polimi.it/Pub/mbdyn
             - either
-                - select the develop branch from the menu, download a tarball, unpack it, and change directory into the source tree
-
-                  `$ tar xzvf mbdyn-develop.tar.gz`
-                  `$ cd mbdyn-develop`
-                - or (preferred!) copy the URL required to clone it with git, then change directory into the source tree and checkout the develop branch
+                - **(preferred!)** copy the URL required to clone it with git, then change directory into the source tree and checkout the develop branch
 
                   `$ git clone https://public.gitlab.polimi.it/DAER/mbdyn.git`
 
                   `$ cd mbdyn`
 
                   `$ git checkout develop`
+                - or select the develop branch from the menu, download a tarball, unpack it, and change directory into the source tree
+
+                  `$ tar xzvf mbdyn-develop.tar.gz`
+                  `$ cd mbdyn-develop`
             - if not yet available on your system, you may need to install GNU autotools; in Ubuntu:
 	    
               `# apt update`
@@ -66,6 +58,15 @@ Note: in command examples below, a `$` prefix means you can run the command as a
               `$ sh bootstrap.sh`
 
               (ignore errors related to build scripts in subdirectories, for now)
+
+        - or get the **(OBSOLETE, UNTIL A NEW RELEASE IS OUT!)** official release: tarball from the website:
+            - `$ wget https://www.mbdyn.org/userfiles/downloads/mbdyn-<version>.tar.gz`
+              (replace `<version>` with the desired version)
+            - untar and change directory into the source tree:
+                  
+	          `$ tar xzvf mbdyn-<version>.tar.gz`
+                  
+	          `$ cd mbdyn-<version>/`
     - from within the source tree, configure the package:
 
       `$ ./configure`
