@@ -53,7 +53,7 @@ and a brief description to appear in this list.
   Author: **Doug Baldwin**
   Source: [http://sourceforge.net/projects/blenderandmbdyn/]("http://sourceforge.net/projects/blenderandmbdyn/")
  
-* [2007-...] [Fluid-Structure Interaction: EDGE]({{ "/userfiles/documents/research/fsi-edge/" | reletive_url }})
+* [2007-...] [Fluid-Structure Interaction: EDGE]({{ "/userfiles/documents/research/fsi-edge/" | relative_url }})
 
   **MBDyn** is being interfaced to [EDGE]("http://www.foi.se/edge"), a compressible 
   URANS solver developed by FOI (Swedish Defense Research Agency).  
