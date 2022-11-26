@@ -42,7 +42,7 @@ directed to the original authors.
 * Check our [consulting services]({{ "Documentation/Consulting.html" | relative_url }}).
 * Links related to [Aerospace Engineering]({{ "/Documentation/Links.html#aerospace-engineering" | relative_url }}), 
   [Rotorcraft Dynamics]({{ "/Documentation/Links.html#rotorcraft-dynamics" | relative_url }}) and
-  [Multibody Analysis]({{ "/Documentation/Links.html#multibody-analysis" | relative_url }}).
+  [Multibody Analysis]({{ "/Documentation/Links.html#multibody-dynamics-multidisciplinary-analysis-and-related-software" | relative_url }}).
 
 ## Related projects: 
 * [Blendyn](https://github.com/zanoni-mbdyn/blendyn), a powerful post-processor
