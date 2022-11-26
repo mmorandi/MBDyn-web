@@ -57,6 +57,7 @@ defaults:
 #
 exclude:
   - userfiles/documents/examples/
+  - userfiles/documents/presentations/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
