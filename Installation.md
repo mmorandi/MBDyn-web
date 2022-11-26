@@ -44,7 +44,7 @@ Note: in command examples below, a `$` prefix means you can run the command as a
                   `$ cd mbdyn`
 
                   `$ git checkout develop`
-                - or select the develop branch from the menu, download a tarball, unpack it, and change directory into the source tree
+                - or alternatively select the develop branch from the menu, download a tarball, unpack it, and change directory into the source tree
 
                   `$ tar xzvf mbdyn-develop.tar.gz`
                   `$ cd mbdyn-develop`
@@ -59,7 +59,7 @@ Note: in command examples below, a `$` prefix means you can run the command as a
 
               (ignore errors related to build scripts in subdirectories, for now)
 
-        - or get the **(OBSOLETE, UNTIL A NEW RELEASE IS OUT!)** official release: tarball from the website:
+        - or **(OBSOLETE, UNTIL A NEW RELEASE IS OUT!)** get the latest official release: tarball from the website:
             - `$ wget https://www.mbdyn.org/userfiles/downloads/mbdyn-<version>.tar.gz`
               (replace `<version>` with the desired version)
             - untar and change directory into the source tree:
