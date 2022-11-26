@@ -14,31 +14,31 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 
   P. Masarati, M. Morandini, P. Mantegazza 
   "**An Efficient Formulation for General-Purpose Multibody/Multiphysics Analysis**"
-  [ASME J. Comput. Nonlinear Dyn.]("http://journaltool.asme.org/Content/JournalDescriptions.cfm?journalId=21&amp;Journal=CND"),
-  9(4):041001, October 2014, [doi:10.1115/1.4025628]("http://dx.doi.org/10.1115/1.4025628").
+  [ASME J. Comput. Nonlinear Dyn.](http://journaltool.asme.org/Content/JournalDescriptions.cfm?journalId=21&amp;Journal=CND),
+  9(4):041001, October 2014, [doi:10.1115/1.4025628](http://dx.doi.org/10.1115/1.4025628).
 
 * For the integration methods:
 
   H. Zhang, R. Zhang, A. Zanoni, P. Masarati
   "**Performance of implicit A-stable time integration methods for multibody system dynamics**"
   **(open access)**
-  [_Multibody System Dynamics_]("http://www.springer.com/engineering/journal/11044"), 2022,�
-  [doi:10.1007/s11044-021-09806-9]("https://doi.org/10.1007/s11044-021-09806-9").
+  [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044), 2022,�
+  [doi:10.1007/s11044-021-09806-9](https://doi.org/10.1007/s11044-021-09806-9).
 
 * For the finite volume beam model:
 
   O. A. Bauchau, P. Betsch, A. Cardona, J. Gerstmayr, B. Jonker, P. Masarati, V. Sonneville
   "**Validation of Flexible Multibody Dynamics Beam Formulations using Benchmark Problems**"
-  [_Multibody System Dynamics_]("http://www.springer.com/engineering/journal/11044"),
-  37(1):29-48, 2016, [doi:10.1007/s11044-016-9514-y]("http://dx.doi.org/10.1007/s11044-016-9514-y").
+  [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044),
+  37(1):29-48, 2016, [doi:10.1007/s11044-016-9514-y](http://dx.doi.org/10.1007/s11044-016-9514-y).
 
   and
 
   G. L. Ghiringhelli, P. Masarati, P. Mantegazza
   "**A Multibody Implementation of Finite Volume C0 Beams**"
-  [_AIAA Journal_]("https://arc.aiaa.org/journal/aiaaj"), 
+  [_AIAA Journal_](https://arc.aiaa.org/journal/aiaaj), 
   Vol. 38(1), January 2000, pp. 131-138,
-  [doi:10.2514/2.933]("http://dx.doi.org/10.2514/2.933").
+  [doi:10.2514/2.933](http://dx.doi.org/10.2514/2.933).
 
 ## Journal Papers:
 * A. Tamer "**Aeroelastic Response of Aircraft Wings to External 
@@ -724,5 +724,5 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   GA, USA, April 5-6, 2000 (AIAA 2000-1771)
 
 ## See also
-[this page]("http://www.aero.polimi.it/~masarati/Publications/index.html")
+[this page](http://www.aero.polimi.it/~masarati/Publications/index.html)
 for a more up-to-date list of publications.

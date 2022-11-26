@@ -14,10 +14,10 @@ development, while some independent users contributed portions of software.
 * Massimiliano Lanz
   
   coordinated many rotorcraft analysis developments.
-* [Gian Luca Ghiringhelli]("https://www.aero.polimi.it/index.php?id=263&amp;uid=898")
+* [Gian Luca Ghiringhelli](https://www.aero.polimi.it/index.php?id=263&amp;uid=898)
   
   coordinated many multidisciplinary analysis developments.
-* [Giampiero Bindolino]("https://www.aero.polimi.it/index.php?id=263&amp;uid=18628")
+* [Giampiero Bindolino](https://www.aero.polimi.it/index.php?id=263&amp;uid=18628)
 
   had an important role in interfacing the initial F77 version with free wake aerodynamics. He is also contributing his continuous support to the current version.
 * Gabriele Gilardi
@@ -29,20 +29,20 @@ development, while some independent users contributed portions of software.
 * Stefano Marazzani
 
   worked as an undergrad student at the beam, rotor and aerodynamic elements in the F77 version of the code.
-* [Pierangelo Masarati]("https://www.aero.polimi.it/index.php?id=263&amp;uid=102934")
+* [Pierangelo Masarati](https://www.aero.polimi.it/index.php?id=263&amp;uid=102934)
 
   in 1995 joined the **MBDin** team while undergraduate student, developing the 
   control-related genels and the piezoelectric beam elements. 
   In 1997, while Ph.D. student, he started recoding **MBDyn** in its current form (from F77 to C++). 
   He currently coordinates the development and maintenance of **MBDyn** and other related projects 
-  ([personal home page](http://home.aero.polimi.it/masarati/")).
+  ([personal home page](http://home.aero.polimi.it/masarati/)).
 * Felice Felippone
 
   as undergrad student, implemented the modal body back in the new version of the code.
 * Lamberto Puggelli
 
   as undergrad student, implemented the hydraulic components library.
-* [Giuseppe Quaranta](https://www.aero.polimi.it/index.php?id=263&amp;uid=134997")
+* [Giuseppe Quaranta](https://www.aero.polimi.it/index.php?id=263&amp;uid=134997)
 
   as undergrad student, parallelized the code by adding a Schur domain decomposition 
   solver and incorporating Metis as a partitioning tool, all under the MPI umbrella. 
@@ -53,30 +53,30 @@ development, while some independent users contributed portions of software.
 * Leonardo Cassan
 
   as undergrad student, worked at the ADAMS2MBDyn project, a translator 
-  from [ADAMS]("http://www.mscsoftware.com/") models in adm format into **MBDyn** 
+  from [ADAMS](http://www.mscsoftware.com/) models in adm format into **MBDyn** 
   raw input files. You can find what's available in `contrib/a2m` (essentially abandoned).
-* [Marco Morandini]("https://www.aero.polimi.it/index.php?id=263&amp;uid=112071")
+* [Marco Morandini](https://www.aero.polimi.it/index.php?id=263&amp;uid=112071)
 
   developed advanced elasticity models, working on the data structure, new integration 
   schemes, friction, tire and brake models and shell elements. He is a stable member of the team
-  ([personal home page](http://home.aero.polimi.it/morandini/")).
+  ([personal home page](http://home.aero.polimi.it/morandini/)).
 * Stefania Gualdi
 
   as Post Doc., worked at aircraft landing and ground handling qualities: 
   tire, shock absorber and the related element library implementation.
 * Michele Attolico
 
-  as Ph.D. student, exploited [RTAI]("https://www.rtai.org/") to allow 
+  as Ph.D. student, exploited [RTAI](https://www.rtai.org/) to allow 
   hard and user-space real-time simulations, and worked on real-time applications and improvements.
 * Matteo Martegani
 
   as graduate student, along with Marco Morandini, worked on the improvement of the 
-  [RTAI]("https://www.rtai.org/") support with netrpc using [RTNet]("http://www.rtnet.org/") 
+  [RTAI](https://www.rtai.org/) support with netrpc using [RTNet](http://www.rtnet.org/) 
   for remote hardware-in-the-loop simulation monitoring.
 * Patrick Rix
 
   as an independent user, contributed to the 
-  [NetCDF]("http://www.unidata.ucar.edu/software/netcdf/" output and to wind-turbine modeling aspects.
+  [NetCDF](http://www.unidata.ucar.edu/software/netcdf/) output and to wind-turbine modeling aspects.
 * Alessandro Fumagalli
 
   as Ph.D. student, worked at formulation and implementation aspects related to robotics. 
@@ -86,11 +86,11 @@ development, while some independent users contributed portions of software.
 
   as Ph.D. student, added Artificial Neural Network support, and modeled 
   flapping and cycloidal rotors in collaboration with 
-  [UMD]("http://www.microsystems.umd.edu/research/tasks.html").
+  [UMD](http://www.microsystems.umd.edu/research/tasks.html).
 * Luca Cavagna
 
   as Ph.D. student, worked at at [interfacing]({{ "/Documentation/Research" | relative_url }})
-  **MBDyn with external CFD solvers ([FOI]("http://www.foi.se/"'s [EDGE]("http://www.foi.se/edge") right now).
+  **MBDyn with external CFD solvers ([FOI](http://www.foi.se/)'s [EDGE](http://www.foi.se/edge) right now).
 * Michele Frumusa
 
   as undergrad, interfaced **MBDyn** with FEA software for detailed stress 
@@ -98,8 +98,8 @@ development, while some independent users contributed portions of software.
 * Tommaso Solcia
 
   as undergraduate student, interfaced **MBDyn** with 
-  [Scicos]("http://www.scilab.org/"; as Ph.D. student, interfaced **MBDyn** with 
-  [OpenFOAM]("http://www.openfoam.com/"/[AeroFOAM]("http://www.aero.polimi.it/freecase/").
+  [Scicos](http://www.scilab.org/); as Ph.D. student, interfaced **MBDyn** with 
+  [OpenFOAM](http://www.openfoam.com/)/[AeroFOAM](http://www.aero.polimi.it/freecase/).
 * Riccardo Vescovini
 
   as Ph.D. student, helped Marco Morandini in the development of the shell element.
@@ -107,23 +107,23 @@ development, while some independent users contributed portions of software.
 
   as an independent user, contributed several examples, bugfixes and modules, 
   significantly `module-octave`, the linesearch nonlinear solver, automatic differentiation, and more.
-* [Louis Gagnon]("http://louisgagnon.com/research/")
+* [Louis Gagnon](http://louisgagnon.com/research/)
 
   as visiting Ph.D. student, worked at tire models and vehicle simulation 
-  ([video interview about his stage]("http://youtu.be/iXXCCSZ4O3w"), in French). 
+  ([video interview about his stage](http://youtu.be/iXXCCSZ4O3w), in French). 
   He spent a few yeas as a postdoctoral fellow at Polimi and collaboratee to various **MBDyn** aspects. 
   He is also a mentor and administrator for the _Google Summer of Code_. He is now at
-  [Stuttgard's univeristy]("https://www.uni-stuttgart.de/").
-* [Andrea Zanoni]("https://www.aero.polimi.it/index.php?id=263&amp;uid=260632)
+  [Stuttgard's univeristy](https://www.uni-stuttgart.de/).
+* [Andrea Zanoni](https://www.aero.polimi.it/index.php?id=263&amp;uid=260632)
 
   as undergrad student, contributed to inverse dynamics of underdetermined systems 
   and muscle modeling, and is now contributing several other features. 
   He is also the developer of the 
-  [Blendyn]("https://github.com/zanoni-mbdyn/blendyn) 3D visualization post-processing interface.
+  [Blendyn](https://github.com/zanoni-mbdyn/blendyn) 3D visualization post-processing interface.
 * Matteo Fancello
 
   as undergraduate student, developed a module for the solution of non-smooth 
-  problems based on [Siconos]("http://siconos.gforge.inria.fr/".
+  problems based on [Siconos](http://siconos.gforge.inria.fr/).
 * Eduardo Okabe
 
   as visiting professor, contributed the `fab*` modules about gears, 
@@ -149,7 +149,7 @@ development, while some independent users contributed portions of software.
 * Runsen Zhang
 
   worked at co-simulation in general and specifically with 
-  [Chrono::Engine]("https://projectchrono.org/").
+  [Chrono::Engine](https://projectchrono.org/).
 
 Other undergraduate and graduate students may have contributed to the development 
 and testing of **MBDyn**, mainly by extending the element library.
