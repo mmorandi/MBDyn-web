@@ -96,4 +96,6 @@ These are used by [RT-MBDyn]({{ "/RT-MBDyn" | relative_url }}):
 * [Vortexje](http://vortexje.org/): open-source computational fluid dynamics (CFD) software that implements the source-doublet panel method for incompressible potential flow; can be coupled to MBDyn. 
 * [Wind Turbine/Research Development](http://opensourceecology.org/wiki/Wind_Turbine/Research_Development)
 
-If you think there is an error in any of the above reported links, or if you have suggestions about organizations that should be present in this list, please contact <a href="mailto:mbdyn@aero.polimi.it">mbdyn@aero.polimi.it</a>.
+If you think there is an error in any of the above reported links, 
+or if you have suggestions about organizations that should be present 
+in this list, please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
