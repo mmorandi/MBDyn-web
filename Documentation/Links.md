@@ -2,7 +2,9 @@
 ---
 # Links
 
-If you find out that a link in this page is dangling or out of date, or if you think that a link to your institution should appear in this page, please contact </span><a href="mailto:mbdyn@aero.polimi.it">mbdyn@aero.polimi.it</a><span>.</span></p>
+If you find out that a link in this page is dangling or out of date, 
+or if you think that a link to your institution should appear in this page, 
+please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
 
 ## Aerospace Research and Engineering
 ## Aerospace Engineering
