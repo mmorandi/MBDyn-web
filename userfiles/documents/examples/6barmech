@@ -1,9 +1,7 @@
-# $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/tests/benchmarks/6barmech/6barmech,v 1.2 2013/08/27 13:29:19 masarati Exp $
-#
 # MBDyn (C) is a multibody analysis code. 
 # http://www.mbdyn.org
 # 
-# Copyright (C) 1996-2013
+# Copyright (C) 1996-2022
 # 
 # Pierangelo Masarati	<masarati@aero.polimi.it>
 # Paolo Mantegazza	<mantegazza@aero.polimi.it>
@@ -208,3 +206,5 @@ begin: elements;
 
 	gravity: 0., 0., -1., 9.81;
 end: elements;
+
+# vim:ft=mbd

@@ -1,4 +1,4 @@
-** $Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/documentation/examples/hand-made-static.fem,v 1.3 2008/11/05 20:58:42 masarati Exp $
+** Hand-made MBDyn modal data file for static analysis
 ** MBDyn MODAL DATA FILE
 ** NODE SET "ALL" 
   
