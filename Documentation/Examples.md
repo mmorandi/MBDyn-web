@@ -9,7 +9,7 @@
 * [rigidpendulum](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidpendulum). 
 * [cantilever1](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever1). 
 * [cantilever1piezo](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever1piezo). 
-* [cantilever2](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever2) 
+* [cantilever5](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever5) 
   (also needs 
   [beam.nod](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.nod) 
   and 
