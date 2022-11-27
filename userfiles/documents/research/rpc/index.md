@@ -15,9 +15,10 @@ In general, when the effectiveness of the Automatic Flight Control System (AFCS)
 
 Less attention has been paid in the last decades in the open literature to Rotorcraft-Pilot Coupling (RPC), as opposed to APC. This implies a somewhat poorer knowledge of RPC phenomena, which are not yet specifically considered as design drivers by many rotorcraft manufacturers. 
 
-Only few works on this topic are available in the open literature. Recent efforts originated in Europe to investigate Aircraft- and Rotorcraft-Pilot Couplings (A/RPC). This page briefly recaps the role of the Aeroservoelasticity and Structural Dynamics research group of the "Dipartimento di Ingegneria Aerospaziale" (now Department of Aerospace Science and Technology) of Politecnico di Milano in several consortia that studied the problem mainly from the point of view of rotorcraft aeroelasticity and pilot biomechanics, to investigate the involuntary aspects of the problem (Pilot-Augmented Oscillations, PAO) and their potential impact on vehicle design. 
+Only few works on this topic are available in the open literature. Recent efforts originated in Europe to investigate Aircraft- and Rotorcraft-Pilot Couplings (A/RPC). This page briefly recaps the role of the Aeroservoelasticity and Structural Dynamics research group of the "Department of Aerospace Science and Technology" (formerly Dipartimento di Ingegneria Aerospaziale) of Politecnico di Milano in several consortia that studied the problem mainly from the point of view of rotorcraft aeroelasticity and pilot biomechanics, to investigate the involuntary aspects of the problem (Pilot-Augmented Oscillations, PAO) and their potential impact on vehicle design. 
 
 ## Related Research Projects
+* RPC (2019-2023).
 * ARISTOTEL (2010-2013, partially supported by the [European Commission](http://cordis.europa.eu/fp7/home_en.html), 7FP). 
 * [PRIN 2007](http://prin.miur.it/index.php?pag=2007) (2008-2010, partially supported by [MIUR](http://prin.miur.it/)). 
 * "Regione Lombardia" Research Startup Fellowship (2007-2009, supported by [Regione Lombardia](http://www.regione.lombardia.it/)). 

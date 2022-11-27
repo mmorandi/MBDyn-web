@@ -140,7 +140,7 @@ Any static/dynamic object that comes with **MBDyn** must be considered part of t
 ## Disclaimer
 The package **MBDyn** is provided **AS IS AND WITHOUT ANY EXPLICIT OR IMPLICIT WARRANTY**.
 
-The developers' team and the Dipartimento di Scienze e Tecnologie Aerospaziali (formerly Dipartimento di Ingegneria Aerospaziale) of the University "Politecnico di Milano"
+The developers and the Dipartimento di Scienze e Tecnologie Aerospaziali (formerly Dipartimento di Ingegneria Aerospaziale) of the University "Politecnico di Milano"
 shall not be considered responsible for any damage, including partial or total loss of data, resulting from the use of **MBDyn** or from any implementation bug of **MBDyn** or any part of it.
 
 As any software, **MBDyn** cannot be guaranteed to be totally bug-free. The user is also warned that there may be an appreciable difference between reality and the analytical models used in the implementation of the code, which are an idealization of reality.  Moreover, there may exist large uncertainties in the input data, whose collection and preparation is under the responsibility of the user.

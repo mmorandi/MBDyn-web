@@ -78,8 +78,8 @@ in the [license]({{ "Download#license" | relative_url }}) page.
  
 ##  Who maintains/develops MBDyn? 
 **MBDyn** was developed at the 
-[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it) 
-(now Dipartimento di Scienze e Tecnologie Aerospaziali) of the University 
+[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it) 
+(formerly Dipartimento di Ingegneria Aerospaziale) of the University 
 "[Politecnico di Milano](https://www.polimi.it)" 
 (DIA/Polimi) as a research tool that now has reached nearly industrial strength. 
 It has been made available to the free software community in 2001, 
@@ -539,16 +539,18 @@ Alternatively, the modal joint element can be coupled using the external modal v
 
 A peer library is provided (libmbc) with C, C++ and Python APIs.So far, 
 **MBDyn** has been successfully coupled to: 
+  * [DUST](https://www.dust-project.org/), a CFD solver based on vortex particles (VP) developed by "[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it)",
+    [Politecnico di Milano](https://www.polimi.it)
   * a CFD solver based on Boundary Element Method (BEM) developed by "[Dipartimento di Ingegneria Meccanica e
   Industriale](http://www.dimi.uniroma3.it/)", [University "Roma Tre"](http://www.uniroma3.it/) (C API) 
   * TURNS, a compressible URANS CFD solver developed by Jay Sitaraman, [University of Wyoming](http://www.uwyo.edu/) (Python API) 
   * OVERTURNS, the successor of TURNS developed at [University of Maryland](http://www.umd.edu/) (Python API) 
   * [OVERTURE](https://computation.llnl.gov/casc/Overture/), an incompressible URANS CFD solver developed by 
     [Lawrence Livermore National Laboratories](https://www.llnl.gov/) (C++ API) 
-  * NUVOLA, a Vortex Lattice free wake analysis developed by "[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it)", 
+  * NUVOLA, a Vortex Lattice free wake analysis developed by "[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it)", 
     [Politecnico di Milano](https://www.polimi.it) (Python API) 
   * [OpenFOAM](http://www.openfoam.com/) (Python API) 
-  * ROSITA, a proprietary solver developed by "[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it)", 
+  * ROSITA, a proprietary solver developed by "[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it)", 
     [Politecnico di Milano](https://www.polimi.it) 
  
 ## How can I prescribe the value of the time step based on the state of the problem?

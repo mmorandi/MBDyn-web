@@ -7,7 +7,7 @@
 rotorcraft research. It has been used in the past, 
 and is currently used, in a number of research projects, 
 partly funded by the 
-"[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it)" 
+"[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it)" (formerly Dipartimento di Ingegneria Aerospaziale)
 of the University "[Politecnico di Milano](https://www.polimi.it)" 
 and partly funded by the industry and the national and European Institutions. 
 Research performed by independent institutions, 

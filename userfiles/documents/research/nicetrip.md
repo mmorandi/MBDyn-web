@@ -11,7 +11,7 @@ Contract Number 030944
 6th FP European Research Project. 
 
 The research contribution from 
-"[Dipartimento di Ingegneria Aerospaziale](http://www.aero.polimi.it/en/)" of 
+"[Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/en/)" (at that time Dipartimento di Ingegneria Aerospaziale) of 
 "[Politecnico di Milano](https://www.polimi.it)" spans the entire project, 
 from numerical analysis of aerodynamics, flight mechanics, 
 aeroelasticity, structural dynamics, to wind-tunnel testing. 

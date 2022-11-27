@@ -10,7 +10,7 @@ Contract Number G4RD-CT-2002-00773 (Project Number GRD1-2001-40126)
 European Research Project. 
 
 The research contribution from 
-"[Dipartimento di Ingegneria Aerospaziale](https://www.aero.polimi.it)" 
+"[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it)" (at that time Dipartimento di Ingegneria Aerospaziale)
 of "[Politecnico di Milano](https://www.polimi.it)" 
 is focused on the use of multibody 
 analysis to accurately predict the stability boundaries and the 
