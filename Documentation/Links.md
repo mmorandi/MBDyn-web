@@ -40,6 +40,7 @@ please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
 * [MBS3D](http://mat21.etsii.upm.es/mbs/): an easy-to-use [open-source](http://www.opensource.org/) general-purpose program for the dynamic simulation of multibody systems. It is entirely programmed as plain-text in [MATLAB](http://www.mathworks.com/) and uses a very efficient and tested mathematical semi-recursive formulation. It covers open-chain and closed-loop systems. 
 * [MechXML](http://mat21.etsii.upm.es/mbs/MechXML/mechxml.htm): a draft for a new language to define Multibody Systems. It is based on XML (eXtensible Markup Language), the standard meta-language to data interchange. In the current version, only rigid bodies are being considered. 
 * [Open Dynamics Engine](http://ode.org/) 
+* [Project Chrono](https://projectchrono.org/) An Open Source Multi-Physics Simulation Engine
 * [Robotran](http://www.prm.ucl.ac.be/recherche/projets/robotran/): ROBOTRAN is a computer program which generates kinematic and dynamical models of multibody systems in a symbolic manner.
 
 **Aerospace**
