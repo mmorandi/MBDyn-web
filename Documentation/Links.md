@@ -9,7 +9,7 @@ please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
 ## Aerospace Research and Engineering
 ## Aerospace Engineering
 
-* The [_Dipartimento di Ingegneria Aerospaziale_](http://www.aero.polimi.it/) of the University "[_Politecnico di Milano_](http://www.polimi.it/)", Italy.
+* The [_Dipartimento di Scienze e Tecnologie Aerospaziali_](http://www.aero.polimi.it/) (Aerospace Science and Technology) of the University "[_Politecnico di Milano_](http://www.polimi.it/)", Italy.
   
   ![POLIMI logo]({{ "/Images/04_blu.gif" | relative_url }}){: width="212" height="65"}
   
