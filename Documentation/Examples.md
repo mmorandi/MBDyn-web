@@ -13,8 +13,7 @@
   (also needs 
   [beam.nod](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.nod) 
   and 
-  [beam.elm](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.elm)
-  ). 
+  [beam.elm](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.elm)). 
 * [actuator](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/actuator). 
 * [speedcontrol](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/speedcontrol). 
 * [rigidhelicopter](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter). 
