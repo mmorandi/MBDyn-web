@@ -2,6 +2,7 @@
 ---
 
 # News
+* The new Website is online.
 
 * Paper on multibody communities mentions MBDyn
   A paper describing the existence, consistency,
