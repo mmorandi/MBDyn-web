@@ -1,0 +1,104 @@
+Index: mbdyn/struct/totalj.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/totalj.cc,v
+retrieving revision 1.81
+diff -u -r1.81 totalj.cc
+--- mbdyn/struct/totalj.cc	8 Jan 2012 11:06:51 -0000	1.81
++++ mbdyn/struct/totalj.cc	31 Jan 2012 14:23:16 -0000
+@@ -76,7 +76,8 @@
+ #endif // USE_NETCDF
+ M(::Zero3), F(::Zero3),
+ ThetaDelta(::Zero3), ThetaDeltaPrev(::Zero3),
+-ThetaDeltaRemnant(::Zero3)
++ThetaDeltaRemnant(::Zero3),
++ThetaDeltaTrue(::Zero3)
+ {
+ 	/* Equations 1->3: Positions
+ 	 * Equations 4->6: Rotations */
+@@ -174,6 +175,8 @@
+ 
+ 	nConstraints = nPosConstraints + nVelConstraints
+ 		+ nRotConstraints + nAgvConstraints;
++
++	ThetaDeltaTrue = RotManip::VecRot((pNode1->GetRCurr()*R1hr).MulTM(pNode2->GetRCurr()*R2hr));
+ }
+ 
+ TotalJoint::~TotalJoint(void)
+@@ -736,6 +739,7 @@
+ 	}
+ 
+ 	ThetaDeltaPrev = Unwrap(ThetaDeltaPrev, ThetaDeltaRemnant);
++	ThetaDeltaTrue = Unwrap(ThetaDeltaTrue, RotManip::VecRot((pNode1->GetRCurr()*R1hr).MulTM(pNode2->GetRCurr()*R2hr)));
+ }
+ 
+ void
+@@ -1991,7 +1995,7 @@
+ 	case 4:
+ 	case 5:
+ 	case 6: {
+-		Vec3 Theta(Unwrap(ThetaDeltaPrev, ThetaDeltaRemnant));
++		Vec3 Theta(Unwrap(ThetaDeltaTrue, RotManip::VecRot((pNode1->GetRCurr()*R1hr).MulTM(pNode2->GetRCurr()*R2hr))));
+ 		return Theta(i - 3);
+ 		}
+ 
+@@ -2084,7 +2088,10 @@
+ Var_Omega(0),
+ #endif // USE_NETCDF
+ M(::Zero3), F(::Zero3),
+-ThetaDelta(::Zero3), ThetaDeltaPrev(::Zero3), ThetaDeltaRemnant(::Zero3)
++ThetaDelta(::Zero3),
++ThetaDeltaPrev(::Zero3),
++ThetaDeltaRemnant(::Zero3),
++ThetaDeltaTrue(::Zero3)
+ {
+ 	/* Equations 1->3: Positions
+ 	 * Equations 4->6: Rotations */
+@@ -2178,6 +2185,8 @@
+ 
+ 	nConstraints = nPosConstraints + nVelConstraints
+ 		+ nRotConstraints + nAgvConstraints;
++
++	ThetaDeltaTrue = RotManip::VecRot(RchT*pNode->GetRCurr()*tilde_Rnhr);
+ }
+ 
+ TotalPinJoint::~TotalPinJoint(void)
+@@ -2738,6 +2747,7 @@
+ 	}
+ 
+ 	ThetaDeltaPrev = Unwrap(ThetaDeltaPrev, ThetaDeltaRemnant);
++	ThetaDeltaTrue = Unwrap(ThetaDeltaTrue, RotManip::VecRot(RchT*pNode->GetRCurr()*tilde_Rnhr));
+ }
+ 
+ /* Inverse Dynamics: */
+@@ -3655,7 +3665,7 @@
+ 	case 4:
+ 	case 5:
+ 	case 6: {
+-		Vec3 Theta(Unwrap(ThetaDeltaPrev, ThetaDeltaRemnant));
++		Vec3 Theta(Unwrap(ThetaDeltaTrue, RotManip::VecRot(RchT*pNode->GetRCurr()*tilde_Rnhr)));
+ 		return Theta(i - 3);
+ 		}
+ 
+Index: mbdyn/struct/totalj.h
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/totalj.h,v
+retrieving revision 1.35
+diff -u -r1.35 totalj.h
+--- mbdyn/struct/totalj.h	8 Jan 2012 11:06:51 -0000	1.35
++++ mbdyn/struct/totalj.h	31 Jan 2012 14:23:16 -0000
+@@ -98,6 +98,7 @@
+ 	mutable Vec3 ThetaDeltaPrev;
+ 
+ 	Vec3 ThetaDeltaRemnant;
++	Vec3 ThetaDeltaTrue;
+ 
+ public:
+ 	/* Constructor */
+@@ -311,6 +312,7 @@
+ 	mutable Vec3 ThetaDeltaPrev;
+ 
+ 	Vec3 ThetaDeltaRemnant;
++	Vec3 ThetaDeltaTrue;
+ 
+ public:
+ 	/* Constructor */

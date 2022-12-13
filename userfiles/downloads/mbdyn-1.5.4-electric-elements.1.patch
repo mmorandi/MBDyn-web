@@ -1,0 +1,17 @@
+Index: mbdyn/elec/elec.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/elec/elec.cc,v
+retrieving revision 1.54
+diff -u -r1.54 elec.cc
+--- mbdyn/elec/elec.cc	6 Jan 2013 17:12:37 -0000	1.54
++++ mbdyn/elec/elec.cc	16 Jan 2013 12:06:13 -0000
+@@ -167,7 +167,8 @@
+ 		"discrete" "control",
+ 			"identification",
+ 			"control",
+-			"adaptive" "control"
++			"adaptive" "control",
++		NULL
+ 	};
+ 
+ 	// enum delle parole chiave

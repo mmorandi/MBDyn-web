@@ -1,0 +1,141 @@
+$Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/download/CHANGELOG-1.7.txt,v 1.6 2017/10/15 01:11:44 masarati Exp $
+
+MBDyn (C) is a multibody analysis code.
+http://www.mbdyn.org
+
+Copyright (C) 1996-2017
+
+Pierangelo Masarati     <masarati@aero.polimi.it>
+Paolo Mantegazza        <mantegazza@aero.polimi.it>
+
+
+MBDyn 1.7.3
+	Enhancements:
+		- added network byte order to drivers & element output streams
+		- added width/format for eigenanalysis output files
+		  (noted by Reinhard Resch)
+		- added relative output of follower force/couple
+		- refactored communication code (stream drivers and output
+		  elements) to support user-defined communicators (Luca Conti
+		  for GSoC 2017)
+		- added module-flightgear (Luca Conti for GSoC 2017)
+		- added automatic derivatives coefficient estimation
+		  (Reinhard Resch)
+	Backward compatibility issues:
+		- got rid of adams and motionview output support
+		- deprecated "drees 2" inflow model (identical to "dreese")
+	Known issues:
+	Bug fixes:
+		- fixed (harmless?) off-by-one read in fixed step drive
+		- fixed bugs in timestep control (Reinhard Resch)
+		- fixed default max time step (Reinard Resch)
+		- fixed build without libmbc (noted by Richard Crozier)
+		- fixed test if residual is NaN (Reinard Resch)
+		- fixed error message in strext (Richard Crozier)
+		- fixed typos and strengthened inflow models
+
+MBDyn 1.7.2
+	Enhancements:
+		- added contrib/Post (Marco Morandini)
+		- added python input file pre-processing (Marco Morandini)
+		- added support for Functional Mockup Interface (FMI) model
+		  exchange and co-simulation standard (with the contribution
+		  of Devyesh Tandon during Google Summer of Code 2016)
+		- added "raw" variants of buffer drive and output elem
+		- added private data to electric motor (Reinhard Resch)
+		- added initial current to electric motor (Reinhard Resch)
+		- added printing the CPU time used for each iteration
+		  (Reinhard Resch)
+		- reduce memory usage during initial assembly (Reinhard Resch)
+		- added netcdf output for eigenanalysis (Andrea Zanoni)
+		- added range checks to parsing (noted by Reinhard Resch)
+		- added several improvements related to automatic
+		  differentiation (Reinhard Resch)
+		- updated support for CodeAster modal element database
+		  generation (Reinhard Resch)
+		- improved electric motor (Reinhard Resch)
+		- improved module-hydrodynamic_plain_bearing (Reinhard Resch)
+			1) Multiple Gauss Points can be used in combination
+			   with axial movement of the shaft
+			2) It is possible to have eccentricities larger than
+			   one (Sommerfeld numbers are extrapolated linear).
+			3) Output can be generated for selected Gauss points
+			   only
+		- added support for user-defined time step control code
+		  (With the contribution of Ankit Aggarwal during Google Summer
+		  of Code 2016)
+	Backward compatibility issues:
+		- reworked output elements syntax
+	Known issues:
+		- aeromodal with rigid-body motion needs work
+		- deformable displacement joint initial assembly broken
+		- modal joint initial assembly with initial modal disp. broken
+	Bug fixes:
+		- fixed "log" of total* family
+		- fixed build of bufferstream* when sockets are not present
+		- fixed build with RTAI
+		- fixed output of drive callers (Reinhard Resch)
+		- fixed read check for excessive channel number in fixed
+		  step driver (noted by Davide Ivone)
+		- fixed time-dependent output meter
+		- fixed missing "forever" in double ramp descent final time
+		  (Reinhard Resch)
+		- fixed modal body assembly (Reinhard Resch)
+		- fixed solver initialization after first step
+		- fixed compilation in FreeBSD (Pedro Giffuni)
+		- fix Gauss integration with > 5 points (Reinhard Resch)
+
+MBDyn 1.7.1
+	Enhancements:
+		- added ModalBody: body connected to modal node
+		  (Reinhard Resch)
+		- added sprintf function to math parser
+		- added "single factor damping" to modal joint
+		- added "Rayleigh damping" to modal joint
+		  (suggested by Reinhard Resch)
+		- added check for symmetric/diagonal mass/stiffness
+		  matrices in modal joint
+		- added initial distance as "current" in distance joint
+		- added "buffer" stream drive and output element
+		- added skeleton for embedding solver(s)
+	Backward compatibility issues:
+		- "proportional damping" in modal joint replaced by
+		  "single factor damping"
+	Known issues:
+	Bug fixes:
+		- fixed possibility to turn off output of aero elements
+		- fixed structural forces in inverse dynamics
+		  (Andrea Zanoni, noted by Davide Ivone)
+		- fixed off-by-one bug in socket stream drive
+		- fixed invalid memory access bug in viscoelastic
+		  displacement joint Jacobian matrix initial assembly
+		  (Reinhard Resch); assembly still needs work
+		- fixed bug in EasyAnim post-processing of total joints
+		- fixed bug in strain gage priv data (noted by Jason)
+		- fixed EOF handling on arm
+		- fixed check for body connected to modal node
+		  (noted by Reinhard Resch)
+		- fixed parsing of modal joint "origin node" in string format
+		  (noted by Reinhard Resch)
+		- fixed bug in deformable displacement joint Jacobian
+		  matrix (Andrea Zanoni)
+		- fixed bug in stream drive echo, writing old instead of new
+
+MBDyn 1.7.0
+	Enhancements:
+		- (optional) new handling of math expressions and
+		  "string" drive caller (With the contribution
+		  of Ankit Aggarwal during Google Summer of Code 2015)
+	Backward compatibility issues:
+		- (input and) output of "remarks" changed
+	Known issues:
+		- aeromodal with rigid-body motion needs work
+		- deformable displacement joint initial assembly broken
+		- modal joint initial assembly with initial modal disp. broken
+	Bug fixes:
+		- fixed math parser bug with undefined vare at beginning
+		  of expression (noted by Andrea Zanoni)
+		- fixed potential buffer overflow when parsing long numbers
+		- fixed use of 'reference' for absolute/relative vector drives
+		  (noted by Doug Baldwin)
+

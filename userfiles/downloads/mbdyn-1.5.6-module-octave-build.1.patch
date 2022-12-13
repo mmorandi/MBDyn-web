@@ -1,0 +1,207 @@
+Index: include/Makefile.am
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/include/Makefile.am,v
+retrieving revision 1.9
+retrieving revision 1.10
+diff -u -r1.9 -r1.10
+--- include/Makefile.am	3 Sep 2012 20:17:51 -0000	1.9
++++ include/Makefile.am	25 Aug 2014 11:29:53 -0000	1.10
+@@ -1,5 +1,5 @@
+ include $(top_srcdir)/build/top.mk
+-## $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/include/Makefile.am,v 1.9 2012/09/03 20:17:51 masarati Exp $
++## $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/include/Makefile.am,v 1.10 2014/08/25 11:29:53 masarati Exp $
+ ## Process this file with automake to produce Makefile.in
+ ## Do not forget to run automake ( --add-missing ) when you modify Makefile.am
+ 
+@@ -9,11 +9,18 @@
+ 
+ all-local: mbdefs.h FORCE
+ 
++if USE_OCTAVE
++octbindir="${bindir}/octave-`octave-config --version`"
++else
++octbindir="${bindir}"
++endif
++
+ mbdefs.h: mbdefs.h.in Makefile
+ 	sed \
+ 		-e "s;%MODULE_LOADPATH%;@MODULE_LOADPATH@;" \
+ 		-e "s;%BINPATH%;${bindir};" \
+ 		-e "s;%OCTAVEPATH%;${octavedir};" \
++		-e "s;%OCTAVEBINPATH%;${octbindir};" \
+ 		$(srcdir)/$@.in > $@
+ 
+ uninstall-local: mbdefs.h
+Index: include/mbdefs.h.in
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/include/mbdefs.h.in,v
+retrieving revision 1.16
+retrieving revision 1.17
+diff -u -r1.16 -r1.17
+--- include/mbdefs.h.in	22 Jul 2014 19:19:08 -0000	1.16
++++ include/mbdefs.h.in	25 Aug 2014 11:29:53 -0000	1.17
+@@ -1,4 +1,4 @@
+-/* $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/include/mbdefs.h.in,v 1.16 2014/07/22 19:19:08 masarati Exp $ */
++/* $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/include/mbdefs.h.in,v 1.17 2014/08/25 11:29:53 masarati Exp $ */
+ /* 
+  * MBDyn (C) is a multibody analysis code. 
+  * http://www.mbdyn.org
+@@ -38,6 +38,7 @@
+ 
+ #define BINPATH                 "%BINPATH%"
+ #define OCTAVEPATH		"%OCTAVEPATH%"
++#define OCTAVEBINPATH "%OCTAVEBINPATH%"
+ 
+ #endif /* MBDEFS_H */
+ 
+Index: modules/module-octave/module-octave.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/modules/module-octave/module-octave.cc,v
+retrieving revision 1.15
+retrieving revision 1.16
+diff -u -r1.15 -r1.16
+--- modules/module-octave/module-octave.cc	22 Jul 2014 19:19:41 -0000	1.15
++++ modules/module-octave/module-octave.cc	25 Aug 2014 11:29:53 -0000	1.16
+@@ -1,4 +1,4 @@
+-/* $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/modules/module-octave/module-octave.cc,v 1.15 2014/07/22 19:19:41 masarati Exp $ */
++/* $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/modules/module-octave/module-octave.cc,v 1.16 2014/08/25 11:29:53 masarati Exp $ */
+ /* 
+  * MBDyn (C) is a multibody analysis code. 
+  * http://www.mbdyn.org
+@@ -891,9 +891,9 @@
+ 
+ 	feval("pkg", args, 0);
+ 
+-	bHaveADPackage = (error_state == 0);
++	bHaveADPackage = true; // Use finite differences in var/mbdyn_derivative.m if AD is not available
+ 
+-	if (!bHaveADPackage) {
++	if ((error_state != 0)) {
+ 		silent_cerr("warning: octave package for automatic forward differentiation is not available" << std::endl);
+ 		error_state = 0; // ignore error
+ 	}
+@@ -1244,12 +1244,13 @@
+ 	}
+ 
+ 	if (bFirstCall) {
+-		// octave scripts by default are installed here
+-		if (!AddOctaveSearchPath(BINPATH)) {
++		// octave .oct files by default are installed here
++		if (!AddOctaveSearchPath(OCTAVEBINPATH)) {
+ 			silent_cerr("OctaveInterface error: addpath(\"" << BINPATH << "\") failed" << std::endl);
+ 			throw ErrGeneric(MBDYN_EXCEPT_ARGS);
+ 		}
+ 
++		// octave .m files by default are installed here
+ 		if (!AddOctaveSearchPath(OCTAVEPATH)) {
+ 			silent_cerr("OctaveInterface error: addpath(\"" << OCTAVEPATH << "\") failed" << std::endl);
+ 			throw ErrGeneric(MBDYN_EXCEPT_ARGS);
+Index: var/mbdyn_derivative.m
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/var/mbdyn_derivative.m,v
+retrieving revision 1.3
+retrieving revision 1.5
+diff -u -r1.3 -r1.5
+--- var/mbdyn_derivative.m	22 Jul 2014 19:20:00 -0000	1.3
++++ var/mbdyn_derivative.m	25 Aug 2014 11:33:58 -0000	1.5
+@@ -17,6 +17,8 @@
+ ## @seealso{use_sparse_jacobians}
+ #################################################################################
+ 
++## $Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/var/mbdyn_derivative.m,v 1.5 2014/08/25 11:33:58 masarati Exp $
++
+ #################################################################################
+ ## Copyright (C) 2006, 2007 Thomas Kasper, <thomaskasper@gmx.net>
+ ##
+@@ -84,31 +86,68 @@
+ 
+ function [y, J] = mbdyn_derivative(F, x, varargin)
+   if nargin > 1
+-    if ( ischar(F) )
+-        f = feval(F, gradinit(x), varargin{:});
+-    else
+-        f = F(gradinit(x), varargin{:});
+-    endif
+- 
+-    if isgradient (f)
+-      y = f.x;
+-      J = f.J;
+-    else
+-      warning ("AD: function not differentiable or not dependent on input")
+-      y = f;
+-      m = numel (y);
+-      n = numel (x);
+-      if use_sparse_jacobians () != 0
+-        J = sparse (m, n);
++    if (3 == exist("gradinit", "file"))
++      f = feval(F, gradinit(x), varargin{:});
++   
++      if isgradient (f)
++        y = f.x;
++        J = f.J;
+       else
+-        J = zeros (m, n);
++        warning ("AD: function not differentiable or not dependent on input")
++        y = f;
++        m = numel (y);
++        n = numel (x);
++        if use_sparse_jacobians () != 0
++          J = sparse (m, n);
++        else
++          J = zeros (m, n);
++        endif
+       endif
+-    endif
+-  else usage ("[y, J] = mbdyn_derivative(F, x, varargin)");
+-  endif
+ 
+-  # FIXME: reshape needed for TplDriveCaller<Mat3x3>
+-  if ( isscalar(x) && ismatrix(y) )
+-    J = reshape(J, rows(y), columns(y));
++      # FIXME: reshape needed for TplDriveCaller<Mat3x3>
++      if ( isscalar(x) && ismatrix(y) )
++        J = reshape(J, rows(y), columns(y));
++      endif
++    else
++      y = feval(F, x, varargin{:});
++
++      if (~(isscalar(x) && ismatrix(y)))
++        J = zeros(length(y), length(x));
++      endif
++
++      for i=1:length(x)
++        dx = zeros(size(x));
++        dx(i) = sqrt(eps) * norm(x) + sqrt(eps);
++        dy_dx = (feval(F, x + dx, varargin{:}) - y)  / dx(i);
++
++        # FIXME: reshape needed for TplDriveCaller<Mat3x3>
++        if ( isscalar(x) && ismatrix(y) )
++          J = dy_dx;
++        else
++          J(:, i) = dy_dx;
++        endif
++      endfor
++    endif
++  else 
++    usage ("[y, J] = mbdyn_derivative(F, x, varargin)");
+   endif
+ endfunction
++
++%!function y=f2(x)
++%! y(1,1) = (x - 1) / (x + 1);
++%! y(1,2) = 1/(1+x)^2;
++%! y(2,1) = (x - 1) * (x + 1);
++%! y(2,2) = x + 1 / x;
++
++%!function y=f1(x)
++%!  y(1)=sin(x(1)) * tan(x(2)) + exp(x(3));
++%!  y(2)=cos(x(2)) + sin(x(3))^2 * x(1);
++
++%!test
++%! x = [0.57; 0.68; -1.3];
++%! [y,J]=mbdyn_derivative(@f1, x)
++
++%!test
++%! x = 20;
++%! [y, J]=mbdyn_derivative(@f2, x)
++

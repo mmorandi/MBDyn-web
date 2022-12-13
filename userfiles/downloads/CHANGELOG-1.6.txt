@@ -1,0 +1,63 @@
+$Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/download/CHANGELOG-1.6.txt,v 1.3 2015/06/17 16:11:59 masarati Exp $
+
+MBDyn (C) is a multibody analysis code.
+http://www.mbdyn.org
+
+Copyright (C) 1996-2014
+
+Pierangelo Masarati     <pierangelo.masarati@polimi.it>
+Paolo Mantegazza        <paolo.mantegazza@polimi.it>
+
+
+MBDyn 1.6.1
+	Enhancements:
+		- added hostname support to utils
+		- added module for file drive input from LeapMotion device
+		- rod without offset now works with displacement nodes
+		- added several modules (Reinhard Resch)
+		- added autodiff vectorialization (Reinhard Resch)
+		- added support for OpenBLAS (Reinhard Resch)
+		- added support for UDP to socket-based communication
+		- added configurable types to socket-based communication
+		- added Bezier-based rod joint (Andrea Zanoni)
+	Backward compatibility issues:
+	Known issues:
+		- aeromodal with rigid-body motion needs work
+		- deformable displacement joint initial assembly broken
+		- modal joint initial assembly with initial modal disp. broken
+	Bug fixes:
+		- fixed build with RTAI configured without inlining
+		- fixed math parser bug with function calls in expressions
+		- fixed deadlock in recursive string parser calls
+		- fixed echo of modal joint record 12 (noted by Timothy Jim)
+		- fixed Windows build of mbdyn_util_oct.oct (Reinhard Resch)
+		- fixed mode label in ModalExt output (noted by Timothy Jim)
+		- fixed (multithread) build in MinGW64 (Reinhard Resch)
+
+MBDyn 1.6.0
+	Enhancements:
+		- added central gravity field (suggested by Linh H. Phan)
+		- added automatic differentiation support to drive callers
+		  and constitutive laws (Reinhard Resch)
+		- added (optional) modal joint reaction forces output
+		- added runtime loadable file drivers
+		- added generic joystick driver (module-hid)
+		- added run-time loadable "description" registration
+		- added "namespace" stmt (module-namespace)
+		- added symbol table in namespaces (module-namespace)
+	Backward compatibility issues:
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fix module-octave build and scripts installation
+		  (Reinhard Resch)
+		- fix initial assembly of viscoelastic deformable joint
+		  (noted by Reinhard Resch)
+		- fix python detection (David Verelst)
+		- fix SparseSuite_config detection
+		  (Marco Morandini; noted by David Verelst)
+		- fixed (harmless) stmt parsing bug
+

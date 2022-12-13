@@ -1,0 +1,90 @@
+Index: mbdyn/base/dataman4.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/dataman4.cc,v
+retrieving revision 1.149
+diff -u -r1.149 dataman4.cc
+--- mbdyn/base/dataman4.cc	19 Jan 2012 10:09:24 -0000	1.149
++++ mbdyn/base/dataman4.cc	1 Feb 2012 19:42:56 -0000
+@@ -421,7 +421,7 @@
+ 							<< std::endl);
+ 					} else {
+ 						DEBUGLCOUT(MYDEBUG_INPUT, "element " << uL << std::endl);
+-						pE->SetOutputFlag(flag(1));
++						pE->SetOutputFlag(flag(1) | ElemData[Typ].uOutputFlags);
+ 						if (dynamic_cast<const Modal *>(pE)) {
+ 							OutputOpen(OutputHandler::MODAL);
+ 						}
+Index: mbdyn/base/elman.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/elman.cc,v
+retrieving revision 1.88
+diff -u -r1.88 elman.cc
+--- mbdyn/base/elman.cc	19 Jan 2012 10:09:24 -0000	1.88
++++ mbdyn/base/elman.cc	1 Feb 2012 19:42:56 -0000
+@@ -116,7 +116,7 @@
+ 	ElemData[Elem::AERODYNAMIC].OutFile = OutputHandler::AERODYNAMIC;
+ 	ElemData[Elem::AERODYNAMIC].Desc = "Aerodynamic";
+ 	ElemData[Elem::AERODYNAMIC].ShortDesc = "aero";
+-	ElemData[Elem::BEAM].uOutputFlags = AerodynamicOutput::OUTPUT_DEFAULT;
++	ElemData[Elem::AERODYNAMIC].uOutputFlags = AerodynamicOutput::OUTPUT_DEFAULT;
+ 
+ 	ElemData[Elem::HYDRAULIC].OutFile = OutputHandler::HYDRAULIC;
+ 	ElemData[Elem::HYDRAULIC].Desc = "Hydraulic";
+Index: mbdyn/struct/beam.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/beam.cc,v
+retrieving revision 1.100
+diff -u -r1.100 beam.cc
+--- mbdyn/struct/beam.cc	2 Jan 2012 20:18:14 -0000	1.100
++++ mbdyn/struct/beam.cc	1 Feb 2012 19:42:56 -0000
+@@ -1864,6 +1864,9 @@
+ 		} else if (HP.IsKeyWord("all")) {
+ 			uFlag = Beam::OUTPUT_EP_ALL;
+ 
++		} else if (HP.IsKeyWord("none")) {
++			uFlag = Beam::OUTPUT_NONE;
++
+ 		} else {
+ 			break;
+ 		}
+@@ -1890,6 +1893,11 @@
+ 			od = ReadOptionalOrientationDescription(pDM, HP);
+ 		}
+ 
++		if (uFlag == Beam::OUTPUT_NONE) {
++			// reset all
++			uFlags = Beam::OUTPUT_NONE;
++		}
++
+ 		uFlags |= uFlag;
+ 	}
+ }
+@@ -2131,7 +2139,9 @@
+ 	ReadOptionalBeamCustomOutput(pDM, HP, uLabel, Type, uFlags, od);
+ 
+ 	flag fOut = pDM->fReadOutput(HP, Elem::BEAM);
+-	fOut |= uFlags;
++	if (fOut) {
++		fOut |= uFlags;
++	}
+ 
+ 	/* Se necessario, interpola i parametri di rotazione delle sezioni */
+ 	if (b_I || bII) {
+Index: mbdyn/struct/beam2.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/beam2.cc,v
+retrieving revision 1.78
+diff -u -r1.78 beam2.cc
+--- mbdyn/struct/beam2.cc	2 Jan 2012 20:18:14 -0000	1.78
++++ mbdyn/struct/beam2.cc	1 Feb 2012 19:42:57 -0000
+@@ -1437,7 +1437,9 @@
+ 	ReadOptionalBeamCustomOutput(pDM, HP, uLabel, Type, uFlags, od);
+ 
+ 	flag fOut = pDM->fReadOutput(HP, Elem::BEAM);       
+-	fOut |= uFlags;
++	if (fOut) {
++		fOut |= uFlags;
++	}
+ 
+ 	/* Se necessario, interpola i parametri di rotazione delle sezioni */
+ 	if (f) {

@@ -1,0 +1,16 @@
+Index: mbdyn/base/socketstreamdrive.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/socketstreamdrive.cc,v
+retrieving revision 1.58
+diff -u -r1.58 socketstreamdrive.cc
+--- mbdyn/base/socketstreamdrive.cc	25 Jun 2015 18:36:37 -0000	1.58
++++ mbdyn/base/socketstreamdrive.cc	31 Dec 2015 14:04:40 -0000
+@@ -268,7 +268,7 @@
+ 		}
+ 
+ 		// copy values from buffer
+-		pMod->Modify(pdVal, &buf[0]);
++		pMod->Modify(&pdVal[1], &buf[0]);
+ 
+ 		if (!sOutFileName.empty()) {
+ 			for (int i = 1; i <= iNumDrives; i++) {

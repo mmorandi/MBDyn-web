@@ -1,0 +1,27 @@
+Index: mbdyn/struct/vehj4.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/vehj4.cc,v
+retrieving revision 1.5
+retrieving revision 1.7
+diff -u -r1.5 -r1.7
+--- mbdyn/struct/vehj4.cc	27 Oct 2011 13:47:10 -0000	1.5
++++ mbdyn/struct/vehj4.cc	5 Jan 2012 13:36:22 -0000	1.7
+@@ -48,8 +48,7 @@
+ 	doublereal dCoef)
+ {
+ 	/* M was updated by AssRes */
+-	Vec3 M(pNode1->GetRCurr()*(tilde_R1h.GetVec(3)*(dM*dCoef)));
+-	Mat3x3 MTmp(MatCross, M);
++	Mat3x3 MTmp(MatCross, M*dCoef);
+ 
+ 	WMA.Add(1, 1, MTmp);
+ 	WMA.Sub(4, 1, MTmp);
+@@ -917,7 +917,7 @@
+ 		ConstitutiveLaw1DOwner::Update(0., dOmega);
+ 	}
+ 
+-	Vec3 M(e1z*ConstitutiveLaw1DOwner::GetF());
++	M = e1z*ConstitutiveLaw1DOwner::GetF();
+ 
+ 	WorkVec.Add(1, M);
+ 	WorkVec.Sub(4, M);

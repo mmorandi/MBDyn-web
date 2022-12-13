@@ -1,0 +1,20 @@
+Index: modules/Makefile.am
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/modules/Makefile.am,v
+retrieving revision 1.54
+retrieving revision 1.55
+diff -u -r1.54 -r1.55
+--- modules/Makefile.am	26 Dec 2012 21:50:56 -0000	1.54
++++ modules/Makefile.am	8 Jan 2013 20:28:27 -0000	1.55
+@@ -38,9 +38,9 @@
+ 	-I../$(top_srcdir)/mbdyn/hydr \
+ 	-prefer-pic \
+ 	$(AM_CPPFLAGS) @CPPFLAGS@ $(AM_CFLAGS) @CFLAGS@
+-export LTF77COMPILE = @LIBTOOL@ --mode=compile @F77@ $(AM_FFLAGS) @FFLAGS@ \
++export LTF77COMPILE = @LIBTOOL@ --tag=F77 --mode=compile @F77@ $(AM_FFLAGS) @FFLAGS@ \
+ 	-prefer-pic
+-export LTFCCOMPILE = @LIBTOOL@ --mode=compile @FC@ $(AM_FFLAGS) @FFLAGS@ \
++export LTFCCOMPILE = @LIBTOOL@ --tag=FC --mode=compile @FC@ $(AM_FFLAGS) @FFLAGS@ \
+ 	-prefer-pic
+ export LIBTOOL = @LIBTOOL@
+ export MODULES_DIRS=@MODULES_DIRS@

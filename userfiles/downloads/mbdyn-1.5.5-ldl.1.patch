@@ -1,0 +1,42 @@
+Index: libraries/libmbmath/matvec3.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/libraries/libmbmath/matvec3.cc,v
+retrieving revision 1.59
+retrieving revision 1.61
+diff -u -r1.59 -r1.61
+--- libraries/libmbmath/matvec3.cc	6 Jan 2013 17:12:25 -0000	1.59
++++ libraries/libmbmath/matvec3.cc	28 Jan 2014 10:34:20 -0000	1.61
+@@ -210,7 +210,7 @@
+ 	d2 = pdMat[M22] - l21*l21*d1;
+ 	ASSERT(d2 >= 0.);
+ 	if (d2 > std::numeric_limits<doublereal>::epsilon()) {
+-		l32 = (pdMat[M32] + pdMat[M23])/(2.*d2);
++		l32 = ((pdMat[M32] + pdMat[M23])/2. - l21*l31*d1)/d2;
+ 	}
+ 
+ 	d3 = pdMat[M33] - l31*l31*d1 - l32*l32*d2;
+@@ -221,9 +221,9 @@
+ 	// L * z = v
+ 
+ 	// z = L^-1 * v
+-	doublereal z3 = v(3);
+-	doublereal z2 = v(2) - l32*z3;
+-	doublereal z1 = v(1) - l21*z2 - l31*z3;
++	doublereal z1 = v(1);
++	doublereal z2 = v(2) - l21*z1;
++	doublereal z3 = v(3) - l31*z1 - l32*z2;
+ 
+ 	// y = D^-1 * z
+ 	if (d1 > std::numeric_limits<doublereal>::epsilon()) {
+@@ -245,7 +245,10 @@
+ 	}
+ 
+ 	// x = L^-T * y
+-	return Vec3(z1, z2 - l21*z1, z3 - l31*z1 - l32*z2);
++	z2 -= l32*z3;
++	z1 -= l21*z2 + l31*z3;
++
++	return Vec3(z1, z2, z3);
+ }
+ 
+ bool

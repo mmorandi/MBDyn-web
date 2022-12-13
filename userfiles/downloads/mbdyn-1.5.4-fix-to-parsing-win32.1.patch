@@ -1,0 +1,56 @@
+Index: libraries/libmbutil/parsinc.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/libraries/libmbutil/parsinc.cc,v
+retrieving revision 1.53
+retrieving revision 1.54
+diff -u -r1.53 -r1.54
+--- libraries/libmbutil/parsinc.cc	6 Jan 2013 17:12:26 -0000	1.53
++++ libraries/libmbutil/parsinc.cc	4 Feb 2013 14:59:14 -0000	1.54
+@@ -257,7 +257,12 @@
+    	pf = NULL;
+    	pIn = NULL;
+ 
++#ifdef _WIN32
++	// open the file in non translated mode in order not to break seek operations
++   	SAFENEWWITHCONSTRUCTOR(pf, std::ifstream, std::ifstream(sfname, std::ios::binary));
++#else
+    	SAFENEWWITHCONSTRUCTOR(pf, std::ifstream, std::ifstream(sfname));
++#endif
+    	if (!(*pf)) {
+ #ifdef DEBUG
+ 		char *buf = getcwd(NULL, 0);
+Index: mbdyn/mbdyn.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/mbdyn.cc,v
+retrieving revision 1.144
+retrieving revision 1.145
+diff -u -r1.144 -r1.145
+--- mbdyn/mbdyn.cc	6 Jan 2013 17:12:31 -0000	1.144
++++ mbdyn/mbdyn.cc	4 Feb 2013 14:59:14 -0000	1.145
+@@ -442,7 +442,12 @@
+ 			mbp.CurrInputFormat = MBDYN;
+ 			mbp.CurrInputSource = MBFILE_OPT;
+  			mbp.sInputFileName = optarg;
++#ifdef _WIN32
++			// open the file in non translated mode in order not to break seek operations
++			mbp.FileStreamIn.open(mbp.sInputFileName.c_str(), std::ios::binary);
++#else
+ 			mbp.FileStreamIn.open(mbp.sInputFileName.c_str());
++#endif
+ 			if (!mbp.FileStreamIn) {
+ 				silent_cerr(std::endl 
+ 					<< "Unable to open file \""
+@@ -861,8 +866,12 @@
+ #endif /* USE_ADAMS_PP */
+ 			{
+ 				mbp.CurrInputFormat = MBDYN;
+-
++#ifdef _WIN32
++				// open the file in non translated mode in order not to break seek operations
++				mbp.FileStreamIn.open(mbp.sInputFileName.c_str(), std::ios::binary);
++#else
+ 				mbp.FileStreamIn.open(mbp.sInputFileName.c_str());
++#endif
+ 				if (!mbp.FileStreamIn) {
+ 					silent_cerr(std::endl 
+ 						<< "Unable to open file "

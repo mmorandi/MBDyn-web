@@ -1,0 +1,48 @@
+Index: mbdyn/base/drive.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/drive.cc,v
+retrieving revision 1.52
+retrieving revision 1.54
+diff -u -r1.52 -r1.54
+--- mbdyn/base/drive.cc	22 Jul 2014 19:19:17 -0000	1.52
++++ mbdyn/base/drive.cc	25 Jan 2015 09:10:29 -0000	1.54
+@@ -71,7 +71,12 @@
+ SH(0)
+ {
+ #ifdef USE_MULTITHREAD
+-	if (pthread_mutex_init(&parser_mutex, NULL)) {
++	pthread_mutexattr_t ma;
++	pthread_mutexattr_init(&ma);
++	pthread_mutexattr_settype(&ma, PTHREAD_MUTEX_RECURSIVE);
++	int rc = pthread_mutex_init(&parser_mutex, &ma);
++	pthread_mutexattr_destroy(&ma);
++	if (rc) {
+ 		silent_cerr("DriveHandler::DriveHandler(): mutex init failed"
+ 			<< std::endl);
+ 		throw ErrGeneric(MBDYN_EXCEPT_ARGS);
+@@ -363,6 +368,11 @@
+ 
+ 	} catch (MBDynErrBase e) {
+ 		silent_cerr("StringDrive: " << e.what() << std::endl);
++
++#ifdef USE_MULTITHREAD
++		pthread_mutex_unlock(&parser_mutex);
++#endif /* USE_MULTITHREAD */
++
+ 		throw e;
+ 
+ #if 0
+@@ -372,7 +382,12 @@
+ #endif
+ 
+ 	} catch (...) {
+-		silent_cerr("StringDrive error" << std::endl);
++		silent_cerr("StringDrive generic error" << std::endl);
++
++#ifdef USE_MULTITHREAD
++		pthread_mutex_unlock(&parser_mutex);
++#endif /* USE_MULTITHREAD */
++
+ 		throw;
+ 	}
+ 

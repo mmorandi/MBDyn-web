@@ -1,0 +1,532 @@
+$Header: /var/cvs/mbdyn/mbdyn/mbdyn-web/download/CHANGELOG-1.3.txt,v 1.1 2014/07/23 08:19:40 masarati Exp $
+
+MBDyn (C) is a multibody analysis code.
+http://www.mbdyn.org
+
+Copyright (C) 1996-2010
+
+Pierangelo Masarati     <masarati@aero.polimi.it>
+Paolo Mantegazza        <mantegazza@aero.polimi.it>
+
+
+MBDyn 1.3.18
+	Enhancements:
+		- added initial values for socket stream drive
+	Backward compatibility issues:
+		- fixed typo in angular velocity priv data string selection
+		  in total joint family
+	Known issues:
+	Bug fixes:
+		- fixed dof/eq description of driven elements
+		- added missing mbc_py_interface.py file
+
+MBDyn 1.3.17
+	Enhancements:
+		- improved sanity checks when using arpack for eigenanalysis
+		- improved error checking in fixed/variable step file driver
+		  (noted by Stefan van't'Hoff)
+		- added alpha-first generic aerodynamic element
+		- allow to fine-tune when initial eigenanalysis is performed
+		- added C++ interface to external forces peer library
+		- added "sample and hold" (Mattia Mattaboni)
+	Backward compatibility issues:
+	Known issues:
+	Bug fixes:
+		- loosely/not coupled ext force needs not set convergence
+		  (noted by Tingnan Zhang)
+		- fixed data manager cleanup
+		- fixed revolute joint private data "rz" computation
+		  (noted by Stefan van't'Hoff)
+		- fixed 2D mesh all-nodes automatic selection
+		  in CodeAster CMS macro
+		- fixed external structural mapping when no mapping required
+		- fixed viscous/viscoelastic symbolic constitutive laws
+		- fixed VHUB computation in module-aerodyn (Fanzhong Meng)
+		- fixed minor issues in external structural mapping
+		- fixed PrivDriveCaller ("element", "node") when used with arg
+		- fixed output flag in module-wheel2
+		- fixed case detection in structural node private data
+		  (noted by Louis Gagnon)
+		- fixed "log" scalar function arg positiveness check
+
+MBDyn 1.3.16
+	Enhancements:
+		- optimized full matrix handler operations
+		- support multiple eigenanalyses per simulation
+		- added "receive first" option to stream input
+		- added structural mapping scripts (Giuseppe Quaranta)
+		- improved external structural mapping force
+		  (Giuseppe Quaranta)
+		- allow user-defined induced velocity models
+		- allow induced velocity models based on sectional forces
+		- added "slug2kg" and "kg2slug" constants to symbol table
+		- reworked input manual
+		- added sanity checks in c81 data
+		- added "at most" max iterations feature
+		- added "timestep" drive caller
+		- added "mult" drive caller
+	Backward compatibility issues:
+		- edge interface changed, to conform to EDGE 5.1
+		- changed GenericAerodynamicForce input format
+		- aeromodal element syntax changed
+		- precision of some built-in symbol table constants increased
+		- TCL plugin fixed and moved to run-time loadable module
+	Known issues:
+	Bug fixes:
+		- fix EDGE communication (noted by Luca Cavagna)
+		- fix output meter initial output (noted by Doug Baldwin)
+		- fix "output every" in stream output (noted by Doug Baldwin)
+		- fix "input every" in stream input (noted by Doug Baldwin)
+		- fix GenericAerodynamicForce (noted by Stefan van't'Hoff)
+		- fixed max iterations count (off-by-one)
+
+	The features related to fluid-structure interaction introduced in this
+	release were partially supported by the School of Energy Resources of
+	the University of Wyoming
+
+MBDyn 1.3.15
+	Enhancements:
+		- added support for KLU (Marco Morandini)
+		- added "closest next" drive caller support
+		- added nodal external force support to peer library (mbc.h)
+		- added relative frame external force support
+		- added peer library libmbc with python wrapping
+		- added solver diagnostics output meter
+		- added structural mapping external force
+		- reworked user-defined element support
+	Backward compatibility issues:
+		- "run.time" is now "time" in NetCDF output
+		- scalar variables dropped "1" dimension in NetCDF output
+		- syntax of external structural force changed
+	Known issues:
+	Bug fixes:
+		- fixed modal mapping with reference node
+		- fixed socket cleanup in case of error
+
+MBDyn 1.3.14
+	Enhancements:
+		- added c81 data interpolation w/ Theodorsen unsteady aero
+	Backward compatibility issues:
+		- structural nodes "accelerations" needs "yes" or "no"
+		- Theodorsen unsteady aero needs be followed by "c81" keyword
+	Known issues:
+	Bug fixes:
+
+MBDyn 1.3.13
+	Enhancements:
+		- math symbol table reworked with STL
+		- added "direct" drive caller
+		- added NetCDF support to aerodynamic body & beam2/3
+		- added c81 data interpolation
+		- added reference configuration & indexes to eig output
+		- added extra info to inertia private data (Mattia Mattaboni)
+	Backward compatibility issues:
+		- TypedValue no longer inherits const'ness in assignments
+	Known issues:
+	Bug fixes:
+		- fixed type detection in GiNaC constitutive law
+
+	The features introduced in this release were partially sponsored
+	by REpower Systems AG
+
+MBDyn 1.3.12
+	Enhancements:
+		- added gust models for basic wind profiles
+		- added drop tolerance (Umfpack)
+		- added matrix scaling (Naive)
+	Backward compatibility issues:
+	Known issues:
+	Bug fixes:
+		- fixed build without sockets (noted by Subhasis Sarkar)
+		- fixed scalar filter when order == 1
+
+MBDyn 1.3.11
+	Enhancements:
+		- added peer libraries for modal external force (mbc.h)
+		- added NetCDF support to beam2/3
+		- added support for gust models run-time loading
+		- added piecewise constant shape
+		- added tip loss handling to aerodynamic elements
+		- added referenced direction capability to rigid body
+		  kinematics
+		- added modal mapping external modal force element
+	Backward compatibility issues:
+		- syntax of "modal" joint "diag damping" changed
+	Known issues:
+	Bug fixes:
+		- fixed nonzero angular velocity modal joint initial assembly
+		- fixed socket-based external force loose coupling
+		- fixed Theodorsen unsteady aero handling of multiple points
+		- fixed AerodynamicBeam2/3 AfterConvergence w/ int. states
+		- fixed "inertia" element when inertia tensor is singular
+		- fixed "diag damping" in "modal" joint
+		- fixed issues with rotor inflows at very low angular speed
+		  (Mattia Mattaboni; noted by Jinwei Shen)
+		- fixed preconditioning issue in matrix free solver
+		- fixed index bug in GenelStateSpaceMIMO::AssJac()
+		- fixed invalid density issue in rotor (noted by Jinwei Shen)
+		- fixed sanity check in transpose sparse matrix-vector mult.
+		- fixed realloc issue in subvector
+
+MBDyn 1.3.10
+	Enhancements:
+		- added accelerations output to dummy structural nodes
+		- added experimental cycloidal rotor inflow models
+		  (Mattia Mattaboni)
+		- added better Fortran compiler detection
+		- added referenced direction capability to "total joint"
+		  and "total pin joint" elements
+		- added support for variable step file driver
+		- added "const" variant of fixed/variable step file drivers
+		- added "echo" of socket stream file drivers
+		  (all three above suggested by Doug Baldwin)
+		- added "echo" of stream output elements
+		- added socket support to external force
+		- added general external modal force
+		- added viscous body element
+		- added accelerations priv data to dummy structural nodes
+		- added Jacobian matrix contribution of state space SISO/MIMO
+		  elements when input is a ScalarNode
+		- added embryonic Scicos interface (by Tommaso Solcia)
+	Backward compatibility issues:
+		- the "imposed displacement", "imposed displacement pin"
+		  and "imposed orientation" joints are now mimicked
+		  by "total joint" and "total pin joint"
+		- allow "position" in deformable hinge (ignored by now)
+		- the (implicit) label of "air properties" is now "1".
+		- "jacobian" in aerodynamic elements needs yes/no/<bool> arg
+	Known issues:
+	Bug fixes:
+		- fix error message when math parser unable to cast value
+		  (noted by Romuald Noret)
+		- only output valid frequencies if permuting with LAPACK
+		- fix non-blocking socket stream drivers/output elements
+		  (noted by Doug Baldwin)
+		- fix endless loop detection using "change" variable time
+		  step strategy (noted by Patrick Rix)
+		- detect whether "jacobian" is needed in aero elements
+		  (noted by Patrick Rix)
+		- fix strain output of deformable joint
+		- wait for creation of unix sockets
+
+MBDyn 1.3.9
+	Enhancements:
+		- allow initialization of SISO/MIMO state
+		- added mbd.vim syntax file
+		- added time-variant viscoelastic constitutive law
+		- added support for Euler 313 & 321 orientations
+	Backward compatibility issues:
+	Known issues:
+	Bug fixes:
+		- fix differential abstract node parsing of derivative
+		  initial value
+		- fix total joint describe dof/equation
+		- fix viscoelastic deformable joint jacobian
+
+MBDyn 1.3.8
+	Enhancements:
+		- permute and scale matrix for lapack eigenanalysis
+		- add frequency range for partial eigenanalysis output
+		- add (experimental) support for eigensolution with JDQZ
+		- allow setting initial value in modal joint card
+		- add incomplete FEM file detection to modal joint
+		  (noted by Luca Cavagna)
+		- add "attached" viscous/viscoelastic deformable joint
+		  and "invariant" elastic deformable joint
+		  (partially contributed by Doug Baldwin)
+		- add Jacobian of aerodynamic body/beam2/beam3
+		  (contributions by Alessandro Fumagalli)
+		- add 2D unsteady Theodorsen model (Mattia Mattaboni)
+		- add internal states support in aerodynamic body/beam2/beam3
+		- add support for scalar values to discrete control elem
+		- honor default output orientation for reference frames
+		- add echo of C81 data
+		- add '%' operator to math parser
+		- add over/underflow check in math parser
+		  (noted by Patrick Rix)
+	Backward compatibility issues:
+		- the format of the modal joint output changed
+		- the format of the modal force input changed
+		- the "imposed displacement" and "imposed orientation"
+		  joints have been removed; use the "total joint" instead
+	Known issues:
+		- RTAI mailboxes have problems...
+	Bug fixes:
+		- fixed naive solver default pivot factor
+		  (noted by Kristopher Ellis)
+		- fixed consistency checks in modal joint/force input
+		  (noted by Luca Cavagna)
+		- fixed modal joint SetValue() (noted by Luca Cavagna)
+		- fixed electric elements input
+		- fixed consistently honor drive caller references
+		- try to reduce time step in case of divergence
+		  (Marco Morandini, noted by Patrick Rix)
+
+MBDyn 1.3.7
+	Enhancements:
+		- add {xyz}unitvec function to model namespace
+		- release module-aerodyn for wind-turbine modeling
+		- struct force/couple with 3D drive (supersedes original)
+		- downgrade linear viscoelastic const. laws as appropriate
+	Backward compatibility issues:
+		- runtime loadable modules now loaded as libmodule-<name>.la
+		- syntax of force elements changed
+		- output format of force elements changed
+		- naive is the default solver unless umfpack is available;
+		  y12 is optional, built by default unless explicitly disabled
+	Known issues:
+	Bug fixes:
+		- fix libtool handling of modules (Marco Morandini)
+		- fix absolute internal force output
+		- fix Code Aster macros install path (noted by Tomislav Maric)
+		- fix exception handling in GiNaC constitutive law
+		  (noted by Christophe Trophime)
+		- write file/line number in error when a variable is redefined
+		- fix eigenvalue postprocessing
+		- fix sqrt() arg checking (0 is valid)
+
+MBDyn 1.3.6
+	Enhancements:
+	Backward compatibility issues:
+	Known issues:
+	Bug fixes:
+		- fix plane hinge family eq. description
+		- fix (hacked) build on Mac 10.5.X (Leopard)
+		  (noted by Min Mao)
+		- fix LAPACK detection (noted Shreyas Ananthan)
+		- fix type in aerod2.f (noted Shreyas Ananthan)
+		- fix build error in GPC-related elements
+		- fix and improve eigenanalysis options detection
+		- fix MSYS/MinGW build
+
+MBDyn 1.3.5
+	Enhancements:
+		- rework exception handling
+		- allow to control convergence test
+		- allow interrupt within iterations (CTRL^C twice)
+		- add support for generic external forces
+		- add file-based interface with EDGE
+		- allow socket stream element to output all kinematics
+		- add POSIX soft real-time support
+		- add "other {position,orientation,node}" reference types
+		- add "abort if broken" keyword to stream output elements
+		- add RTAI-based motion output
+		- add embryonic relative frame dynamics & aerodynamics
+		- clamp joint more resilient to large transient violations
+		- add direct eigensolution based on LAPACK & ARPACK
+		- use HP's atomic_ops for spinlock in multithread
+		  (by Marco Morandini)
+	Backward compatibility issues:
+		- now immediate abort requires CTRL^C three times
+		- changed real-time args order (not backward compatible)
+		- changed stream output elements default port (to 9011)
+	Known issues:
+	Bug fixes:
+		- fix "cardano hinge" keyword detection (Marco Morandini)
+		- fix radial flow correction
+		- fix structural node acceleration priv data
+		  (noted by Alessandro Colombo)
+		- fix check for file drivers early dereferencing
+		  (noted by Doug Baldwin)
+		- do not remove module dir while making distclean
+		- fix check for module load early call
+		  (noted by Riccardo Gori)
+		- minor fix to clamp joint inverse dynamics
+
+MBDyn 1.3.4-Beta
+	Enhancements:
+		- configurable orientation output for gimbal rotation joint
+		- more beam private data available
+		- add run-time computation of sets' inertia properties
+		- abs2rel.awk handles accelerations and RefOnly mode
+		- preliminary support for substructure output
+		  (by Michele Frumusa)
+		- RTAI output uses stream output syntax for values
+		- allow drives as input to scalar filter/state space genels
+		- allow state space filters in descriptor form
+		- add "TimeStep" and "Step" vars to math parser
+		- allow fixed step driver to count steps
+		- add provisions to combine multiple gust models
+		- allow binding to air properties
+		- add bailout support to drives (Marco Morandini)
+		- allow controllable/observable canonical forms
+		  of scalar filters
+		- add balancing of state space filter matrices
+		- allow to use strings for FEM labels in modal joint
+		- add "from file" keyword for FEM node number in modal joint
+	Backward compatibility issues:
+		- the binary format of modal fem data changed;
+		  old files "should" be still usable
+	Known issues:
+		- odd operator precedence for power/unary minus
+	Bug fixes:
+		- MSYS/MinGW needs to explicitly include stdint.h
+		- MSG_WAITALL is not defined on Cygwin
+		- driven joints need to be used in initial assembly
+		- fix uninitialized parameter in beam2 initial assembly
+		- fix variable init and assignment in math parser
+		  (thanks to Alessandro Fumagalli)
+		- fix "allow nonroot" in RTAI support
+		- fix tic count initialization in RTAI support
+		- fix optional log process execution in RTAI support
+		- fix linear scalar function input
+		- fix crash when using model namespace too early
+		- fix nested elements usage during initial assembly
+		- fix scalar filter (using state space SISO)
+		- fix one-time leak in modal joint
+		- fix crasher in revolute hinge friction dof/eq description
+		- fix one-time leak in elements with friction
+		- fix Crank-Nicolson spelling
+
+MBDyn 1.3.3-Beta
+	Enhancements:
+		- add OpenMPI support
+		- allow accelerations in external force output
+		- allow accelerations in external modal force output
+		- add support for nested elements
+		- add elastic and viscous variants of nlsf/nlp const. laws
+		- add dof/equation description to solution/residual output
+		- add dof description to linear solver diagnostics
+		- add support for octave-compatible sparse matrix output
+	Backward compatibility issues:
+	Known issues:
+		- document limitation of invariant angular const. law wrapper
+	Bug fixes:
+		- fix Schur matrix/vector handlers destructors
+		- fix solver first step with Schur data manager
+		- fix array allocation when --enable-debug
+		- fix Jacobian of invariant angular const. law wrapper
+		- allow references in invariant angular const. law wrapper
+		- fix c81 table lookup
+
+MBDyn 1.3.2-Beta
+	Enhancements:
+		- added "tanh" drive caller
+		- allow elastic/viscous variants of nlsf/nlp const. laws
+		  (suggested by Rudi Jaeger)
+		- rework logical operators on math data structures
+		- add relative private data to structural nodes
+		- allow using drives as output values in streams
+		  (noted by Rudi Jaeger)
+		- add framework for joint regularization
+		  (suggested by Alessandro Fumagalli)
+		- add select timeout to stream drives (patch by Rudi Jaeger)
+		- add invariant angular constitutive law wrapper
+		- add temperature and training dependent const. law wrapper
+		- add modal force
+		- add external modal force (file-based)
+		- add boolean type to math parser
+		- better handling of boolean expressions
+		- NetCDF output of inertia
+		- NetCDF listing of node/element labels
+	Backward compatibility issues:
+		- removed (useless) '-a' and '-n' options
+	Known issues:
+	Bug fixes:
+		- fix "remark" in combination with -s
+		- only default to linear elastic for 1D constitutive laws
+		  (noted by Rudi Jaeger)
+		- fix ann viscoelastic constitutive law
+		- fix symbolic viscoelastic/symbolic 1D constitutive law
+		  (noted by Mattia Mattaboni)
+		- reset ANN structure (noted by Mattia Mattaboni)
+		- allow accelerations in dynamic node's private data
+		  even if not explicitly enabled (noted by Rudi Jaeger)
+		- fix gimbal formulation (noted by Marco Morandini,
+		  thanks to CppAd)
+		- fix accelerations output (noted by Michele Frumusa)
+		- matrix handlers: copy constructor must be private
+		- fix issue with external force (file-based)
+		- fix sign(0) (= 0) in math parser
+
+MBDyn 1.3.1-Alpha
+	Enhancements:
+		- added simple thermo framework (Marco Morandini)
+		- added (experimental) third order step solver
+		  (by Marco Morandini)
+		- added TAUCS linear solver (experimental) (by Marco Morandini)
+		- added "ad hoc" (Radau IIA) third-order integrator
+		- automated installation of share data in $prefix/share
+		- reworked support for EasyAnim
+		- added drive displacement and drive displacement pin joints
+		- added cubic elastic and viscoelastic constitutive laws
+		- added capability to run static analyses with gravity
+		  and reference centrifugal forces
+		- added access to modal element FEM nodes position,
+		  velocity and acceleration as private data
+		- added truncated Fourier series drive
+		- added generic external forces for loose/tight coupling
+		  with external software via files
+		- added support for user-defined drives
+		- added drive derivative where appropriate
+		- added support for user-defined constitutive laws
+		- added scalar function-based drive caller
+		- added support for user-defined scalar functions
+		- added scalar function-based constitutive laws
+		- improved double viscoelastic constitutive law
+		- added support for streamed output for EasyAnim
+		- added extrapolation to fixed step file driver
+		- added "air properties" private data
+		- added priv data to nodes
+		- added "node" drive, in analogy to "element" drive
+		- added preliminary NetCDF binary output support
+		  (thanks to Patrick Rix)
+		- added node priv data plugin to math parser
+		- added 3D and 6D support for GiNaC-based symbolic const. law
+		- added invariant deformable hinge joint (needs work)
+		- added imposed displacement joint (and pin)
+		- added reaction moments to drive hinge private data
+		- added "exp" scalar function
+		- added configurable orientation output
+		- added support for new orientation output to abs2rel.awk
+		- added support for "accelerations" in "default output"
+		- added SubMatrix helpers to add Vec3 straight and trasposed
+		- added TotalJoint (Alessandro Fumagalli)
+		- added model connectivity description
+		- added A' * x = b support in solution manager
+		- added TotalPinJoint
+		- added support for run-time modules in Fortran 90
+		- added support for scalar functions in model namespace
+		- added Chebychev polynomials as scalar function
+		- added units namespace module based on UNIDATA's UDUNITS
+		- misc. cleanup to allow building with MinGW
+		- added nonlinear constitutive laws based on scalar functions
+		  (sponsored by Hutchinson CdR; acks to Dr. Daniel Benoualid)
+		- added "pivot" dummy node (suggested by Nicola Turini)
+		- added support for private data in driven elements
+	Backward compatibility issues:
+		- per-element output removed from modal joints
+		- spherical hinge output now refers to node 1 instead of 2
+		- "conservative" forces and couples renamed to "absolute"
+		- remove "isotropic" from "symbolic" constitutive laws
+		- remove '-m' switch (send email on completion)
+		- added detection of improper use of min/max time step
+	Known issues:
+	Bug fixes:
+		- fixed orientation matrix input check and diagnostics
+		- fixed misc one-time leaks
+		- fixed initialization of fixed step file drive
+		- fixed --enable-runtime-loading configuration
+		- fixed output of drive hinge
+		- fixed offset dummy node orientation handling
+		  (noted by I. Wander)
+		- fixed misc errors in utils/*
+		- fixed corrupted binary FEM file leftover when parse fails
+		- fixed bug in .log of deformable joint(s)
+		  (noted by Jerome Merel)
+		- fixed minor memory issue in fixed step file driver
+		- added column check to file drive
+		  (noted by Marco Mantegazza and Fabio Veroni)
+		- fixed "log" scalar function ("base" needed to be explicit)
+		- fixed use of uninitialized values in model parsing
+		- fixed scale/test inheritance issue (Marco Morandini)
+		- fixed one-time memory leaks (shutdown)
+		- fixed initial assembly max iteration count
+		- fixed variable time step retry in beam2/beam3
+		- fixed drive hinge initial assembly (noted by Patrick Rix)
+		- fixed rigid body Jacobian matrix with gravity
+		- fixed build with PowerPC (thanks to Torsten Sadowski)
+		- fixed dummy nodes output selection (noted by Nicola Turini)
+		- fixed Vec6/Mat6x6 passing by reference
+		- fixed sign in ExpandableRowVector::Sub()
+

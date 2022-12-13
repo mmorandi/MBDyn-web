@@ -1,0 +1,17 @@
+Index: libraries/libmbutil/mathp.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/libraries/libmbutil/mathp.cc,v
+retrieving revision 1.108
+retrieving revision 1.109
+diff -u -r1.108 -r1.109
+--- libraries/libmbutil/mathp.cc	13 Dec 2014 20:47:56 -0000	1.108
++++ libraries/libmbutil/mathp.cc	24 Jan 2015 12:23:08 -0000	1.109
+@@ -3872,7 +3872,7 @@
+ 							"\"", f->fname.c_str(), "\" in expr()");
+ 				}
+ 				GetToken();
+-				return d;
++				return logical(d);
+ 			}
+ 
+ 			/* assignment? */

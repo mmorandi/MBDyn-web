@@ -1,0 +1,211 @@
+$Header: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/CHANGES,v 1.802 2014/07/31 14:06:26 masarati Exp $
+
+MBDyn (C) is a multibody analysis code.
+http://www.mbdyn.org
+
+Copyright (C) 1996-2014
+
+Pierangelo Masarati     <masarati@aero.polimi.it>
+Paolo Mantegazza        <mantegazza@aero.polimi.it>
+
+
+MBDyn 1.5.6
+	Enhancements:
+		- added explicit cast to math parser
+		- added loads fade-in in module-aerodyn
+		  (Jens van Schelve, Patrick Rix)
+		- added "drivep" (derivative) function to model namespace
+		- added measures in aircraft instruments
+		- added axial constitutive law wrapper
+		- added simple gear joint (Eduardo Okabe)
+		- added kinetic energy in automatic structural element
+		  private data
+		- added "postponed" drive caller capability
+		- added max time step as drive (Reinhard Resch)
+		- added min/max drive caller (Reinhard Resch)
+		- added output of drive callers (Reinhard Resch)
+		- added tracing of drive callers (Reinhard Resch)
+		- added improved scaling (Reinhard Resch)
+		- added support for automatic differentiation (Reinhard Resch)
+		- improved step size control (Reinhard Resch)
+		- improved hydrodynamic plain bearing (Reinhard Resch)
+		- improved module-octave (Reinhard Resch)
+		- added check for symmetry of inertia tensor
+		- added several modules by Eduardo Okabe (module-fab-*/)
+		- added algebraic equations scaling (Reinhard Resch)
+		- added support for octave 3.8.1 (Reinhard Resch)
+		- more joints with NetCDF support (Louis Gagnon)
+		- added output of electric nodes (Eduardo Okabe)
+		- added check for finite test (Reinhard Resch)
+	Backward compatibility issues:
+		- "overwrite" option of "setenv" changed
+		- incompatible module-aerodyn syntax change
+		- reference systems of aircraft instruments changed
+		- reworked orientation description within node input
+		  according to documentation (was inconsistent)
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fixed rotor radius in module-aerodyn (Jens van Schelve)
+		- fixed redeclaration without definition of already defined
+		  ifndef vars
+		- fixed reference orientation reset after initial assembly
+		  (Reinhard Resch)
+		- fixed inertia computation with structural displacement
+		  nodes (noted by Mattia Alioli)
+		- fixed data initialization in external struct mapping
+		  with membrane elements
+		- fixed bug in Cardano hinge initial assembly
+		- fixed bug in driven element when internal states
+		  are differential (Reinhard Resch)
+		- fixed memory issue in eigenanalysis (Reinhard Resch)
+		- fixed bug in acceleration computation
+		  (noted by Reinhard Resch)
+		- fixed bug in rigid body kinetic energy (Reinhard Resch)
+
+MBDyn 1.5.5
+	Enhancements:
+		- added Umfpack solver iterative refinement support
+		  (Reinhard Resch)
+		- added built in drive callers interface to module-octave
+		  (Reinhard Resch)
+		- added scaling support to Naive, Umfpack and KLU solvers
+		  (based on patch by Reinhard Resch)
+	Backward compatibility issues:
+		- old binary modal joint databases no longer supported
+		- cyclocopter inflow models moved to module-cyclocopter
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fix binary modal joint database in MinGW
+		- fix undefined const error message bug
+		- fix libtool lang tag for run-time loadable modules
+		  (noted by Jens van Schelve)
+		- fix electric elements parsing (noted by Morten Ketelsen)
+		- fix parsing on win32: MinGW/MSYS (Reinhard Resch)
+		- fix naive multithread assembly bug
+
+MBDyn 1.5.4
+	Enhancements:
+		- added '-N' command-line switch to set threads number
+		- added module-nonsmooth-node: non-smooth dynamics support
+		  using SICONOS <http://siconos.gforge.inria.fr/>
+		  (Matteo Fancello)
+		- added 3D variant of continuous contact constitutive law
+		  (Matteo Fancello)
+		- added line search nonlinear solver (Reinhard Resch)
+		- added condition number output (Reinhard Resch)
+		- added scalar support genel private data (Reinhard Resch)
+	Backward compatibility issues:
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- simplify escaping of delimiter in input
+		- fix deformable hinge early Jacobian assembly
+		  (noted by Filippo Tunesi)
+		- fix conjugate transpose of `X' in pod.m
+		- fix modal element when origin redefined
+		  (noted by Sebastiano Fichera)
+		- fix block 11 one row too much in output of femgen
+		  (noted by Sebastiano Fichera)
+		- fix arpack memory issue (noted by Reinhard Resch)
+		- fixed NaivePermMatrixHandler resize
+		  (noted by Reinhard Resch)
+		- fix array drive caller derivative bug
+		- fix missing space in mode output for matlab/octave
+		  (Reinhard Resch)
+
+MBDyn 1.5.3
+	Enhancements:
+		- added forces NetCDF support (Louis Gagnon)
+		- added support for modal damping matrix in modal joint db
+		- femgen(1) more user friendly (and documented)
+	Backward compatibility issues:
+		- nodes and elements now handled in strict input order
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fix multiple statements bug in string drive caller
+		- fix (harmless) memory issue in structural mapping force
+		- fix integer division bug in aeromodal element
+
+MBDyn 1.5.2
+	Enhancements:
+		- added AfterPredict & Restart to module-octave
+		  (Reinhard Resch)
+		- added inverse square constitutive law
+	Backward compatibility issues:
+		- "index" form for priv data is deprecated
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fix restart bug (Reinhard Resch)
+		- fix initialization issues (Marco Morandini)
+		- fix dist of mbc_py_interface.py (noted by Gaël Ecorchard)
+
+MBDyn 1.5.1
+	Enhancements:
+		- added "ifndef" declaration modifier for var redefinition
+		- added module-nodedistdrive (Reinhold Resch)
+	Backward compatibility issues:
+		- moved GRAALL damper to module-damper-graall
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fix build when sched_setaffinity() is unavailable
+		- fix file name handling in windows (mingw)
+
+MBDyn 1.5.0
+	Enhancements:
+		- added displacement-only nodes and selected basic elements
+		- added membrane element (Marco Morandini & Tommaso Solcia)
+		- added continuous contact constitutive law (Matteo Fancello)
+		- added inverse dynamics body for weight tailoring
+		- added "other" specifier to total pin joint input
+		- added dof stats output to file (Reinhard Resch)
+		- added '-E' to enable fpe checking
+		- added module-octave and related modules (Reinhard Resch)
+		- drive drive made differentiable (Reinhard Resch)
+		- added "m" (mass) to body private data (Louis Gagnon)
+		- added module-eu2phi TplDriveCaller wrapper
+		  (suggested by Tingnan Zhang)
+		- added built-in 'TRUE' and 'FALSE' boolean const vars
+		- added built-in int/real limit const vars
+		- added module-wheel4 (Louis Gagnon)
+	Backward compatibility issues:
+	Known issues:
+		- Schur solver is broken
+		- TotalPinJoint inverse dynamics support is broken
+		- RTAI and multithread support incompatible
+		- module-octave and multithread support incompatible
+	Bug fixes:
+		- fix output file name ext. issue (noted by Jens van Schelve)
+		- fix totalj rel. rot. priv data (noted by Jens van Schelve)
+		- fix beam default output (noted by Reinhard Resch)
+		- fix linear/angular acceleration joint initialization
+		- fix initial assembly required by userelem (Reinhard Resch)
+		- fix "wrong type" diagnostic message in math parser
+		- fix initial assembly matrix reset (noted by Reinhard Resch)
+		- fix uninitialized array in modal joint parsing
+		  (noted by Domenico Capobianco)
+		- fix 'print: all'
+		- fix linking of NetCDF 4.X (noted by Patrick Rix)
+

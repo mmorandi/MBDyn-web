@@ -1,0 +1,235 @@
+Index: mbdyn/base/constltp_impl.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/constltp_impl.cc,v
+retrieving revision 1.43
+retrieving revision 1.45
+diff -u -r1.43 -r1.45
+--- mbdyn/base/constltp_impl.cc	24 Nov 2011 05:17:02 -0000	1.43
++++ mbdyn/base/constltp_impl.cc	5 Jan 2012 12:47:57 -0000	1.45
+@@ -196,6 +196,96 @@
+ }
+ 
+ /* specific functional object(s) */
++struct CLArray1DR : public ConstitutiveLawRead<doublereal, doublereal> {
++	virtual ConstitutiveLaw<doublereal, doublereal> *
++	Read(const DataManager* pDM, MBDynParser& HP, ConstLawType::Type& CLType) {
++		ConstitutiveLaw<doublereal, doublereal>* pCL = 0;
++
++		unsigned n = HP.GetInt();
++		if (n <= 0) {
++			silent_cerr("constitutive law array 1D: invalid constitutive law number " << n
++				<< " at line " << HP.GetLineData() << std::endl);
++			throw DataManager::ErrGeneric(MBDYN_EXCEPT_ARGS);
++		}
++
++		if (n == 1) {
++			return ReadCL1D(pDM, HP, CLType);
++		}
++
++		std::vector<ConstitutiveLaw<doublereal, doublereal> *> clv(n);
++		for (unsigned i = 0; i < n; i++) {
++			clv[i] = ReadCL1D(pDM, HP, CLType);
++		}
++
++		typedef ConstitutiveLawArray<doublereal, doublereal> L;
++		SAFENEWWITHCONSTRUCTOR(pCL, L, L(clv));
++
++		CLType = pCL->GetConstLawType();
++
++		return pCL;
++	};
++};
++
++struct CLArray3DR : public ConstitutiveLawRead<Vec3, Mat3x3> {
++	virtual ConstitutiveLaw<Vec3, Mat3x3> *
++	Read(const DataManager* pDM, MBDynParser& HP, ConstLawType::Type& CLType) {
++		ConstitutiveLaw<Vec3, Mat3x3>* pCL = 0;
++
++		unsigned n = HP.GetInt();
++		if (n <= 0) {
++			silent_cerr("constitutive law array 1D: invalid constitutive law number " << n
++				<< " at line " << HP.GetLineData() << std::endl);
++			throw DataManager::ErrGeneric(MBDYN_EXCEPT_ARGS);
++		}
++
++		if (n == 1) {
++			return ReadCL3D(pDM, HP, CLType);
++		}
++
++		std::vector<ConstitutiveLaw<Vec3, Mat3x3> *> clv(n);
++		for (unsigned i = 0; i < n; i++) {
++			clv[i] = ReadCL3D(pDM, HP, CLType);
++		}
++
++		typedef ConstitutiveLawArray<Vec3, Mat3x3> L;
++		SAFENEWWITHCONSTRUCTOR(pCL, L, L(clv));
++
++		CLType = pCL->GetConstLawType();
++
++		return pCL;
++	};
++};
++
++struct CLArray6DR : public ConstitutiveLawRead<Vec6, Mat6x6> {
++	virtual ConstitutiveLaw<Vec6, Mat6x6> *
++	Read(const DataManager* pDM, MBDynParser& HP, ConstLawType::Type& CLType) {
++		ConstitutiveLaw<Vec6, Mat6x6>* pCL = 0;
++
++		unsigned n = HP.GetInt();
++		if (n <= 0) {
++			silent_cerr("constitutive law array 1D: invalid constitutive law number " << n
++				<< " at line " << HP.GetLineData() << std::endl);
++			throw DataManager::ErrGeneric(MBDYN_EXCEPT_ARGS);
++		}
++
++		if (n == 1) {
++			return ReadCL6D(pDM, HP, CLType);
++		}
++
++		std::vector<ConstitutiveLaw<Vec6, Mat6x6> *> clv(n);
++		for (unsigned i = 0; i < n; i++) {
++			clv[i] = ReadCL6D(pDM, HP, CLType);
++		}
++
++		typedef ConstitutiveLawArray<Vec6, Mat6x6> L;
++		SAFENEWWITHCONSTRUCTOR(pCL, L, L(clv));
++
++		CLType = pCL->GetConstLawType();
++
++		return pCL;
++	};
++};
++
+ template <class T, class Tder>
+ struct LinearElasticCLR : public ConstitutiveLawRead<T, Tder> {
+ 	virtual ConstitutiveLaw<T, Tder> *
+@@ -1213,6 +1303,11 @@
+ 	if (::done++ > 0) {
+ 		return;
+ 	}
++
++	/* constitutive law array */
++	SetCL1D("array", new CLArray1DR);
++	SetCL3D("array", new CLArray3DR);
++	SetCL6D("array", new CLArray6DR);
+ 
+ 	/* linear elastic */
+ 	SetCL1D("linear" "elastic", new LinearElasticCLR<doublereal, doublereal>);
+Index: mbdyn/base/constltp_impl.h
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/constltp_impl.h,v
+retrieving revision 1.29
+retrieving revision 1.31
+diff -u -r1.29 -r1.31
+--- mbdyn/base/constltp_impl.h	24 Nov 2011 05:17:02 -0000	1.29
++++ mbdyn/base/constltp_impl.h	5 Jan 2012 12:47:57 -0000	1.31
+@@ -43,6 +43,109 @@
+ #include "constltp.h"
+ #include "hint_impl.h"
+ #include "elem.h"
++
++/* ConstitutiveLawArray - begin */
++
++template <class T, class Tder>
++class ConstitutiveLawArray
++: public ConstitutiveLaw<T, Tder> {
++protected:
++	ConstLawType::Type m_type;
++	std::vector<ConstitutiveLaw<T, Tder> *> m_clv;
++
++public:
++	ConstitutiveLawArray(const std::vector<ConstitutiveLaw<T, Tder> *>& clv)
++	: m_clv(clv)
++	{
++		unsigned type = 0;
++		for (typename std::vector<ConstitutiveLaw<T, Tder> *>::const_iterator i = m_clv.begin(); i != m_clv.end(); i++) {
++			type |= (*i)->GetConstLawType();
++		}
++		m_type = ConstLawType::Type(type);
++	};
++
++	virtual ~ConstitutiveLawArray(void)
++	{
++		NO_OP;
++	};
++
++	ConstLawType::Type GetConstLawType(void) const {
++		return m_type;
++	};
++
++	void SetValue(DataManager *pDM,
++		VectorHandler& X, VectorHandler& XP,
++		SimulationEntity::Hints *ph = 0)
++	{
++		for (typename std::vector<ConstitutiveLaw<T, Tder> *>::iterator i = m_clv.begin(); i != m_clv.end(); i++) {
++			(*i)->SetValue(pDM, X, XP, ph);
++		}
++	};
++
++	virtual ConstitutiveLaw<T, Tder>* pCopy(void) const {
++		ConstitutiveLaw<T, Tder>* pCL = NULL;
++
++		std::vector<ConstitutiveLaw<T, Tder> *> clv(m_clv.size());
++		for (unsigned i = 0; i < m_clv.size(); i++) {
++			clv[i] = m_clv[i]->pCopy();
++		}
++
++		typedef ConstitutiveLawArray<T, Tder> cl;
++		SAFENEWWITHCONSTRUCTOR(pCL, cl, cl(clv));
++		return pCL;
++	};
++
++	virtual std::ostream& Restart(std::ostream& out) const {
++		out << "array, " << m_clv.size();
++		for (typename std::vector<ConstitutiveLaw<T, Tder> *>::const_iterator i = m_clv.begin(); i != m_clv.end(); i++) {
++			out << ", ", (*i)->Restart(out);
++		}
++		return out;
++	};
++
++	virtual void Update(const T& Eps, const T& EpsPrime = ::mb_zero<T>()) {
++		ConstitutiveLaw<T, Tder>::Epsilon = Eps;
++		ConstitutiveLaw<T, Tder>::EpsilonPrime = EpsPrime;
++		ConstitutiveLaw<T, Tder>::F = ::mb_zero<T>();
++		if (m_type & ConstLawType::ELASTIC) {
++			ConstitutiveLaw<T, Tder>::FDE = ::mb_zero<Tder>();
++		}
++		if (m_type & ConstLawType::VISCOUS) {
++			ConstitutiveLaw<T, Tder>::FDEPrime = ::mb_zero<Tder>();
++		}
++
++		for (typename std::vector<ConstitutiveLaw<T, Tder> *>::iterator i = m_clv.begin(); i != m_clv.end(); i++) {
++			(*i)->Update(Eps, EpsPrime);
++			ConstitutiveLaw<T, Tder>::F += (*i)->GetF();
++			if (m_type & ConstLawType::ELASTIC) {
++				ConstitutiveLaw<T, Tder>::FDE += (*i)->GetFDE();
++			}
++
++			if (m_type & ConstLawType::VISCOUS) {
++				ConstitutiveLaw<T, Tder>::FDEPrime += (*i)->GetFDEPrime();
++			}
++		}
++	};
++
++	virtual void AfterConvergence(const T& Eps, const T& EpsPrime = mb_zero<T>()) {
++		ConstitutiveLaw<T, Tder>::Epsilon = Eps;
++		ConstitutiveLaw<T, Tder>::EpsilonPrime = EpsPrime;
++
++		for (typename std::vector<ConstitutiveLaw<T, Tder> *>::iterator i = m_clv.begin(); i != m_clv.end(); i++) {
++			(*i)->AfterConvergence(Eps, EpsPrime);
++		}
++	};
++
++	virtual std::ostream& OutputAppend(std::ostream& out) const {
++		for (typename std::vector<ConstitutiveLaw<T, Tder> *>::const_iterator i = m_clv.begin(); i != m_clv.end(); i++) {
++			(*i)->OutputAppend(out);
++		}
++		return out;
++	};
++};
++
++/* ConstitutiveLawArray - end */
++
+ 
+ /* ElasticConstitutiveLaw - begin */
+ 

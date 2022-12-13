@@ -1,0 +1,69 @@
+Index: mbdyn/mbdyn.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/mbdyn.cc,v
+retrieving revision 1.135
+diff -u -r1.135 mbdyn.cc
+--- mbdyn/mbdyn.cc	2 Jan 2012 20:18:06 -0000	1.135
++++ mbdyn/mbdyn.cc	31 Jan 2012 13:36:56 -0000
+@@ -599,10 +599,20 @@
+ static int
+ mbdyn_prepare_files(const std::string& sInputFileName, std::string& sOutputFileName)
+ {
++	std::string sNormalizedInputFileName;
++	const char *dirsep = std::strrchr(sInputFileName.c_str(), '/');
++	const char *dot = std::strrchr(sInputFileName.c_str(), '.');
++	if (dot != 0 && (dirsep == 0 || dot > dirsep)) {
++		sNormalizedInputFileName = std::string(sInputFileName, 0, dot - sInputFileName.c_str());
++
++	} else {
++		sNormalizedInputFileName = sInputFileName;
++	}
++
+ 	// fix output file name
+ 	if (sOutputFileName.empty()) {
+ 		if (!sInputFileName.empty()) {
+-			sOutputFileName = sInputFileName;
++			sOutputFileName = sNormalizedInputFileName;
+ 
+ 		} else {
+ 			sOutputFileName = ::sDefaultOutputFileName;
+@@ -649,12 +659,11 @@
+ 			std::string tmpIn;
+ 
+ 			if (!sInputFileName.empty()) {
+-				const char *p = std::strrchr(sInputFileName.c_str(), '/');
+-				if (p != 0) {
+-					tmpIn = p;
++				if (dirsep != 0) {
++					tmpIn = dirsep;
+ 
+ 				} else {
+-					tmpIn = sInputFileName;
++					tmpIn = sNormalizedInputFileName;
+ 				}
+ 
+ 			} else {
+@@ -680,7 +689,6 @@
+ #endif // HAVE_GETCWD
+ 
+ 	// chdir to input file's folder
+-	const char *dirsep = std::strrchr(sInputFileName.c_str(), '/');
+ 	if (dirsep != 0) {
+ 		std::string sInputDir(sInputFileName.c_str(), dirsep - sInputFileName.c_str());
+ #ifdef HAVE_CHDIR
+Index: mbdyn/base/dataman.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/dataman.cc,v
+retrieving revision 1.140
+diff -u -r1.140 dataman.cc
+--- mbdyn/base/dataman.cc	2 Jan 2012 20:18:07 -0000	1.140
++++ mbdyn/base/dataman.cc	31 Jan 2012 13:36:56 -0000
+@@ -103,7 +103,7 @@
+ MathPar(HP.GetMathParser()),
+ pSolver(pS),
+ DrvHdl(HP.GetMathParser()),
+-OutHdl(sOutputFileName, strcmp(sInputFileName, sOutputFileName) == 0 ? -1 : 0),
++OutHdl(sOutputFileName, 0),
+ pXCurr(0), pXPrimeCurr(0), 
+ /* Inverse Dynamics: */
+ pXPrimePrimeCurr(0),

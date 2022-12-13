@@ -1,0 +1,50 @@
+Index: mbdyn/base/j2p.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/j2p.cc,v
+retrieving revision 1.31
+diff -u -r1.31 j2p.cc
+--- mbdyn/base/j2p.cc	25 Jun 2015 18:36:36 -0000	1.31
++++ mbdyn/base/j2p.cc	8 Dec 2015 23:13:54 -0000
+@@ -154,7 +154,25 @@
+ 	}
+ 
+ 	/* Nota: ora i == 1 o 2 per punto di valutazione I o II */
+-	Elem2Param::Bind(pEl, i);
++	const char *s;
++	switch (i) {
++	case 1:
++		s = "pI.ex";
++		break;
++
++	case 2:
++		s = "pII.ex";
++		break;
++
++	default:
++		throw ErrGeneric(MBDYN_EXCEPT_ARGS);
++	}
++
++	unsigned int idx = pEl->iGetPrivDataIdx(s);
++	ASSERT(idx > 0);
++	ASSERT(idx <= pEl->iGetNumPrivData());
++
++	Elem2Param::Bind(pEl, idx);
+ }
+ 
+ /* Contributo del nodo al file di restart */
+Index: mbdyn/base/j2p.h
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/j2p.h,v
+retrieving revision 1.28
+diff -u -r1.28 j2p.h
+--- mbdyn/base/j2p.h	25 Jun 2015 18:36:36 -0000	1.28
++++ mbdyn/base/j2p.h	8 Dec 2015 23:13:54 -0000
+@@ -139,7 +139,7 @@
+ inline const doublereal&
+ StrainGageParam::dGetX(void) const
+ {  
+-	unsigned int i = 6 * (iNum - 1);
++	unsigned int i = iNum - 1;
+ 
+ 	dX = pElem->dGetPrivData(i + 1)
+ 		+ dZ*pElem->dGetPrivData(i + 5)

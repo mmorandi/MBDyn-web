@@ -1,0 +1,58 @@
+Index: mbdyn/struct/strnode.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/strnode.cc,v
+retrieving revision 1.145
+retrieving revision 1.149
+diff -u -r1.145 -r1.149
+--- mbdyn/struct/strnode.cc	29 Nov 2011 18:37:34 -0000	1.145
++++ mbdyn/struct/strnode.cc	8 Jan 2012 11:02:13 -0000	1.149
+@@ -1587,6 +1587,21 @@
+ }
+ 
+ void
++DynamicStructNode::Update(const VectorHandler& X, const VectorHandler& XP)
++{
++	StructNode::Update(X, XP);
++	if (bComputeAccelerations()) {
++		/* FIXME: pAutoStr is 0 in ModalNode */
++		if (pAutoStr == 0) {
++			return;
++		}
++		// FIXME: based on values set during previous
++		// of AutomaticStructural::AssRes()
++		pAutoStr->ComputeAccelerations(XPPCurr, WPCurr);
++	}
++}
++
++void
+ DynamicStructNode::AfterConvergence(const VectorHandler& X,
+ 	const VectorHandler& XP)
+ {
+@@ -1595,6 +1610,8 @@
+ 		if (pAutoStr == 0) {
+ 			return;
+ 		}
++		// FIXME: based on values set during previous
++		// of AutomaticStructural::AssRes()
+ 		pAutoStr->ComputeAccelerations(XPPCurr, WPCurr);
+ 	}
+ }
+Index: mbdyn/struct/strnode.h
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/struct/strnode.h,v
+retrieving revision 1.71
+retrieving revision 1.73
+diff -u -r1.71 -r1.73
+--- mbdyn/struct/strnode.h	29 Nov 2011 21:06:23 -0000	1.71
++++ mbdyn/struct/strnode.h	8 Jan 2012 11:02:13 -0000	1.73
+@@ -610,6 +610,10 @@
+ 	 * se differenziale, iOrder puo' essere = 1 per la derivata */
+ 	virtual void SetDofValue(const doublereal& dValue,
+ 		unsigned int iDof, unsigned int iOrder = 0);
++
++	/* Aggiorna dati in base alla soluzione */
++	virtual void Update(const VectorHandler& X,
++		const VectorHandler& XP);
+ 
+ 	virtual inline bool bComputeAccelerations(void) const;
+ 	virtual bool ComputeAccelerations(bool b);

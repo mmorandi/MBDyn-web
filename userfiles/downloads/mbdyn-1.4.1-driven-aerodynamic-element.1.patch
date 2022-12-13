@@ -1,0 +1,40 @@
+Index: mbdyn/base/nestedelem.cc
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/nestedelem.cc,v
+retrieving revision 1.20
+diff -u -r1.20 nestedelem.cc
+--- mbdyn/base/nestedelem.cc	10 Nov 2011 10:03:04 -0000	1.20
++++ mbdyn/base/nestedelem.cc	5 Jan 2012 18:39:30 -0000
+@@ -406,6 +406,17 @@
+ 	}
+ 
+ 	return false;
++}
++
++void
++NestedElem::PutAirProperties(const AirProperties* pAP)
++{
++	ASSERT(pElem != NULL);
++	ASSERT(NeedsAirProperties());
++	AerodynamicElem *pAE = dynamic_cast<AerodynamicElem *>(pElem);
++	if (pAE) {
++		return pAE->PutAirProperties(pAP);
++	}
+ }
+ 
+ const InducedVelocity *
+Index: mbdyn/base/nestedelem.h
+===================================================================
+RCS file: /var/cvs/mbdyn/mbdyn/mbdyn-1.0/mbdyn/base/nestedelem.h,v
+retrieving revision 1.15
+diff -u -r1.15 nestedelem.h
+--- mbdyn/base/nestedelem.h	6 Nov 2011 21:26:35 -0000	1.15
++++ mbdyn/base/nestedelem.h	5 Jan 2012 18:39:30 -0000
+@@ -228,6 +228,7 @@
+ 	virtual AerodynamicElem::Type GetAerodynamicElemType(void) const;
+ 	virtual bool NeedsAirProperties(void) const;
+ 	virtual const InducedVelocity *pGetInducedVelocity(void) const;
++	virtual void PutAirProperties(const AirProperties* pAP);
+ 
+ 	/* ElemGravityOwner */
+ protected:
