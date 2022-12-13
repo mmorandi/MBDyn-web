@@ -22,7 +22,7 @@ from publicly available sources.
 
 Are you using **MBDyn** for a research or an industrial project? 
 Would you like to share your experience with other users? 
-[Send]("mailto:mbdyn@polimi.it?Subject=Research with MBDyn") us a link to a webpage describing your work, 
+[Send](mailto:mbdyn@polimi.it?Subject=Research with MBDyn) us a link to a webpage describing your work, 
 and a brief description to appear in this list.
 
 ## Past and Current Projects

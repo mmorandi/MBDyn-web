@@ -14,7 +14,7 @@
   [beam.nod](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.nod) 
   and 
   [beam.elm](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.elm)). 
-* [actuator](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/actuator). 
+* [actuator](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/actuator.mbd). 
 * [speedcontrol](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/speedcontrol). 
 * [rigidhelicopter](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter). 
 * [rigidhelicopter2](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter2): same as rigidhelicopter, but with swashplate. 
@@ -63,7 +63,7 @@
   example of loosely coupled cosimulation between two instances of MBDyn or between an instance of MBDyn and a Python script. 
 * [wire](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/wire):
   eigenanalysis of a wire with pretension. 
-* [slidercrank](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/slidercrank):
+* [slidercrank](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/slider_crank.zip):
   rigid and deformable slider crank examples (the rigid case is also used in this tutorial for the mbdyn-blender postprocessing tool). 
 
 ## Applications:
@@ -80,15 +80,15 @@
   cantilevered HALE wing model.
 * [hale](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/hale.tgz):
   HALE wing model with pseudo-control.
-* [tm4760](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tm4760.tar-gz):
+* [tm4760](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tm4760.tar.gz):
   rotating blade eigenanalysis example from [NASA TM4760](http://hdl.handle.net/2060/19970021351) (broken?)
-* [tnd371](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tnd371.tar-gz): 
+* [tnd371](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tnd371.tar.gz): 
   rotating blade eigenanalysis example from [NASA TN-D371](http://hdl.handle.net/2060/19890068582) (broken?)
 * [cart0](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cart0.tar.gz):
   aeroelastic model of NREL's CART wind-turbine (updated April 10, 2010).
 * [NREL 5MW](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/MBDyn_model_NREL61.5.zip):
   NREL's 5MW class wind turbine. Contributed by Pay Thorben Sacknieß
-  (more details [here](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/research/windturbine//DA-2010-02.pdf)).
+  (more details [here](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/research/windturbine/DA-2010-02.pdf)).
 * [triangle](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/triangle):
   control constraint of a simple manipulator, based on the movie presented by 
   Prof. Betsch at the 1st ESA Workshop on Multibody Dynamics for Space Applications, 

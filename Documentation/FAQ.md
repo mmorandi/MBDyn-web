@@ -108,7 +108,7 @@ Known software distributions that include **MBDyn** are listed below;
 if you know of distributions that include **MBDyn** and that are not listed here, 
 please let us know (thru the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
 you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
-  * [CAELinux](http://www.caelinux.com/CMS/) 
+  * [CAELinux](http://www.caelinux.com/) 
   * [FreeBSD](http://www.freebsd.org/) (thanks to Kay Lehmann) 
 
 **Building**

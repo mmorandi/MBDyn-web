@@ -5,7 +5,7 @@
 
 - The public GIT is available here: [https://gitlab.polimi.it/Pub/mbdyn](https://gitlab.polimi.it/Pub/mbdyn). 
 	- Instructions for contributors are available [here](https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/Development-Developers-Guidelines). 
-	- Read this [FAQ]({{ "FAQ.html#HOW_DO_I_SUBMIT_A_PATCH_TO_MBDYN" | relative_url}})
+	- Read this [FAQ]({{ "Documentation/FAQ.html#HOW_DO_I_SUBMIT_A_PATCH_TO_MBDYN" | relative_url}})
           for guidelines to software/documentation contributions. 
 	- It is recognized that MBDyn's documentation lags a bit behind source code releases. 
 	  As such, this link hosts the input manual and other docs that may refer to yet unreleased code, 
