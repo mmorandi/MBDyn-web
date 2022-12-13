@@ -74,7 +74,7 @@ In short, this means that you can freely get **MBDyn** in binary and in source f
  
 ##  What license is MBDyn distributed under? 
 It is currently distributed under the GNU Public License (GPL) Version 2, as you can read
-in the [license]({{ "Download#license" | relative_url }}) page. 
+in the [license]({{ "Download.html#license" | relative_url }}) page. 
  
 ##  Who maintains/develops MBDyn? 
 **MBDyn** was developed at the 
@@ -84,11 +84,11 @@ in the [license]({{ "Download#license" | relative_url }}) page.
 (DIA/Polimi) as a research tool that now has reached nearly industrial strength. 
 It has been made available to the free software community in 2001, 
 when the first release under the GNU Public License (GPL) and is currently 
-maintained and further developed by a [pool of researchers]({{ Team | relative_url}}). 
+maintained and further developed by a [pool of researchers]({{ "Team.html" | relative_url}}). 
 Contributions from users are warmly welcome (there is a dedicated FAQ here). 
  
 ##  Where can I get MBDyn? 
-You may get the latest release of the source code from the [download]({{ "Download" | relative_url }})
+You may get the latest release of the source code from the [download]({{ "Download.html" | relative_url }})
 page of this site; authorized users may also browse the 
 [git repository](https://public.gitlab.polimi.it/DAER/mbdyn). 
  
@@ -97,7 +97,7 @@ We do not distribute official binaries (basically, for lack of resources). Occas
 make builds available for selected architectures (essentially, those we use); for example,
 for Cygwin and MSYS/MinGW. See this page for miscellaneous downloadable stuff. If you need
 help in building **MBDyn** please ask on the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list 
-(you need to subscribe first; instructions [here]({{ "Mailing" | relative_url}})). 
+(you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
  
 ## Who distributes MBDyn? 
 **MBDyn** is distributed in source form by the developers, through the official web site. 
@@ -107,7 +107,7 @@ MBDyn is also distributed by few package maintainers; those distributions are no
 Known software distributions that include **MBDyn** are listed below; 
 if you know of distributions that include **MBDyn** and that are not listed here, 
 please let us know (thru the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
-you need to subscribe first; instructions [here]({{ "Mailing" | relative_url}})). 
+you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
   * [CAELinux](http://www.caelinux.com/CMS/) 
   * [FreeBSD](http://www.freebsd.org/) (thanks to Kay Lehmann) 
 
@@ -156,7 +156,7 @@ During the development of **MBDyn**, the C++ standard underwent some development
 
 If you succeed in building **MBDyn** on a system or with a compiler not listed here, please let us know 
 (thru the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
-you need to subscribe first; instructions [here]({{ "Mailing" | relative_url}})). 
+you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
  
 ##  How can I build run-time loadable modules?
 To enable building of run-time loadable modules one needs to configure using the switch
@@ -242,7 +242,7 @@ and that should be it. This provides support also for the KLU solver.
 If you are aware of more GNU/Linux distributions or other OSes that provide 
 UMFPACK or other uncommon packages that MBDyn interacts with, please let us know 
 (thru the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
-you need to subscribe first; instructions [here]({{ "Mailing" | relative_url}})). 
+you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
 
 ## Compilation/installation went fine, but can't find the executable
 By default, **MBDyn** installs in `/usr/local/mbdyn/`; the executable ends up in subfolder `/usr/local/mbdyn/bin/`.  Likely, such folder is not in one's execution path.  Users should take appropriate measures to make sure they can reach the executable. 
@@ -278,12 +278,12 @@ The short answer is: there is no developers' manual, sorry.A more detailed answe
 ## What is the exact syntax of element X?
 The exact syntax of each input card is illustrated in the input manual (either make sure you consult the input manual that refers to the version you are using, or dowload the source code from GIT; the input manual latex code is in manual/input/). The input manual is regularly updated, but omissions may occur, and outdated stuff and bugs may always slip in. Please feel free to notify errors and submit patches, if you think there is anything wrong in it, 
 using the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
-you need to subscribe first; instructions [here]({{ "Mailing" | relative_url}})). 
+you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
 
 ## What element should I use to model Y?
 To answer this question, the complement of the input manual, namely a modeling manual, is required. Unfortunately, such document does not exist, and it is not even foreseen. Right now, modeling style and capabilities are grossly addressed in the tutorials; for specific needs you should ask on the 
 [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
-you need to subscribe first; instructions [here]({{ "Mailing" | relative_url}})). 
+you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
 
 ## How to refer to MBDyn in technical publications?
 There are several technical papers that illustrate specific features of MBDyn.  However, only recently a single publication appeared, that describes the project as a whole:
@@ -351,7 +351,7 @@ By increasing this parameter from 0.0 (Backward Differentiation Formulas) to a h
 the local error of the algorithm is reduced. Practical values of 0.6 showed the 
 best trade-off between accuracy and stability of the algorithm. 
 More details may be found in the paper 
-"[Multistep Integration of Ordinary, Stiff and Differential-Algebraic Problems for Multibody Dynamics Applications]({{ "Documentation/Publications#INTEGRATOR2001" | relative_url }})".
+"[Multistep Integration of Ordinary, Stiff and Differential-Algebraic Problems for Multibody Dynamics Applications]({{ "Documentation/Publications.html#INTEGRATOR2001" | relative_url }})".
 
 ## Can I compute eigenvalues with MBDyn?
 **MBDyn** performs direct time integration of Initial Value Problems (IVP), where the problem is written as a system of nonlinear Differential Algebraic Equations (DAE). Eigenvalues make little sense for this type of problems; all one could expect is the capability to solve the eigenproblem of the system obtained by linearizing the problem about an equilibrium solution. MBDyn implements this type of analysis with some limitations: 

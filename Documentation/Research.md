@@ -113,7 +113,7 @@ and a brief description to appear in this list.
   at the Army Research Laboratory/Aeronautical 
   Systems Center - Major Shared Resource Center (ARL/ASC-MSRC)
  
-* [2003-...] [RT-MBDyn]({{ "/RT-MBDyn" | relative_url }})
+* [2003-...] [RT-MBDyn]({{ "/RT-MBDyn.html" | relative_url }})
 
   Distributed real-time simulation of multibody systems at DIAPM. 
  

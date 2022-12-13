@@ -89,7 +89,7 @@ development, while some independent users contributed portions of software.
   [UMD](http://www.microsystems.umd.edu/research/tasks.html).
 * Luca Cavagna
 
-  as Ph.D. student, worked at at [interfacing]({{ "/Documentation/Research" | relative_url }})
+  as Ph.D. student, worked at at [interfacing]({{ "/Documentation/Research.html" | relative_url }})
   **MBDyn with external CFD solvers ([FOI](http://www.foi.se/)'s [EDGE](http://www.foi.se/edge) right now).
 * Michele Frumusa
 

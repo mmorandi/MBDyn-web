@@ -50,7 +50,7 @@ please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
 * [OpenFOAM](http://www.opencfd.co.uk/openfoam/)
 
 **Real-Time**
-These are used by [RT-MBDyn]({{ "/RT-MBDyn" | relative_url }}):
+These are used by [RT-MBDyn]({{ "/RT-MBDyn.html" | relative_url }}):
 * [RTAI](http://www.rtai.org/): Real-Time Application Interface for GNU/Linux 
 * [RT-Net](http://www.rts.uni-hannover.de/rtnet/)
 

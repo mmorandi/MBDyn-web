@@ -19,5 +19,5 @@ please follow the related instructions;
 
 Direct support that involves developers' time and
 effort may require a **support contract**.
-See "[Whom should I post messages to]({{ "Documentation/FAQ#whom-should-i-post-messages-to" | relative_url }})"
+See "[Whom should I post messages to]({{ "Documentation/FAQ.html#whom-should-i-post-messages-to" | relative_url }})"
 for more details.

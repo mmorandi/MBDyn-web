@@ -5,19 +5,19 @@
 
 ## Official documentation
 * Input manual: see the documentation of the 
-  [software version]({{ "Download" | relative_url }}) you're using. 
-* Installation manual: see [this]({{ "Installation" | relative_url }}) 
+  [software version]({{ "Download.html" | relative_url }}) you're using. 
+* Installation manual: see [this]({{ "Installation.html" | relative_url }}) 
   page and the documentation of the 
-  [software version]({{ "Download" | relative_url }}) you're using. 
+  [software version]({{ "Download.html" | relative_url }}) you're using. 
 * [Tutorials](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/tutorials.pdf)
   ![pdf]({{ "/Images/pdf.gif" | relative_url }}).  
 * [Applications](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/applications.pdf)
   ![pdf]({{ "/Images/pdf.gif" | relative_url }}).  
-* [Examples]({{ "Documentation/Examples" | relative_url }}). 
-* [FAQ]({{ "Documentation/FAQ" | relative_url }}). 
-* [Publications]({{ "Documentation/Publications" | relative_url }}) on the subject. 
-* [Research]({{ "Documentation/Research" | relative_url }}) involving MBDyn. 
-* [Links]({{ "Documentation/Links" | relative_url }}) about MBDyn. 
+* [Examples]({{ "Documentation/Examples.html" | relative_url }}). 
+* [FAQ]({{ "Documentation/FAQ.html" | relative_url }}). 
+* [Publications]({{ "Documentation/Publications.html" | relative_url }}) on the subject. 
+* [Research]({{ "Documentation/Research.html" | relative_url }}) involving MBDyn. 
+* [Links]({{ "Documentation/Links.html" | relative_url }}) about MBDyn. 
 
 ## Presentations
 

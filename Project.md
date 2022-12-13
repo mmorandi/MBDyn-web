@@ -11,5 +11,5 @@ Eventually it evolved in a powerful multibody multidisciplinary
 analysis software tool, which is distributed under GPL 2.1 since
 November 2001.
 
-  * The **MBDyn** [Team]({{ "Team" | relative_url }})
-  * [Contributing]({{ "Contributing" | relative_url }})
+  * The **MBDyn** [Team]({{ "Team.html" | relative_url }})
+  * [Contributing]({{ "Contributing.html" | relative_url }})

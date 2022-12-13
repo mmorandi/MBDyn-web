@@ -79,12 +79,12 @@ This project has been partially sponsored by:
     Further information can be found in the document [NREL/TP-500-32879](http://www.nrel.gov/docs/fy03osti/32879.pdf). 
   * A preliminary [CART model](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cart.zip) for **MBDyn**: rigid pylon, rigid blade w/ aerodynamics, deformable still w/o. 
   * An evolution of the [CART model](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cart-0001.zip) for **MBDyn**: deformable pylon and blades (arbitrary number of beam elements). 
-  * A real-time simulation of the CART model with **RT-MBDyn** is illustrated [here]({{ "/RT-MBDyn" | relative_url }}) 
+  * A real-time simulation of the CART model with **RT-MBDyn** is illustrated [here]({{ "/RT-MBDyn.html" | relative_url }}) 
     as part of the **SI PARTE!** project. 
   * A further evolution of the 
     [CART model](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cart0.tar.gz) 
-    for **MBDyn**. This model was used for the [real-time simulation]({{ "/RT-MBDyn" | relative_url }}) 
-    discussed above. It is now part of the (undocumented) official [examples]({{ "/Documentation/Examples" | relative_url }}). 
+    for **MBDyn**. This model was used for the [real-time simulation]({{ "/RT-MBDyn.html" | relative_url }}) 
+    discussed above. It is now part of the (undocumented) official [examples]({{ "/Documentation/Examples.html" | relative_url }}). 
   * Patrick Rix provided a [sketch](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/research/windturbine/CART0_TURBINE_ReferenceFrames_Sketch_2012-08-23.pdf) of the reference frames used in the definition of the CART model. 
 * Patrick Rix provided [digitalizations](http://lists.mbdyn.org/pipermail/mbdyn-users/attachments/20070308/25ce82ad/airfoils_c81.obj)
   of aerodynamic coefficients from [NRELOffshrBsline5MW.pdf](http://www.ieawind.org/AnnexXXIIISecure/Subtask_2S_docs/OC3Files/BaselineTurbine/NRELOffshrBsline5MW.pdf),
