@@ -19,22 +19,22 @@ before downloading and/or using **MBDyn**.
 
 - Version 1.7 [CHANGELOG](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/CHANGELOG-1.7.txt)
     - [mbdyn-1.7.3.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.7.3.tar.gz) 2017-10-15
-      [input manual](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/mbdyn-input-1.7.3.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input-1.7.3.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
     - [mbdyn-1.7.2.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.7.2.tar.gz) 2017-01-14
-      [input manual](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/mbdyn-input-1.7.2.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input-1.7.2.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
     - [mbdyn-1.7.1.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.7.1.tar.gz) 2016-04-25
-      [input manual](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/mbdyn-input-1.7.1.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input-1.7.1.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
     - [mbdyn-1.7.0.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.7.0.tar.gz) 2015-10-30
-      [input manual](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/mbdyn-input-1.7.0.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input-1.7.0.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog.
         - [mbdyn-1.7.0-strain-gage.1.patch](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.7.0-strain-gage.1.patch) fix output at section 2 of three-node beam 
         - [mbdyn-1.7.0-socketstreamdrive.1.patch](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.7.0-socketstreamdrive.1.patch) fix off-by-one bug in socket stream drive 
 - Version 1.6 [CHANGELOG](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/CHANGELOG-1.6.txt) 
     - [mbdyn-1.6.1.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.6.1.tar.gz) 2015-06-19
-      [input manual](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/mbdyn-input-1.6.1.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog. 
-    - [mbdyn-1.6.0.tar.gz](mbdyn-1.6.0.tar.gz) 2014-12-15
-      [input manual](https://github.com/mmorandi/RTAI/raw/main/userfiles/documents/mbdyn-input-1.6.0.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog. 
-        - [mbdyn-1.6.0-nested-string-drive.1.patch](mbdyn-1.6.0-nested-string-drive.1.patch) fix deadlock in nested calls to string drive caller when built with multithread support 
-        - [mbdyn-1.6.0-function-in-statement.1.patch](mbdyn-1.6.0-function-in-statement.1.patch) fix math parser error when functions appear in a composite statement 
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input-1.6.1.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog. 
+    - [mbdyn-1.6.0.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.6.0.tar.gz) 2014-12-15
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input-1.6.0.pdf) ![pdf]({{ "/Images/pdf.gif" | relative_url }}) see changelog. 
+        - [mbdyn-1.6.0-nested-string-drive.1.patch](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.6.0-nested-string-drive.1.patch) fix deadlock in nested calls to string drive caller when built with multithread support 
+        - [mbdyn-1.6.0-function-in-statement.1.patch](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.6.0-function-in-statement.1.patch) fix math parser error when functions appear in a composite statement 
 - Version 1.5 [CHANGELOG](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/CHANGELOG-1.5.txt)
     - [mbdyn-1.5.6.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.5.6.tar.gz) 2014-08-01   see changelog.
         - [mbdyn-1.5.6-module-octave-build.1.patch](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/downloads/mbdyn-1.5.6-module-octave-build.1.patch) fix module-octave and octave binaries build and install (Reinhard Resch). 
