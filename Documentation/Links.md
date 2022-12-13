@@ -4,7 +4,7 @@
 
 If you find out that a link in this page is dangling or out of date, 
 or if you think that a link to your institution should appear in this page, 
-please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
+please contact [mbdyn@polimi.it](mailto:mbdyn@polimi.it).
 
 ## Aerospace Research and Engineering
 ## Aerospace Engineering
@@ -102,4 +102,4 @@ These are used by [RT-MBDyn]({{ "/RT-MBDyn.html" | relative_url }}):
 
 If you think there is an error in any of the above reported links, 
 or if you have suggestions about organizations that should be present 
-in this list, please contact [mbdyn@aero.polimi.it](mailto:mbdyn@aero.polimi.it).
+in this list, please contact [mbdyn@polimi.it](mailto:mbdyn@polimi.it).

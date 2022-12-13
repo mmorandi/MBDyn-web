@@ -38,7 +38,7 @@ any right to oblivion).
 Contact instructions:
 * send _public inquiries_ to [mbdyn-users@mbdyn.org](mailto://mbdyn-users@mbdyn.org) (only subscribers can post to this list). Public discussion is open and free, since it may be beneficial to all users; it implies that all exchanged data and information is public;
 * send _private inquiries_ to
-  [mbdyn@aero.polimi.it](mailto://mbdyn@aero.polimi.it).
+  [mbdyn@polimi.it](mailto://mbdyn@polimi.it).
   Note that private discussion could end up to the point where
   it configures as consulting. In the latter case,
   an economical agreement might be required to continue support,

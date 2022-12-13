@@ -22,7 +22,7 @@ from publicly available sources.
 
 Are you using **MBDyn** for a research or an industrial project? 
 Would you like to share your experience with other users? 
-[Send]("mailto:mbdyn@aero.polimi.it?Subject=Research with MBDyn") us a link to a webpage describing your work, 
+[Send]("mailto:mbdyn@polimi.it?Subject=Research with MBDyn") us a link to a webpage describing your work, 
 and a brief description to appear in this list.
 
 ## Past and Current Projects
@@ -142,4 +142,4 @@ and a brief description to appear in this list.
   ![NASA logo]({{ "/userfiles/documents/research/meatball6.gif" | relative_url }})
 
        
-If you think there is an error in any of the above reported links, or if you have suggestions about info that should be present in this list, please contact mbdyn@aero.polimi.it.
+If you think there is an error in any of the above reported links, or if you have suggestions about info that should be present in this list, please contact [mbdyn@polimi.it]("mailto:mbdyn@polimi.it").

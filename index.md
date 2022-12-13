@@ -37,7 +37,7 @@ and 2022! We are eager to participate in future editions.
 ## Feedback 
 Are you using **MBDyn** for a research or an industrial project? 
 Would you like to share your experience with other users? 
-[Send](mailto:mbdyn@aero.polimi.it) us a link to a webpage describing your work, 
+[Send](mailto:mbdyn@polimi.it) us a link to a webpage describing your work, 
 and a brief description to be listed in the 
 [research page]({{ "Documentation/Research.html" | relative_url }}). 
 
