@@ -56,7 +56,7 @@ and a brief description to be listed in the
 ![WRATS Model]({{ "Images/attila_rendered.png" | relative_url }})
 
 Semispan Wing ATTILA Tiltrotor Model&nbsp;
-(rendered by [Blender](https://www.blender.org/); from [doi:10.1007/s13272-022-00605-2](https://doi.org/10.1007/s13272-022-00605-2))
+(rendered by Alessandro Cocco with [Blender](https://www.blender.org/); from [doi:10.1007/s13272-022-00605-2](https://doi.org/10.1007/s13272-022-00605-2))
 
 <a name="Free"></a>*
 Free means freedom (quoting GNU's philosophy, 
