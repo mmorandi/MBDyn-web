@@ -26,6 +26,10 @@ Would you like to share your experience with other users?
 and a brief description to appear in this list.
 
 ## Past and Current Projects
+
+* [2019-2024] [ATTILA - Advanced Testbed for TILtrotor Aeroelastics](https://www.attila-project.eu/)
+
+  Grant agreement no. 863418
  
 * [2013-2014] CROP - Cycloidal Rotor Optimized for Propulsion
   

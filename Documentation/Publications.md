@@ -41,6 +41,8 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   [doi:10.2514/2.933](http://dx.doi.org/10.2514/2.933).
 
 ## Journal Papers:
+* S. Conti, E. Tschopp, O. Mateus, A. Zanoni, P. Masarati, G. Sala, "**Multibody analysis and soft tissue strength refute supersonic dinosaur tail**", [Scientific Reports](https://www.nature.com/srep/) 2022, 12:19245, [doi:10.1038/s41598-022-21633-2](https://doi.org/10.1038/s41598-022-21633-2)
+* A. Cocco, S. Mazzetti, P. Masarati, S. van 't Hoff, B. Timmerman, "**Numerical Whirl-Flutter Analysis of a Tiltrotor Semi-span Wind Tunnel Model**", [CEAS Aeronautical Journal](https://www.springer.com/journal/13272) 2022 13(4):923-938, [doi:10.1007/s13272-022-00605-2](https://doi.org/10.1007/s13272-022-00605-2)
 * A. Tamer "**Aeroelastic Response of Aircraft Wings to External Store Separation Using Flexible Multibody Dynamics**" [_Machines_](https://www.mdpi.com/journal/machines) 2021, 9(3), 61; [doi:10.3390/machines9030061](https://doi.org/10.3390/machines9030061)
 * Z. Zhao, G. Li, Q. Xiao, H. Jiang, G.M. Tchivelekete, X. Shu, H. Liu "**Quantification of the influence of drugs on zebrafish larvae swimming kinematics and energetics**" _[PeerJ](https://peerj.com/sections/zoological-science/)_ 8:e8374 2020, [doi:10.7717/peerj.8374](https://doi.org/10.7717/peerj.8374)
 * P. Masarati "**Robust Static Analysis Using General-Purpose Multibody Dynamics**" [_Proc. IMechE Part K: J. Multi-body Dynamics_](http://www.uk.sagepub.com/journals/Journal202024), 229(2):152-165, June 2015, [doi:10.1177/1464419314554490](http://dx.doi.org/10.1177/1464419314554490). 

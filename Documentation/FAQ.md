@@ -69,7 +69,7 @@
 **MBDyn** is a multibody multidisciplinary analysis software suite. It performs the integrated simulation and analysis of nonlinear mechanical, aeroelastic, hydraulic, electric and control problems by numerical integration. 
  
 ##  Is MBDyn free? 
-**MBDyn** is free software (see the GNUproject of the Free Software Foundation for more information about free software).
+**MBDyn** is free software (see the GNU project of the Free Software Foundation for more information about free software).
 In short, this means that you can freely get **MBDyn** in binary and in source form, use it, modify it, and even redistribute it for free or for any fee you want to apply. However, there are few constraints: you cannot modify the license and, if you redistribute the software, you have to distribute it (also) in source form, even if you modified it, including your modifications. This is necessary to give others the same rights you got and leveraged by using it. 
  
 ##  What license is MBDyn distributed under? 
@@ -102,7 +102,7 @@ help in building **MBDyn** please ask on the [mbdyn-users](mailto:mbdyn-users@mb
 ## Who distributes MBDyn? 
 **MBDyn** is distributed in source form by the developers, through the official web site. 
            
-MBDyn is also distributed by few package maintainers; those distributions are not directly under our control, so for any issue related to packaging, please do contact the package maintainers. In case of bugs spotted in those distributions, we are happy to hear about them, in case the bugs actually are in MBDyn source code, because then they can get fixed. However, having the bug fixed in MBDyn source code doesn't imply that those distributors will react promptly and incorporate the bugfix in a timely manner. In those cases, again, please don't complain to us. 
+MBDyn is also distributed by few package maintainers; those distributions are not directly under our control, so for any issue related to packaging, please do contact the package maintainers. In case of bugs spotted in those distributions, we are happy to hear about them, in case the bugs actually are in MBDyn source code, because then they can get fixed. However, having the bug fixed in MBDyn source code doesn't imply that those distributors will react promptly and incorporate the bug fix in a timely manner. In those cases, again, please don't complain to us. 
            
 Known software distributions that include **MBDyn** are listed below; 
 if you know of distributions that include **MBDyn** and that are not listed here, 
@@ -140,7 +140,7 @@ provided the standard headers and the C/C++ standard library are available.
 Having said this, no one of the developers ever tried to build it using Windows-specific compilers, like Visual Studio. As explained here, MBDyn can be built for Windows using MSYS/MinGW or Cygwin. Note that currently the MSYS/MinGW build does not support networking, so no MATLAB/Simulink interface is available. Volunteers are welcome to work on adding Winsock support. 
  
 ##  What compiler is required/should I use? 
-MBDyn should bewritten in standard C/C++, so any standard compliant C/C++ compiler should be fine. If it's not, then it's a bug that should be notified to the developers and (hopefully) fixed. 
+MBDyn should be written in standard C/C++, so any standard compliant C/C++ compiler should be fine. If it's not, then it's a bug that should be notified to the developers and (hopefully) fixed. 
            
 The typical development environment used at DIA/Polimi is gcc/g++ (as of this writing, gcc 4.8) on different flavors of GNU/Linux (mostly Ubuntu, but also SuSE, RedHat, CentOS, Mandrake and Debian; Slackware during early development) on Intel & AMD 32 & 64 bit processors.  We used to check building with Intel's compilers, but Intel no longer grants free access to compilers for research purpose.  We occasionally build in MSYS/MinGW for minimal support of the Windows OS.
            
@@ -181,7 +181,7 @@ without the module-prefix. For example:
 ```
 builds the wheel2 and the muscles modules.To develop a custom module, use any existing module as a template, 
 and place your module in a subdirectory of modules/; the directory name must start with module-. 
-For example, the module-template2can be used as a guideline for user-defined elements.On x86 with gcc/g++ MBDyn must be compiled with
+For example, the module-template2 can be used as a guideline for user-defined elements. On x86 with gcc/g++ MBDyn must be compiled with
 ```
 LDFLAGS=-rdynamic
 ```
@@ -189,7 +189,7 @@ to instruct **MBDyn** to export symbols to the run-time loaded modules (See GCC 
 ```
 LIBS=/usr/lib/libltdl.a
 ```
-when configuring **MBDyn**, or by manually hacking the resulting mbdyn/Makefilefile. 
+when configuring **MBDyn**, or by manually hacking the resulting mbdyn/Makefile file. 
       Note: when using gcc 5.4.0 shipping with Ubuntu 16.04.1 LTS, autotools want to use the switch `--export-dynamic`, 
       whereas that version of gcc requires `-export-dynamic` (notice a single leading "dash"). 
       Moreover, generated commands that include a macro are incorrectly formatted and subsequently expanded.
@@ -207,14 +207,14 @@ autoconf
 prior to running configure.  If anyone has a better suggestion, please let us know.
 
 ##  What linear solver is needed?
-**MBDyn** has two built-in sparse linear solvers: naive (an original sparse solver with dense storage that is extremely performing for problems up to roughly 5000 equations, although as memory intensive as dense solvers; documented here) and y12. They are provided in order to make the distribution self-contained, so one can build and execute MBDyn without any external package. However, it is recommended to build MBDyn with support for UMFPACK, in order to be able to use the umfpacksolver. NOTE: originally, the naive linear solver needed some reordering option; for example, use of
+**MBDyn** has two built-in sparse linear solvers: naive (an original sparse solver with dense storage that is extremely performing for problems up to roughly 5000 equations, although as memory intensive as dense solvers; documented here) and y12. They are provided in order to make the distribution self-contained, so one can build and execute MBDyn without any external package. However, it is recommended to build MBDyn with support for UMFPACK, in order to be able to use the umfpack solver. NOTE: originally, the naive linear solver needed some reordering option; for example, use of
 ```
 linear solver: naive, colamd;
 ```
 was recommended. Now it is the default. See the input manual for further details. 
 
 ##  How can I build with UMFPACK support?
-On most systems, UMFPACK, a widespread sparse linear solver from Tim Davi's 
+On most systems, UMFPACK, a widespread sparse linear solver from Tim Davis' 
 [SuiteSparse](https://people.engr.tamu.edu/davis/suitesparse.html), is not available. 
 It is not strictly needed by **MBDyn**, since at least two built-in sparse linear solvers are available, 
 and one of them, naive (documented here), may be significantly more efficient than UMFPACK 
@@ -276,7 +276,7 @@ The short answer is: there is no developers' manual, sorry.A more detailed answe
 [here](http://home.aero.polimi.it/masarati/tecman.pdf), but it's far from complete and in a very preliminary status. Essentially, developers committed themselves to writing some technical documentation for each new feature that is added to the code, while features already implemented will get documented whenever they need review for whatever reason. Eventually, this document will become complete enough to be called "developers' manual". 
 
 ## What is the exact syntax of element X?
-The exact syntax of each input card is illustrated in the input manual (either make sure you consult the input manual that refers to the version you are using, or dowload the source code from GIT; the input manual latex code is in manual/input/). The input manual is regularly updated, but omissions may occur, and outdated stuff and bugs may always slip in. Please feel free to notify errors and submit patches, if you think there is anything wrong in it, 
+The exact syntax of each input card is illustrated in the input manual (either make sure you consult the input manual that refers to the version you are using, or download the source code from GIT; the input manual latex code is in manual/input/). The input manual is regularly updated, but omissions may occur, and outdated stuff and bugs may always slip in. Please feel free to notify errors and submit patches, if you think there is anything wrong in it, 
 using the [mbdyn-users](mailto:mbdyn-users@mbdyn.org) mailing list; 
 you need to subscribe first; instructions [here]({{ "Mailing.html" | relative_url}})). 
 
@@ -503,7 +503,7 @@ Consider two structural nodes connected by a revolute hinge joint. That joint al
     * a `drive hinge` joint, that allows to impose the relative orientation between the two nodes 
       as a whole (thus adding 3 more degrees of constraint). 
   * As an alternative, one could use the `axial rotation` joint, which is equivalent 
-    to a `revolute hing`e with the angular velocity about the `revolute hinge` axis imposed 
+    to a `revolute hinge` with the angular velocity about the `revolute hinge` axis imposed 
     as function of time. This is not exactly equivalent to imposing the relative orientation, 
     even in case the imposed angular velocity is exactly the time derivative of the desired 
     relative angle, since the constraint is now non-holonomic and, as such, 
@@ -537,7 +537,7 @@ The solvers communicate though either UNIX or INET sockets using a native protoc
 
 Alternatively, the modal joint element can be coupled using the external modal variant of the force element. 
 
-A peer library is provided (libmbc) with C, C++ and Python APIs.So far, 
+A peer library is provided (libmbc) with C, C++ and Python APIs. So far, 
 **MBDyn** has been successfully coupled to: 
   * [DUST](https://www.dust-project.org/), a CFD solver based on vortex particles (VP) developed by "[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it)",
     [Politecnico di Milano](https://www.polimi.it)

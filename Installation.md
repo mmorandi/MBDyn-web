@@ -8,7 +8,7 @@ The favourite installation method is by compiling it yourself. You can compile *
 - natively in Linux (instructions follow below), or
 - in Windows, for 
     - Windows 10: using Linux in the Windows Subsystem for Linux (WSL; instructions at the bottom)
-    - most Windows versions: using specific build environments (Cygwin, MSYS/MinGW; instructions at the very bottom)
+    - most Windows versions: using specific build environments (Cygwin, MSYS/MinGW; instructions at the very bottom; warning: obsolete)
 - in Mac: **(in progress...)**. 
 
 **MBDyn** compilation and installation is based on GNU's autotools. You need:
