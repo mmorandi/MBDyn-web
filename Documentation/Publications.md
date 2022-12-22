@@ -22,7 +22,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   H. Zhang, R. Zhang, A. Zanoni, P. Masarati
   "**Performance of implicit A-stable time integration methods for multibody system dynamics**"
   **(open access)**
-  [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044), 2022,�
+  [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044), 2022,
   [doi:10.1007/s11044-021-09806-9](https://doi.org/10.1007/s11044-021-09806-9).
 
 * For the finite volume beam model:
