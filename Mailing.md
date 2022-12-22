@@ -2,7 +2,7 @@
 ---
 # Mailing lists
 
-## Mailing lists will likely be disconotinued in a nrea future.
+## Mailing lists will likely be disconotinued in a near future.
 
 _NOTE: for reasons outside our direct control, 
 the SSL certificate of the lists server does not match the server's name.  
