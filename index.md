@@ -55,7 +55,7 @@ and a brief description to be listed in the
  
 ![WRATS Model]({{ "Images/attila_rendered.png" | relative_url }})
 
-Semispan Wing ATTILA Tiltrotor Model &nbsp;
+Semispan Wing ATTILA Tiltrotor Model&nbsp;
 (rendered by [Blender](https://www.blender.org/), [doi:10.1038/s41598-022-21633-2](https://doi.org/10.1038/s41598-022-21633-2))
 
 <a name="Free"></a>*
