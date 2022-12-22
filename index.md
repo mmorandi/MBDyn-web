@@ -53,11 +53,10 @@ and a brief description to be listed in the
   - a 24/7 supported software
 
  
-![WRATS Model]({{ "Images/tiltrotor.jpg" | relative_url }})
+![WRATS Model]({{ "Images/attila_rendered.png" | relative_url }})
 
 Semispan Wing WRATS Tiltrotor Model &nbsp;
-(rendered by 
-[ADAMS/View](https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams))
+(rendered by [Blender](https://www.blender.org/))
 
 <a name="Free"></a>*
 Free means freedom (quoting GNU's philosophy, 
