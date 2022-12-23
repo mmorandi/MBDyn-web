@@ -28,6 +28,7 @@ and a brief description to appear in this list.
 ## Past and Current Projects
 
 * [2019-2024] [ATTILA - Advanced Testbed for TILtrotor Aeroelastics](https://www.attila-project.eu/)
+  ![ATTILA logo]({{ "/userfiles/documents/research/attila/new-attila_logo_2x.png" | relative_url }})
 
   Grant agreement no. 863418
  
