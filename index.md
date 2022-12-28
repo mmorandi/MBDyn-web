@@ -5,7 +5,7 @@
 
 ## Introduction
 
-**MBDyn** is the first and possibly the only
+**MBDyn** is the first and one of the few full-featured
 [free](https://www.gnu.org/philosophy/free-sw.html)[*](#Free) general purpose Multibody
 Dynamics analysis software, released under GNU's GPL 2.1 (get a cached copy
 [here](https://github.com/mmorandi/MBDyn-web/blob/main/userfiles/downloads/gpl2.txt)).
