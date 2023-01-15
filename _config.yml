@@ -46,6 +46,37 @@ defaults:
       icon: 
         name: "/Images/mbdyn_humbird_text.svg"
         width: "20%"
+      keywords:
+        - mbdyn
+        - multibody
+        - multibody dynamics
+        - multibody system dynamics
+        - numerical analysis
+        - numerical modeling
+        - structural dynamics
+        - finite element method
+        - aerospace
+        - aerodynamics
+        - helicopter
+        - rotorcraft
+        - wind energy
+        - automotive
+        - vehicles
+        - vehicle dynamics
+        - tires
+        - trucks
+        - engineering
+        - mechanical engineering
+        - aerospace engineering
+        - robotics
+        - mechatronics
+        - C++
+        - university
+        - free software
+        - simulation
+        - cosimulation
+        - multiphysics
+        - multidisciplinary analysis
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -68,3 +99,4 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
