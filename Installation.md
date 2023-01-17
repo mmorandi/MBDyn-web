@@ -3,7 +3,11 @@
 
 # Software Installation
  
-**MBDyn** is distributed as source code. You can <!--- find the source code in the form of a tarball on **MBDyn**'s website, http://www.mbdyn.org/, in the "Software Download" page, or --> download/clone it from the project's git repository, https://gitlab.polimi.it/Pub/mbdyn.
+**MBDyn** is distributed as source code. You can 
+<!--- find the source code in the form of a tarball on **MBDyn**'s website, http://www.mbdyn.org/, 
+in the "Software Download" page, or --> 
+download/clone it from the project's git repository, 
+[https://gitlab.polimi.it/Pub/mbdyn](https://gitlab.polimi.it/Pub/mbdyn).
 The favourite installation method is by compiling it yourself. You can compile **MBDyn**
 - natively in Linux (instructions follow below), or
 - in Windows, for 
