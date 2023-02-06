@@ -15,7 +15,8 @@ write to the
 If you want to participate to **Google Summer of Code**
 working at the **MBDyn** project,
 please follow the related instructions;
-**this page has NOTHING TO DO WITH GSoC**.
+**this page has NOTHING TO DO WITH GSoC**. Note also
+the **MBDyn** is **not** going to partecipate in 2023.
 
 Direct support that involves developers' time and
 effort may require a **support contract**.

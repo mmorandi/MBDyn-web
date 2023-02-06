@@ -32,7 +32,7 @@ On GNU/Linux, real-time execution is supported under RTAI, the Real-Time Applica
 
 **MBDyn** participated in Google Summer of Code 
 ([GSoC](https://summerofcode.withgoogle.com/)) in 2015, 2016, 2017, 2019, 2020, 2021
-and 2022! We are eager to participate in future editions.
+and 2022! We are **not** planning to participate in 2023.
 
 ## Feedback 
 Are you using **MBDyn** for a research or an industrial project? 
