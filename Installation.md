@@ -35,13 +35,13 @@ Note: in command examples below, a `$` prefix means you can run the command as a
       
       `# apt install libltdl-dev liblapack-dev libsuitesparse-dev libnetcdf-dev libnetcdf-cxx-dev`
       
-      (Note: the name of the latter package might change; for example, libnetcdf-c++4-dev)
+      (Note: the name of the latter package might change; for example, `libnetcdf-c++4-dev`)
         - in other distros you should be able to locate the corresponding packages.
     - get **MBDyn**'s source code: you can use tarballs of official releases, or snapshots from the git repository
         - either **(preferred!)** obtain a snapshot from the git repository:
             - visit the website https://gitlab.polimi.it/Pub/mbdyn
             - either
-                - **(preferred!)** copy the URL required to clone it with git, then change directory into the source tree and checkout the develop branch
+                - **(preferred!)** copy the URL required to clone it with git, then change directory into the source tree and checkout the `develop` branch
 
                   `$ git clone https://public.gitlab.polimi.it/DAER/mbdyn.git`
 
