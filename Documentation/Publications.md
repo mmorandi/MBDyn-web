@@ -41,6 +41,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   [doi:10.2514/2.933](http://dx.doi.org/10.2514/2.933).
 
 ## Journal Papers:
+* Y. Wei, A. Incecik, T. Tezdogan, "**A hydroelasticity analysis of a damaged ship based on a two-way coupled CFD-DMB method**",[_Ocean Engineering_](https://www.sciencedirect.com/journal/ocean-engineering), 274:114075, 2023, [doi:10.1016/j.oceaneng.2023.114075](https://doi.org/10.1016/j.oceaneng.2023.114075)
 * S. Conti, E. Tschopp, O. Mateus, A. Zanoni, P. Masarati, G. Sala, "**Multibody analysis and soft tissue strength refute supersonic dinosaur tail**", [_Scientific Reports_](https://www.nature.com/srep/), 12:19245, 2022, [doi:10.1038/s41598-022-21633-2](https://doi.org/10.1038/s41598-022-21633-2)
 * A. Cocco, S. Mazzetti, P. Masarati, S. van 't Hoff, B. Timmerman, "**Numerical Whirl-Flutter Analysis of a Tiltrotor Semi-span Wind Tunnel Model**", [_CEAS Aeronautical Journal_](https://www.springer.com/journal/13272), 13(4):923-938, 2022, [doi:10.1007/s13272-022-00605-2](https://doi.org/10.1007/s13272-022-00605-2)
 * R. Zhang, H. Zhang, A. Zanoni, A. Tasora, P. Masarati, "**Explicit Smooth/Non-Smooth Co-Simulation Using Kinematic Constraints**", [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044), 55(1-2):3-37, 2022, [doi:10.1007/s11044-022-09829-w](https://doi.org/10.1007/s11044-022-09829-w)
