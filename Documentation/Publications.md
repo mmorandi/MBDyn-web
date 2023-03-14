@@ -41,6 +41,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   [doi:10.2514/2.933](http://dx.doi.org/10.2514/2.933).
 
 ## Journal Papers:
+* G. Cassoni, A. Zanoni, A. Tamer, P. Masarati, "**Stability Analysis of Nonlinear Rotating Systems Using Lyapunov Characteristic Exponents Estimated From Multibody Dynamics**", 2023, [_ASME J. Comput. Nonlinear Dyn._](http://journaltool.asme.org/Content/JournalDescriptions.cfm?journalId=21&amp;Journal=CND), [doi:10.1115/1.4056591](https://doi.org/10.1115/1.4056591)
 * Y. Wei, A. Incecik, T. Tezdogan, "**A hydroelasticity analysis of a damaged ship based on a two-way coupled CFD-DMB method**",[_Ocean Engineering_](https://www.sciencedirect.com/journal/ocean-engineering), 274:114075, 2023, [doi:10.1016/j.oceaneng.2023.114075](https://doi.org/10.1016/j.oceaneng.2023.114075)
 * S. Conti, E. Tschopp, O. Mateus, A. Zanoni, P. Masarati, G. Sala, "**Multibody analysis and soft tissue strength refute supersonic dinosaur tail**", [_Scientific Reports_](https://www.nature.com/srep/), 12:19245, 2022, [doi:10.1038/s41598-022-21633-2](https://doi.org/10.1038/s41598-022-21633-2)
 * A. Cocco, S. Mazzetti, P. Masarati, S. van 't Hoff, B. Timmerman, "**Numerical Whirl-Flutter Analysis of a Tiltrotor Semi-span Wind Tunnel Model**", [_CEAS Aeronautical Journal_](https://www.springer.com/journal/13272), 13(4):923-938, 2022, [doi:10.1007/s13272-022-00605-2](https://doi.org/10.1007/s13272-022-00605-2)
