@@ -86,7 +86,7 @@ defaults:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-include:
+exclude:
   - userfiles/documents/examples/
   - userfiles/documents/presentations/
 #   - .sass-cache/
