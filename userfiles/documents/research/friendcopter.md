@@ -21,6 +21,6 @@ improvement and vibrations reduction.
 The activity is currently focusing on the optimization of the 
 active twist blade section properties.
 
-Points of contact were Professor Gain Luca Ghiringhelli,
+Points of contact were Professor Gian Luca Ghiringhelli,
 Dr. [Pierangelo Masarati](https://home.aero.polimi.it/masarati) and 
 Dr. [Marco Morandini](https://home.aero.polimi.it/morandini) for smart blade optimization. 
