@@ -63,6 +63,8 @@ begin: control data;
 	forces:
 		+1    # loads the beam
 	;
+
+	# output results: netcdf;
 end: control data;
 
 set: real m = 1.;
@@ -105,12 +107,21 @@ begin: elements;
 	set: curr_elem = 10;
 	include: "beam.elm";
 
-	# constant follower force in node 3
-	force: 2 * N + 1, follower, 
+	set: real initial_time = 0.;
+	set: real frequency = 10./pi; # radians
+	set: real amplitude = 100.;
+	set: real initial_value = 0.;
+	# constant absolute force in end node
+	# with different amplification factors
+	force: 2 * N + 1, absolute,
 		2 * N + 1,
-		position,  null,
+		position, null,
 		0., 0., 1.,
-		cosine, 0., pi/2., 10., half, 0.;
+		array, 2,
+			sine, initial_time, frequency, amplitude, 
+				forever, initial_value,
+			cosine, initial_time+.1, frequency/2., amplitude, 
+				half, initial_value;
 end: elements;
 
 # vim:ft=mbd

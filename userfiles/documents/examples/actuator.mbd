@@ -147,6 +147,8 @@ begin: control data;
 	forces:   
 		+1       # imposed flow in pipe
 	;
+
+	# output results: netcdf;
 end: control data;
 
 set: integer BEAM = 100;

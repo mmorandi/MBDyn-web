@@ -27,13 +27,13 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 structural: curr_elem, dynamic,
-	(curr_elem - 1) * dL, 0., 0.,
+	(curr_elem - 1) * (dL/2.), 0., 0.,
 	eye, 
 	null, 
 	null;
 
 structural: curr_elem + 1, dynamic,
-	curr_elem * dL, 0., 0., 
+	curr_elem * (dL/2.), 0., 0., 
 	eye, 
 	null, 
 	null;
