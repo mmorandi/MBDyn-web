@@ -9,7 +9,7 @@ please contact [mbdyn@polimi.it](mailto:mbdyn@polimi.it).
 ## Aerospace Research and Engineering
 ## Aerospace Engineering
 
-* The [_Dipartimento di Scienze e Tecnologie Aerospaziali_](http://www.aero.polimi.it/) (Aerospace Science and Technology) of the University "[_Politecnico di Milano_](http://www.polimi.it/)", Italy.
+* The [_Dipartimento di Scienze e Tecnologie Aerospaziali_](https://www.aero.polimi.it/) (Aerospace Science and Technology) of the University "[_Politecnico di Milano_](http://www.polimi.it/)", Italy.
   
   ![POLIMI logo]({{ "/Images/04_blu.gif" | relative_url }}){: width="212" height="65"}
   
@@ -45,7 +45,7 @@ please contact [mbdyn@polimi.it](mailto:mbdyn@polimi.it).
 
 **Aerospace**
 
-* [FreeCASE](http://www.aero.polimi.it/freecase): DIAPM's Free(dom) Computational AeroServoElasticity site hosts links to the free software they develop. 
+* [FreeCASE](https://www.aero.polimi.it/freecase): DIAPM's Free(dom) Computational AeroServoElasticity site hosts links to the free software they develop. 
 * [NeoCASS](http://www.neocass.org/) (Next generation Conceptual Aero Structural Sizing) is a free suite of Matlab modules that combines state of the art computational, analytical and semi-empirical methods to tackle all the aspects of the aero-structural analysis of a design layout at conceptual design stage. 
 * [OpenFOAM](http://www.opencfd.co.uk/openfoam/)
 

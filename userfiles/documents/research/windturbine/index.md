@@ -12,28 +12,28 @@ This page documents contributions from individuals and institutions to this proj
 
 So far, the persons listed below contributed to **MBDyn** development and application to wind-turbine modeling. 
 * **Luca Cavagna**
-  ([Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale),
+  ([Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale),
   [Politecnico di Milano](https://www.polimi.it)): 
   * worked at the [real-time simulation of the CART model](https://www.mbdyn.org/?RT-MBDyn) with **RT-MBDyn** as part of the **SI PARTE!** project. 
 * **André Espaze** (Dede): 
   * worked at the [Python binding](http://mbdynsimsuite.sourceforge.net/project_doc/api/html/mbdyn-module.html) of **MBDyn** for wind-turbine simulation. 
 * **Alessandro Fumagalli**
-  ([Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
+  ([Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
   [Politecnico di Milano](https://www.polimi.it)): 
   * contributed to **MBDyn** development 
   * worked at real-time simulation of wind-turbines 
 * **Pierangelo Masarati**
-  ([Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
+  ([Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
   [Politecnico di Milano](https://www.polimi.it))
 * **Fanzhong Meng** 
   ([Department of Aerospace Engineering](http://www.lr.tudelft.nl/), [TU Delft](http://www.tudelft.nl/)): 
-  * during a stage at [Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/) of [Politecnico di Milano](https://www.polimi.it) developed `module-aerodyn`, 
+  * during a stage at [Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) of [Politecnico di Milano](https://www.polimi.it) developed `module-aerodyn`, 
     a module that interfaces [NREL](http://www.nrel.gov/)'s [AeroDyn](http://wind.nrel.gov/designcodes/simulators/aerodyn/) wind-turbine aerodynamic loads to **MBDyn**. The module has been released in **MBDyn** 1.3.7. 
 * **Marco Morandini**
-  ([Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
+  ([Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
   [Politecnico di Milano](https://www.polimi.it)): 
 * **Giuseppe Quaranta**
-  ([Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
+  ([Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/) (formerly Dipartimento di Ingegneria Aerospaziale), 
   [Politecnico di Milano](https://www.polimi.it)): 
 * **Patrick Rix** ([REpower Systems AG](http://www.repower.de/)): 
   * contributed to **MBDyn** development 

@@ -35,7 +35,7 @@ development, while some independent users contributed portions of software.
   control-related genels and the piezoelectric beam elements. 
   In 1997, while Ph.D. student, he started recoding **MBDyn** in its current form (from F77 to C++). 
   He currently coordinates the development and maintenance of **MBDyn** and other related projects 
-  ([personal home page](http://home.aero.polimi.it/masarati/)).
+  ([personal home page](https://home.aero.polimi.it/masarati/)).
 * Felice Felippone
 
   as undergrad student, implemented the modal body back in the new version of the code.
@@ -59,7 +59,7 @@ development, while some independent users contributed portions of software.
 
   developed advanced elasticity models, working on the data structure, new integration 
   schemes, friction, tire and brake models and shell elements. He is a stable member of the team
-  ([personal home page](http://home.aero.polimi.it/morandini/)).
+  ([personal home page](https://home.aero.polimi.it/morandini/)).
 * Stefania Gualdi
 
   as Post Doc., worked at aircraft landing and ground handling qualities: 
@@ -99,7 +99,7 @@ development, while some independent users contributed portions of software.
 
   as undergraduate student, interfaced **MBDyn** with 
   [Scicos](http://www.scilab.org/); as Ph.D. student, interfaced **MBDyn** with 
-  [OpenFOAM](http://www.openfoam.com/)/[AeroFOAM](http://www.aero.polimi.it/freecase/).
+  [OpenFOAM](http://www.openfoam.com/)/[AeroFOAM](https://www.aero.polimi.it/freecase/).
 * Riccardo Vescovini
 
   as Ph.D. student, helped Marco Morandini in the development of the shell element.

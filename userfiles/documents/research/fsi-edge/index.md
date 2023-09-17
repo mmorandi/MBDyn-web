@@ -30,5 +30,5 @@ An interface between MBDyn and EDGE, a Navier-Stokes solver for unstructured gri
 ## Related links
 
 * the [TURNS interface]({{ "/userfiles/documents/research/fsi-turns/" | relative_url }}) research page
-* the [FreeCASE]({{ "http://www.aero.polimi.it/freecase" | relative_url }}): 
+* the [FreeCASE]({{ "https://www.aero.polimi.it/freecase" | relative_url }}): 
   <u>Free</u>(dom) <u>C</u>omputational <u>A</u>ero<u>S</u>ervo<u>E</u>lasticity project

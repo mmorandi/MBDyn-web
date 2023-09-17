@@ -92,15 +92,15 @@ Only few works on this topic are available in the open literature. Recent effort
   presented at the [_38th ERF_](http://erf2012.nlr.nl/), Amsterdam, NL, September 4-7, 2012. 
 * A. Zanoni, P. Masarati, G. Quaranta, 
   "**Estimation of the Dependence of Upper Limb's Biomechanical Impedance on Muscular Activation**" , 
-  [presented](http://www.aero.polimi.it/masarati/Publications/imsd2012_bm_pres.pdf) at 
+  [presented](https://home.aero.polimi.it/masarati/Publications/imsd2012_bm_pres.pdf) at 
   [_IMSD 2012_](http://www.imsd2012.uni-stuttgart.de/), Stuttgart, Germany, May 29-June 1, 2012. 
 * V. Muscarello, P. Masarati, G. Quaranta, "**Multibody Analysis of Rotorcraft-Pilot Coupling**" , presented at [_IMSD 2012_](http://www.imsd2012.uni-stuttgart.de/), Stuttgart, Germany, May 29-June 1, 2012. 
 * G. Quaranta, P. Masarati, J. Venrooij, "**Robust Stability Analysis: a Tool to Assess the Impact of Biodynamic Feedthrough on Rotorcraft**" , 
-  [presented](http://www.aero.polimi.it/masarati/Publications/robust-bdft_pres.pdf) at the 
+  [presented](https://home.aero.polimi.it/masarati/Publications/robust-bdft_pres.pdf) at the 
   68th [AHS](http://www.vtol.org/) Forum, Fort Worth, Texas, May 1-3, 2012. 
 * P. Masarati, G. Quaranta, L. Lu, M. Jump, 
   "**Theoretical and Experimental Investigation of Aeroelastic Rotorcraft-Pilot Coupling**" , 
-  [presented](http://www.aero.polimi.it/masarati/Publications/pao_pres.pdf) at the 68th [AHS](http://www.vtol.org/) Forum, Fort Worth, Texas, May 1-3, 2012. 
+  [presented](https://home.aero.polimi.it/masarati/Publications/pao_pres.pdf) at the 68th [AHS](http://www.vtol.org/) Forum, Fort Worth, Texas, May 1-3, 2012. 
 * M. D. Pavel, J. Malecki, B. DangVu, P. Masarati, M. Gennaretti, M. Jump, H. Smaili, A. Ionita, L. Zaicek, "**A Retrospective Survey of Adverse Rotorcraft Pilot Couplings in European Perspective**" , presented at the 68th [AHS](http://www.vtol.org/) Forum, Fort Worth, Texas, May 1-3, 2012. 
 * M. Pavel, J. Malecki, B. DangVu, P. Masarati, G. Quaranta, M. Genaretti, M. Jump, H. Smaili, A. Ionita, L. Zaicek, "**Aircraft and Rotorcraft Pilot Coupling: a Survey of Recent Research Activities within the European Project ARISTOTEL**" , presented at 
   [_CEAS 2011_](http://www.ceas2011.org/), 24-28 October 2011, Venice, Italy. 
@@ -112,19 +112,19 @@ Only few works on this topic are available in the open literature. Recent effort
   "**Aeroservoelastic Investigation of Rotorcraft-Pilot Coupling (RPC) by Coupled BEM/Multibody Analysis**" , 
   [_IFASD 2011_](http://www.ifasd2011.com/), June 26-30, 2011 Paris, France. 
 * P. Masarati, G. Quaranta, W. Basso, R. Bianco-Mengotti, C. Monteggia, 
-  "[**Preliminary In-Flight Biomechanic Tests on the BA-609 Fly-By-Wire Tiltrotor**](http://www.aero.polimi.it/masarati/Publications/sfte2010_609_bm.pdf)" , 
+  "[**Preliminary In-Flight Biomechanic Tests on the BA-609 Fly-By-Wire Tiltrotor**](https://home.aero.polimi.it/masarati/Publications/sfte2010_609_bm.pdf)" , 
   [_21st SFTE EC Symposium_](http://www.sfte-ec.se/), Vergiate (VA), Italy, October 3-6, 2010. 
 * P. Masarati, G. Quaranta, M. Gennaretti, J. Serafini, 
-  "[**Aeroservoelastic Analysis of Rotorcraft-Pilot Interaction by Coupled BEM-Multibody Solvers**](http://www.aero.polimi.it/masarati/Publications/rpcerf2010.pdf)" , 
+  "[**Aeroservoelastic Analysis of Rotorcraft-Pilot Interaction by Coupled BEM-Multibody Solvers**](https://home.aero.polimi.it/masarati/Publications/rpcerf2010.pdf)" , 
   [_36th ERF_](http://www.erf2010.org/), Paris, France, September 7-9, 2010 
 * P. Masarati, G. Quaranta, M. Gennaretti, J. Serafini "**Aeroservoelastic Analysis of Rotorcraft-Pilot Coupling: a Parametric Study**" 66th AHS Forum, May 11-13, 2010, Phoenix, AZ. 
 * M. Mattaboni, G. Quaranta, P. Masarati, and M. Jump "**Experimental Identification of Rotorcraft Pilots' Biodynamic Response for Investigation of PAO Events**" 35th European Rotorcraft Forum, Hamburg, September 22-25, 2009. 
 * P. Masarati, G. Quaranta, W. Basso, R. Bianco-Mengotti e C. Monteggia 
-  "[**Biodynamic Tests for Pilots' Characterization on the BA-609 Fly-By-Wire Tiltrotor**](http://www.aero.polimi.it/masarati/Publications/aidaa2009_609_quaranta_paper.pdf)" XX Congresso Nazionale AIDAA, June 29-July 3 2009, Milano, Italy. 
-* M. Mattaboni, A. Fumagalli, G. Quaranta, and P. Masarati "[**Identification of the Biomechanical Behavior of a Rotorcraft Pilot Arm**](http://www.aero.polimi.it/masarati/Publications/aidaa2009bm.pdf)" XX Congresso Nazionale AIDAA, June 29-July 3 2009, Milano, Italy. 
+  "[**Biodynamic Tests for Pilots' Characterization on the BA-609 Fly-By-Wire Tiltrotor**](https://home.aero.polimi.it/masarati/Publications/aidaa2009_609_quaranta_paper.pdf)" XX Congresso Nazionale AIDAA, June 29-July 3 2009, Milano, Italy. 
+* M. Mattaboni, A. Fumagalli, G. Quaranta, and P. Masarati "[**Identification of the Biomechanical Behavior of a Rotorcraft Pilot Arm**](https://home.aero.polimi.it/masarati/Publications/aidaa2009bm.pdf)" XX Congresso Nazionale AIDAA, June 29-July 3 2009, Milano, Italy. 
 * J. Serafini, M. Gennaretti, P. Masarati, G. Quaranta, O. Dieterich 
-  "[**Aeroelastic and Biodynamic Modeling for Stability Analysis of Rotorcraft-Pilot Coupling Phenomena**](http://www.aero.polimi.it/masarati/Publications/08erf_ae.pdf)" Presented at the 34th European Rotorcraft Forum, September 16-19, 2008, Liverpool (UK). 
+  "[**Aeroelastic and Biodynamic Modeling for Stability Analysis of Rotorcraft-Pilot Coupling Phenomena**](https://home.aero.polimi.it/masarati/Publications/08erf_ae.pdf)" Presented at the 34th European Rotorcraft Forum, September 16-19, 2008, Liverpool (UK). 
 * O. Dieterich, J. Götz, B. DangVu, H. Haverdings, P. Masarati, M. Pavel, M. Jump, M. Gennaretti "**Adverse Rotorcraft-Pilot Coupling: Recent Research Activities in Europe**" Presented at the 34th European Rotorcraft Forum, September 16-19, 2008, Liverpool (UK). 
 * M. Jump, S. Hodge, B. DangVu, P. Masarati, G. Quaranta, M. Mattaboni, M. Pavel, O. Dieterich "**Adverse Rotorcraft-Pilot Coupling: The Construction of the Test Campaigns at the University of Liverpool**" Presented at the 34th European Rotorcraft Forum, September 16-19, 2008, Liverpool (UK). 
 * M. Mattaboni, A. Fumagalli, M. Jump, P. Masarati, G. Quaranta "**Biomechanical Pilot Properties Identification by Inverse Kinematics/Inverse Dynamics Multibody Analysis**" Presented at the ICAS-International Council for the Aeronautical Sciences September 14-19, 2008, Anchorage, Alaska, USA. 
-* P. Masarati, G. Quaranta, J. Serafini, and M. Gennaretti "[**Numerical Investigation of Aeroservoelastic Rotorcraft-Pilot Coupling**](http://www.aero.polimi.it/masarati/Publications/aidaa2007-rpc.pdf)" XIX Congresso AIDAA, Forlì, Italy, 17-21 Settembre 2007. 
+* P. Masarati, G. Quaranta, J. Serafini, and M. Gennaretti "[**Numerical Investigation of Aeroservoelastic Rotorcraft-Pilot Coupling**](https://home.aero.polimi.it/masarati/Publications/aidaa2007-rpc.pdf)" XIX Congresso AIDAA, Forlì, Italy, 17-21 Settembre 2007. 

@@ -44,5 +44,5 @@ mesh based on the deformation of the boundary mesh.
 
 * the [EDGE interface]({{ "/userfiles/documents/research/fsi-edge/index.html" | relative_url }}) research page
 * the [Wind Turbines]({{ "/userfiles/documents/research/windturbine/index.html" | relative_url }}) research page
-* the [FreeCASE](http://www.aero.polimi.it/freecase/): <u>Free</u>(dom) <u>C</u>omputational <u>A</u>ero<u>S</u>ervo<u>E</u>lasticity project
+* the [FreeCASE](https://www.aero.polimi.it/freecase/): <u>Free</u>(dom) <u>C</u>omputational <u>A</u>ero<u>S</u>ervo<u>E</u>lasticity project
 

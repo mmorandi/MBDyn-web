@@ -11,7 +11,7 @@ Contract Number AIP3-CT-2003-502773
 6th FP European Research Project. 
 
 The research contribution from 
-"[Dipartimento di Scienze e Tecnologie Aerospaziali](http://www.aero.polimi.it/en/)" 
+"[Dipartimento di Scienze e Tecnologie Aerospaziali](https://www.aero.polimi.it/en/)" 
 (at that time Dipartimento di Ingegneria Aerospaziale) of 
 "[Politecnico di Milano](https://www.polimi.it)" 
 focuses on interior noise (WP4) and smart blades (WP5). **MBDyn** is used 

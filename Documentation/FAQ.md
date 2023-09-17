@@ -251,29 +251,29 @@ By default, **MBDyn** installs in `/usr/local/mbdyn/`; the executable ends up in
 
 ## Where can I find the theory manual?
 The short answer is: there is no theory manual, sorry.A more detailed answer is: the theory manual is being authored; most of the foundations MBDyn is based on are illustrated in Pierangelo Masarati's Ph.D. dissertation and in the papers listed here. Many of those publications refer to the application of MBDyn to the modeling and analysis of rotorcraft and other aerospace-related problems. Selected ones refer to theoretical aspects of the software, or to implementation details. Among them: 
-  * "[A Multibody Implementation of Finite Volume Beams](http://www.aero.polimi.it/~ghiro/abstract/AIAAJ-FiniteVolumeBeam.pdf)", G.L. Ghiringhelli, P. Masarati and P. Mantegazza, AIAA Journal, Vol. 38(1), January 2000, pp. 131-138 
+  * "[A Multibody Implementation of Finite Volume Beams](https://www.aero.polimi.it/~ghiro/abstract/AIAAJ-FiniteVolumeBeam.pdf)", G.L. Ghiringhelli, P. Masarati and P. Mantegazza, AIAA Journal, Vol. 38(1), January 2000, pp. 131-138 
 discusses the original formulation and some details of the implementation of the beam elements; 
-  * "[Integration of Hydraulic Components in a Multibody Framework for Rotorcraft Analysis](http://www.aero.polimi.it/~masarati/Publications/Integration%20of%20Hydraulic%20Components%20in%20a%20Multibody%20Framework%20for%20Rotorcraft%20Analysis.ps.gz)", P. Masarati, G.L. Ghiringhelli, M. Lanz, and P. Mantegazza, presented at the 26th European Rotorcraft Forum, September 26-29, 2000, The Hague, The Netherlands 
+  * "[Integration of Hydraulic Components in a Multibody Framework for Rotorcraft Analysis](https://www.aero.polimi.it/~masarati/Publications/Integration%20of%20Hydraulic%20Components%20in%20a%20Multibody%20Framework%20for%20Rotorcraft%20Analysis.ps.gz)", P. Masarati, G.L. Ghiringhelli, M. Lanz, and P. Mantegazza, presented at the 26th European Rotorcraft Forum, September 26-29, 2000, The Hague, The Netherlands 
 illustrates the implementation of the hydraulic components library and its application to multidisciplinary problems; 
-  * "[Multistep Integration of Ordinary, Stiff and Differential-Algebraic Problems for Multibody Dynamics Applications](http://www.aero.polimi.it/~masarati/Publications/MULTISTEP_INTEGRATION-AIDAA16.ps.gz)", P. Masarati, M. Lanz and P. Mantegazza, presented at the XVI Congresso Nazionale AIDAA, 24-28 September 2001, Palermo, Italy 
+  * "[Multistep Integration of Ordinary, Stiff and Differential-Algebraic Problems for Multibody Dynamics Applications](https://www.aero.polimi.it/~masarati/Publications/MULTISTEP_INTEGRATION-AIDAA16.ps.gz)", P. Masarati, M. Lanz and P. Mantegazza, presented at the XVI Congresso Nazionale AIDAA, 24-28 September 2001, Palermo, Italy 
 discusses in detail the integration schemes (there is a dedicated FAQ here); 
   * "Multibody Aero-Servoelastic Analysis on Parallel Computers Using Schur Complement Techniques", G. Quaranta, P. Masarati, and P. Mantegazza, Multibody System Dynamics, August 2002, Vol. 8, No. 1, pp. 71-102 
 discusses the parallelization approach initially implemented in MBDyn; the theoretical approach is still valid, but the implementation changed a little bit over the years; 
-  * "[Open Source Multibody Analysis Software](http://www.aero.polimi.it/~masarati/Publications/os2003.pdf)", P. Masarati, M. Morandini, G. Quaranta, and P. Mantegazza, presented at Multibody Dynamics 2003 International Conference on Advances in Computational Multibody Dynamics July 1-4, 2003 Lisboa, Portugal 
+  * "[Open Source Multibody Analysis Software](https://www.aero.polimi.it/~masarati/Publications/os2003.pdf)", P. Masarati, M. Morandini, G. Quaranta, and P. Mantegazza, presented at Multibody Dynamics 2003 International Conference on Advances in Computational Multibody Dynamics July 1-4, 2003 Lisboa, Portugal 
 discusses the opportunity of developing a free multibody analysis software; 
-  * "[A Deformable Slider Joint for Multibody Applications](http://www.aero.polimi.it/~masarati/Publications/SliderAIDAA2003.pdf)", S. Gualdi, M. Morandini, and P. Masarati, presented at the XVII Congresso Nazionale A.I.D.A.A. Settembre 2003 15-19 Roma 
+  * "[A Deformable Slider Joint for Multibody Applications](https://www.aero.polimi.it/~masarati/Publications/SliderAIDAA2003.pdf)", S. Gualdi, M. Morandini, and P. Masarati, presented at the XVII Congresso Nazionale A.I.D.A.A. Settembre 2003 15-19 Roma 
 illustrates the implementation of the deformable slider joint, an element that constrains a node to move along a string of beam elements; 
-  * "[A Multibody User-Space Hard Real-Time Environment for the Simulation of Space Robots](http://www.aero.polimi.it/~masarati/Publications/v2003.pdf)", M. Attolico, and P. Masarati, presented at the Fifth Real-Time Linux Workshop, November 9-11, 2003, Valencia, Spain 
+  * "[A Multibody User-Space Hard Real-Time Environment for the Simulation of Space Robots](https://www.aero.polimi.it/~masarati/Publications/v2003.pdf)", M. Attolico, and P. Masarati, presented at the Fifth Real-Time Linux Workshop, November 9-11, 2003, Valencia, Spain 
 discusses the support for real-time simulation using RTAI, the Real-Time Application Interface for GNU/Linux; 
-  * "[Toward a Computational Framework for Rotorcraft Multi-Physics Analysis: Adding Computational Aerodynamics to Multibody Rotor Models](http://www.aero.polimi.it/~masarati/Publications/multibody2005-103.pdf)", G. Quaranta, G. Bindolino, P. Masarati, and P. Mantegazza, presented at the 30th European Rotorcraft Forum, Marseilles, France, September 14-16 2004 
+  * "[Toward a Computational Framework for Rotorcraft Multi-Physics Analysis: Adding Computational Aerodynamics to Multibody Rotor Models](https://www.aero.polimi.it/~masarati/Publications/multibody2005-103.pdf)", G. Quaranta, G. Bindolino, P. Masarati, and P. Mantegazza, presented at the 30th European Rotorcraft Forum, Marseilles, France, September 14-16 2004 
 illustrates the coupling of MBDyn to generic CFD loads; 
-  * "[Computational Aspects and Recent Improvements in the Open-Source Multibody Analysis Software "MBDyn"](http://www.aero.polimi.it/~masarati/Publications/multibody2005-103.pdf)", P. Masarati, M. Morandini, G. Quaranta, and P. Mantegazza, presented at the Multibody Dynamics 2005 International Conference on Advances in Computational Multibody Dynamics ECCOMAS Thematic Conference, Madrid, Spain, June 21-24 2005, Universidad Politecnica de Madrid 
+  * "[Computational Aspects and Recent Improvements in the Open-Source Multibody Analysis Software "MBDyn"](https://www.aero.polimi.it/~masarati/Publications/multibody2005-103.pdf)", P. Masarati, M. Morandini, G. Quaranta, and P. Mantegazza, presented at the Multibody Dynamics 2005 International Conference on Advances in Computational Multibody Dynamics ECCOMAS Thematic Conference, Madrid, Spain, June 21-24 2005, Universidad Politecnica de Madrid 
 discusses recent improvements of the software, 
                   Further development is underway; as soon as they become available, related documents will be posted here. 
 
 ## Where can I find the developers' manual?
 The short answer is: there is no developers' manual, sorry.A more detailed answer is: it is being authored; a draft copy is available 
-[here](http://home.aero.polimi.it/masarati/tecman.pdf), but it's far from complete and in a very preliminary status. Essentially, developers committed themselves to writing some technical documentation for each new feature that is added to the code, while features already implemented will get documented whenever they need review for whatever reason. Eventually, this document will become complete enough to be called "developers' manual". 
+[here](https://home.aero.polimi.it/masarati/tecman.pdf), but it's far from complete and in a very preliminary status. Essentially, developers committed themselves to writing some technical documentation for each new feature that is added to the code, while features already implemented will get documented whenever they need review for whatever reason. Eventually, this document will become complete enough to be called "developers' manual". 
 
 ## What is the exact syntax of element X?
 The exact syntax of each input card is illustrated in the input manual (either make sure you consult the input manual that refers to the version you are using, or download the source code from GIT; the input manual latex code is in manual/input/). The input manual is regularly updated, but omissions may occur, and outdated stuff and bugs may always slip in. Please feel free to notify errors and submit patches, if you think there is anything wrong in it, 
@@ -368,7 +368,7 @@ More details may be found in the paper
     
     G. Quaranta, P. Masarati, and P. Mantegazza
     "[Assessing the Local Stability of Periodic Motions for Large Multibody Nonlinear Systems Using
-    POD](http://www.aero.polimi.it/~quaranta/Papers/JSV-2003.pdf)",
+    POD](https://www.aero.polimi.it/~quaranta/Papers/JSV-2003.pdf)",
     [Journal of Sound and Vibration](https://www.journals.elsevier.com/journal-of-sound-and-vibration/), Vol. 271/3-5, pp. 1015-1038.
     [doi:10.1016/j.jsv.2003.03.004](https://dx.doi.org/10.1016/j.jsv.2003.03.004)
  
@@ -390,13 +390,13 @@ In short:
   * geometrically exact, nonlinear, composite-ready beam elements:
     
     G.L. Ghiringhelli, P. Masarati, P. Mantegazza
-    "[A Multibody Implementation of Finite Volume Beams](http://www.aero.polimi.it/~ghiro/abstract/AIAAJ-FiniteVolumeBeam.pdf)",
+    "[A Multibody Implementation of Finite Volume Beams](https://www.aero.polimi.it/~ghiro/abstract/AIAAJ-FiniteVolumeBeam.pdf)",
     AIAA Journal, Vol. 38(1), January 2000, pp. 131-138.
     [doi:10.2514/2.933](https://dx.doi.org/10.2514/2.933)
   * geometrically exact, nonlinear, composite-ready shell elements:
     
     P. Masarati, M. Morandini, G. Quaranta, R. Vescovini
-    "[Multibody Analysis of a Micro-Aerial Vehicle Flapping Wing](http://www.aero.polimi.it/masarati/Publications/fw-mb2011.pdf)",
+    "[Multibody Analysis of a Micro-Aerial Vehicle Flapping Wing](https://home.aero.polimi.it/masarati/Publications/fw-mb2011.pdf)",
     [Multibody Dynamics 2011](http://www.multibody2011.org/), July 4-7, 2011, Brussels, Belgium.
                                   
   * geometrically exact, nonlinear membrane elements:

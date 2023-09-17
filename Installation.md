@@ -123,5 +123,5 @@ Those systems are relatively outdated. The user is referred to the specific inst
 At that point, building **MBDyn** follows the same rules as for Linux.
 As an alternative, one can find unofficial (i.e. unsupported!) binaries compiled with 
 MSYS/MinGW here: 
-[http://home.aero.polimi.it/masarati/Download/mbdyn/mbdyn-1.7.3-win32.zip](http://home.aero.polimi.it/masarati/Download/mbdyn/mbdyn-1.7.3-win32.zip)
+[https://home.aero.polimi.it/masarati/Download/mbdyn/mbdyn-1.7.3-win32.zip](http://home.aero.polimi.it/masarati/Download/mbdyn/mbdyn-1.7.3-win32.zip)
 (YMMV! Replace 1.7.3 with the desired version; beware: binaries are not available for all versions).

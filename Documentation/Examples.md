@@ -93,7 +93,7 @@
   control constraint of a simple manipulator, based on the movie presented by 
   Prof. Betsch at the 1st ESA Workshop on Multibody Dynamics for Space Applications, 
   February 2-3, 2010, ESA/ESTEC, Noordwijk, The Netherlands. 
-  See a [movie](http://www.aero.polimi.it/masarati/Download/mbdyn/images/triangle2.gif)
+  See a [movie](https://home.aero.polimi.it/masarati/Download/mbdyn/images/triangle2.gif)
   of MBDyn's analysis animated with EasyAnim.
 * [curved beam](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam_3node.tar.gz):
   eigenanalysis of a curved beam; uses arpack. Courtesy of Resch Reinhard. 

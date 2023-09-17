@@ -23,7 +23,7 @@ dedicated to micro-mechanical systems, not limited to aerial vehicles.
 *  2011-06-27: P. Masarati, M. Morandini, G. Quaranta, D. Chandar, B. Roget, J. Sitaraman, "**Tightly Coupled CFD/Multibody Analysis of Flapping-Wing Micro-Aerial Vehicles**", [_29th AIAA Applied Aerodynamics Conference_](http://www.aiaa.org/content.cfm?pageid=230&lumeetingid=2220), June 27-30, 2011, Honolulu, Hawaii, USA. 
 *  2011-06-21: **MBDyn** 1.4.0 is the first public release of the shell element. 
 *  2010-09-03: Pierangelo Masarati delivers a C++ wrapper of the external structural mapping force element peer library for fluid-structure interaction, to be released soon (eventually released with **MBDyn** 1.3.17). 
-*  2010-08-20: MAV semi-span wing flapping in vacuo [here](http://www.aero.polimi.it/masarati/Download/mbdyn/images/fwflexible4x4_40deg10Hz.gif) (a work in progress). 
+*  2010-08-20: MAV semi-span wing flapping in vacuo [here](https://home.aero.polimi.it/masarati/Download/mbdyn/images/fwflexible4x4_40deg10Hz.gif) (a work in progress). 
 *  2010-05-25: M. Mattaboni, M. Benedict, P. Masarati, and I. Chopra, "**MAV-Scale Cycloidal Rotor Multibody Aeroelastic Analysis**", [_IMSD 2010_](http://www.imsd10.fi/), Lappeenranta, Finland, May 25-27, 2010. 
 *  2010-05-17: Pierangelo Masarati delivers a generic external structural mapping force element and its companion peer library in C and Python, for fluid-structure interaction, to be released soon (eventually released with **MBDyn** 1.3.16). 
 *  2010-05-01: Marco Morandini and Riccardo Vescovini deliver a geometrically exact 4-node shell element, to be released soon (eventually released with **MBDyn** 1.4.0). 
