@@ -41,7 +41,7 @@ please contact [mbdyn@polimi.it](mailto:mbdyn@polimi.it).
 * [MechXML](http://mat21.etsii.upm.es/mbs/MechXML/mechxml.htm): a draft for a new language to define Multibody Systems. It is based on XML (eXtensible Markup Language), the standard meta-language to data interchange. In the current version, only rigid bodies are being considered. 
 * [Open Dynamics Engine](http://ode.org/) 
 * [Project Chrono](https://projectchrono.org/): an Open Source Multi-Physics Simulation Engine
-* [Robotran](http://www.prm.ucl.ac.be/recherche/projets/robotran/): ROBOTRAN is a computer program which generates kinematic and dynamical models of multibody systems in a symbolic manner.
+* [Robotran](https://www.robotran.be/): ROBOTRAN is a computer program which generates kinematic and dynamical models of multibody systems in a symbolic manner.
 
 **Aerospace**
 
