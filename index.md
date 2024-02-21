@@ -3,6 +3,14 @@
 
 # MBDyn - Multi-Body Dynamics
 
+
+> **BREAKING NEWS**
+> 
+> MBDyn has been selected for the 2024 [Google Summer of Code](https://summerofcode.withgoogle.com)!
+>
+> If you want to code with us this summer, head over to the [Gitlab Wiki](https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/home) to learn how you can start building your proposal.
+
+
 ## Introduction
 
 **MBDyn** is the first and one of the few full-featured
@@ -32,7 +40,7 @@ On GNU/Linux, real-time execution is supported under RTAI, the Real-Time Applica
 
 **MBDyn** participated in Google Summer of Code 
 ([GSoC](https://summerofcode.withgoogle.com/)) in 2015, 2016, 2017, 2019, 2020, 2021
-and 2022! We are **not** planning to participate in 2023.
+and 2022... And will again in **2024**!
 
 ## Feedback 
 Are you using **MBDyn** for a research or an industrial project? 
