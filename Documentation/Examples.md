@@ -2,33 +2,33 @@
 ---
 # Examples
 
-## Tutorials 
+## Tutorials
 (see the tutorials for details):
 
-* [rigidbody](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidbody). 
-* [rigidpendulum](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidpendulum). 
-* [cantilever1](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever1). 
-* [cantilever1piezo](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever1piezo). 
-* [cantilever5](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever5) 
-  (also needs 
-  [beam.nod](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.nod) 
-  and 
-  [beam.elm](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.elm)). 
-* [actuator](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/actuator.mbd). 
-* [speedcontrol](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/speedcontrol). 
-* [rigidhelicopter](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter). 
-* [rigidhelicopter2](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter2): same as rigidhelicopter, but with swashplate. 
+* [rigidbody](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidbody).
+* [rigidpendulum](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidpendulum).
+* [cantilever1](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever1).
+* [cantilever1piezo](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever1piezo).
+* [cantilever5](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cantilever5)
+  (also needs
+  [beam.nod](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.nod)
+  and
+  [beam.elm](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam.elm)).
+* [actuator](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/actuator.mbd).
+* [speedcontrol](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/speedcontrol).
+* [rigidhelicopter](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter).
+* [rigidhelicopter2](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rigidhelicopter2): same as rigidhelicopter, but with swashplate.
 
 ## IFToMM Multibody Technical Committee Benchmark Problems:
-* [Double parallelogram](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/6barmech) 
-  ([problem description](http://www.iftomm-multibody.org/benchmark/problem/Double_four_bar_mechanism/)) 
+* [Double parallelogram](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/6barmech)
+  ([problem description](http://www.iftomm-multibody.org/benchmark/problem/Double_four_bar_mechanism/))
 * [Spatial Rigid Slider-crank Mechanism](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/srscm)
-  ([problem description](http://www.iftomm-multibody.org/benchmark/problem/Spatial_rigid_slider-crank_mechanism/)) 
-* [Andrew's Squeezer Mechanism](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/andrewssqueezer.zip) 
-  ([problem description](http://www.iftomm-multibody.org/benchmark/problem/Andrews'_squeezer_mechanism/)) 
+  ([problem description](http://www.iftomm-multibody.org/benchmark/problem/Spatial_rigid_slider-crank_mechanism/))
+* [Andrew's Squeezer Mechanism](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/andrewssqueezer.zip)
+  ([problem description](http://www.iftomm-multibody.org/benchmark/problem/Andrews'_squeezer_mechanism/))
 
 ## Dymore Benchmark Problems:
-* Princeton beam experiments ([problem description](http://www.dymoresolutions.com/Benchmarks/PrincetonBeam/HeadPrincetonBeam.html)) 
+* Princeton beam experiments ([problem description](http://www.dymoresolutions.com/Benchmarks/PrincetonBeam/HeadPrincetonBeam.html))
 * Four bar mechanism ([problem description]())
   ([movie](https://home.aero.polimi.it/masarati/Download/mbdyn/images/fourbar.gif))
 * Lateral buckling ([problem description](http://www.dymoresolutions.com/Benchmarks/LateralBuckling/HeadLateralBuckling.html))
@@ -39,41 +39,41 @@
 
 ## Misc:
 * [chain](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/chain):
-  falling rigid 4 links chain. 
+  falling rigid 4 links chain.
 * [modalextsocket.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/modalextsocket.tar.gz):
-  examples of socket-based tight coupling by external modal forces using C test tool. 
+  examples of socket-based tight coupling by external modal forces using C test tool.
 * [motioncapture.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/motioncapture.tar.gz):
-  example of motion capture.  Two sensors are attached by springs to a constrained system. The motion of the sensors is prescribed; their location is updated to minimize motion mismatch. 
+  example of motion capture.  Two sensors are attached by springs to a constrained system. The motion of the sensors is prescribed; their location is updated to minimize motion mismatch.
 * [pendulum](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/pendulum):
-  simple pendulum. 
+  simple pendulum.
 * [pid](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/pid):
-  simple PID controller example. 
+  simple PID controller example.
 * [planemech](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/planemech):
-  simple plane mechanism. 
+  simple plane mechanism.
 * [privdataoutput](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/privdataoutput):
-  example of private data output. 
-* [rotationalspring](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rotationalspring). 
+  example of private data output.
+* [rotationalspring](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/rotationalspring).
 * [socket.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/socket.tar.gz):
-  examples of socket-based tight coupling by external forces using C (and C++ and F77) test tools. 
+  examples of socket-based tight coupling by external forces using C (and C++ and F77) test tools.
 * [springmass.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/springmass.tar.gz):
-  example of tightly coupled cosimulation directly in python, optionally wrapped through Matlab using pymex. 
+  example of tightly coupled cosimulation directly in python, optionally wrapped through Matlab using pymex.
 * [ssbeam.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/ssbeam.tar.gz):
-  example of hand-made modal element representing a simply supported beam, subjected to gravity. 
+  example of hand-made modal element representing a simply supported beam, subjected to gravity.
 * [stream-springmass.tar.gz](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/stream-springmass.tar.gz):
-  example of loosely coupled cosimulation between two instances of MBDyn or between an instance of MBDyn and a Python script. 
+  example of loosely coupled cosimulation between two instances of MBDyn or between an instance of MBDyn and a Python script.
 * [wire](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/wire):
-  eigenanalysis of a wire with pretension. 
+  eigenanalysis of a wire with pretension.
 * [slidercrank](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/slider_crank.zip):
-  rigid and deformable slider crank examples (the rigid case is also used in this tutorial for the mbdyn-blender postprocessing tool). 
+  rigid and deformable slider crank examples (the rigid case is also used in this tutorial for the mbdyn-blender postprocessing tool).
 
 ## Applications:
-* [AS330 Puma](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/puma.tar.gz). 
-* [modalbody](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/modalbody): 
+* [AS330 Puma](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/puma.tar.gz).
+* [modalbody](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/modalbody):
   example modal element (also needs
   [hand-made-dynamic.fem](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/hand-made-dynamic.fem)
-  and 
+  and
   [hand-made-static.fem](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/hand-made-static.fem)
-  ). 
+  ).
 * [HA145B](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/ha145b.tar.gz):
   unsteady aerodynamics modal element.
 * [HALEcantilever](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/HALEcantilever.tgz):
@@ -82,7 +82,7 @@
   HALE wing model with pseudo-control.
 * [tm4760](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tm4760.tar.gz):
   rotating blade eigenanalysis example from [NASA TM4760](http://hdl.handle.net/2060/19970021351) (broken?)
-* [tnd371](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tnd371.tar.gz): 
+* [tnd371](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/tnd371.tar.gz):
   rotating blade eigenanalysis example from [NASA TN-D371](http://hdl.handle.net/2060/19890068582) (broken?)
 * [cart0](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cart0.tar.gz):
   aeroelastic model of NREL's CART wind-turbine (updated April 10, 2010).
@@ -90,17 +90,29 @@
   NREL's 5MW class wind turbine. Contributed by Pay Thorben Sacknieß
   (more details [here](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/research/windturbine/DA-2010-02.pdf)).
 * [triangle](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/triangle):
-  control constraint of a simple manipulator, based on the movie presented by 
-  Prof. Betsch at the 1st ESA Workshop on Multibody Dynamics for Space Applications, 
-  February 2-3, 2010, ESA/ESTEC, Noordwijk, The Netherlands. 
+  control constraint of a simple manipulator, based on the movie presented by
+  Prof. Betsch at the 1st ESA Workshop on Multibody Dynamics for Space Applications,
+  February 2-3, 2010, ESA/ESTEC, Noordwijk, The Netherlands.
   See a [movie](https://home.aero.polimi.it/masarati/Download/mbdyn/images/triangle2.gif)
   of MBDyn's analysis animated with EasyAnim.
 * [curved beam](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/beam_3node.tar.gz):
-  eigenanalysis of a curved beam; uses arpack. Courtesy of Resch Reinhard. 
+  eigenanalysis of a curved beam; uses arpack. Courtesy of Resch Reinhard.
 * [semitrailer](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/semitrailerPub.tar.bz2):
   22 wheel vehicle model.
   Courtesy of [Louis Gagnon](https://lists.mbdyn.org/pipermail/mbdyn-users/2015-March/001556.html).
   See a [movie](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/animCamion.gif)
-  of MBDyn's analysis animated with [Blender](https://www.blender.org/). 
+  of MBDyn's analysis animated with [Blender](https://www.blender.org/).
 * [cycloidal rotor](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cycloidalRotor.tar.bz2).
-  Courtesy of [Louis Gagnon](https://lists.mbdyn.org/pipermail/mbdyn-users/2015-March/001556.html). 
+  Courtesy of [Louis Gagnon](https://lists.mbdyn.org/pipermail/mbdyn-users/2015-March/001556.html).
+* [flexible four-bar linkage](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/fourbar.tar.bz2) Contributed by Reinhard Resch. See a [movie](https://youtu.be/d4i5AYPxsG4).
+* [nonlinear hyperviscoelasticity using MFront's Signorini model](https://youtu.be/I8HENx5mszA). Contributed by Reinhard Resch.
+* [slender twisted bar](https://youtu.be/D2OZHT9luQs). Contributed by Reinhard Resch.
+* [rolling ring made of hyperelastic material subject to large deformations, contact and friction](https://youtu.be/rxQP8V4U0dE). Contributed by Reinhard Resch.
+* [Cook's membrane benchmark using fully incompressible hyperelastic material](https://youtu.be/EAgejp4jQ00). Contributed by Reinhard Resch.
+* [double elasto-hydrodynamic analysis of a journal plain bearing - pressure distribution](https://youtu.be/eienVfAFyfk). Contributed by Reinhard Resch.
+* [double elasto-hydrodynamic analysis of a journal plain bearing - deformations](https://youtu.be/kCVneVwXYbc). Contributed by Reinhard Resch.
+* [Norman Owen Freund 1995 EHD diaphragm plain bearing - deformations](https://youtu.be/YE0gnTt35WA). Contributed by Reinhard Resch.
+* [Norman Owen Freund 1995 EHD diaphragm plain bearing - fractional film content](https://youtu.be/tipxGDXe1mI). Contributed by Reinhard Resch.
+* [Norman Owen Freund 1995 EHD diaphragm plain bearing - pressure](https://youtu.be/akkelq04mrU). Contributed by Reinhard Resch.
+* [large deflection analysis of a cantilever beam using](https://youtu.be/j8D821HVXDc). Contributed by Reinhard Resch.
+* [rotor dynamics - resonance](https://youtu.be/VohVTeggqI4). Contributed by Reinhard Resch.
