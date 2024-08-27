@@ -104,7 +104,7 @@
   of MBDyn's analysis animated with [Blender](https://www.blender.org/).
 * [cycloidal rotor](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/cycloidalRotor.tar.bz2).
   Courtesy of [Louis Gagnon](https://lists.mbdyn.org/pipermail/mbdyn-users/2015-March/001556.html).
-* [flexible four-bar linkage](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/fourbar.tar.bz2) Contributed by Reinhard Resch. See a [movie](https://youtu.be/d4i5AYPxsG4).
+* [flexible four-bar linkage](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/examples/linkage.tar.bz2) Contributed by Reinhard Resch. See a [movie](https://youtu.be/d4i5AYPxsG4).
 * [nonlinear hyperviscoelasticity using MFront's Signorini model](https://youtu.be/I8HENx5mszA). Contributed by Reinhard Resch.
 * [slender twisted bar](https://youtu.be/D2OZHT9luQs). Contributed by Reinhard Resch.
 * [rolling ring made of hyperelastic material subject to large deformations, contact and friction](https://youtu.be/rxQP8V4U0dE). Contributed by Reinhard Resch.
