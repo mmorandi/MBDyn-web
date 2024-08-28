@@ -8,15 +8,18 @@ since the software became available through a public
 [git repository](https://gitlab.polimi.it/Pub/mbdyn),
 releases have become less and less frequent.
 
-**Please refer to the git repository for the latest code, develop branch**
+**Please refer to the git repository, or to the latest development version for the latest code, develop branch**
 
 (which contains new features and bug fixes).
 
 Please see the [license](#license) and the [disclaimer](#disclaimer)
 before downloading and/or using **MBDyn**.
 
-## Latest development version
-- [mbdyn-input.pdf](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input.pdf)
+## Latest development
+
+- Development snapshot [CHANGELOG](https://public.gitlab.polimi.it/DAER/mbdyn/-/raw/develop/CHANGES)
+    - [mbdyn-develop.tar.gz](https://public.gitlab.polimi.it/DAER/mbdyn/-/archive/develop/mbdyn-develop.tar.gz)
+      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input.pdf) ![pdf]({{ "/Images/pdf.gif"}}).
 
 ## Old Releases
 
