@@ -3,14 +3,6 @@
 
 # MBDyn - Multi-Body Dynamics
 
-
-> **BREAKING NEWS**
-> 
-> MBDyn has been selected for the 2024 [Google Summer of Code](https://summerofcode.withgoogle.com)!
->
-> If you want to code with us this summer, head over to the [Gitlab Wiki](https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/home) to learn how you can start building your proposal.
-
-
 ## Introduction
 
 **MBDyn** is the first and one of the few full-featured
