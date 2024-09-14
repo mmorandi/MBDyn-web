@@ -17,9 +17,10 @@ before downloading and/or using **MBDyn**.
 
 ## Latest development
 
-- Development snapshot [CHANGELOG](https://public.gitlab.polimi.it/DAER/mbdyn/-/raw/develop/CHANGES)
+- Development snapshot
+    - [CHANGELOG](https://public.gitlab.polimi.it/DAER/mbdyn/-/raw/develop/CHANGES)
     - [mbdyn-develop.tar.gz](https://public.gitlab.polimi.it/DAER/mbdyn/-/archive/develop/mbdyn-develop.tar.gz)
-      [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input.pdf) ![pdf]({{ "/Images/pdf.gif"}}).
+    - [input manual](https://github.com/mmorandi/MBDyn-web/raw/main/userfiles/documents/mbdyn-input.pdf) ![pdf]({{ "/Images/pdf.gif"}}).
 
 ## Old Releases
 
