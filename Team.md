@@ -103,10 +103,12 @@ development, while some independent users contributed portions of software.
 * Riccardo Vescovini
 
   as Ph.D. student, helped Marco Morandini in the development of the shell element.
-* Reinhard Resch
+* [Reinhard Resch](https://www.researchgate.net/profile/Reinhard-Resch-2)
 
-  as an independent user, contributed several examples, bugfixes and modules, 
-  significantly `module-octave`, the linesearch nonlinear solver, automatic differentiation, and more.
+  as an independent user, he started adding some non-essential extensions in 2011 to solve very specific problems of limited scope.
+  In the meantime, however, his main focus is on leveraging existing ideas, theories, libraries and frameworks from other researchers to bring MBDyn to a higher level of robustness, quality and abstraction.
+  Ultimately, the main goal is to achieve maximum benefit with minimal effort.
+
 * [Louis Gagnon](http://louisgagnon.com/research/)
 
   as visiting Ph.D. student, worked at tire models and vehicle simulation 
