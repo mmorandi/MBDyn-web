@@ -2,6 +2,8 @@
 ---
 
 # News
+* Mailing lists are now hosted at [freelists.org](https://www.freelists.org/)
+
 * The new Website is online.
 
 * Paper on multibody communities mentions MBDyn
