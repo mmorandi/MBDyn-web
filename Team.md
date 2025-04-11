@@ -10,7 +10,9 @@ development, while some independent users contributed portions of software.
 * Paolo Mantegazza
   
   initiated the project in the early 1990s. He worked on prototyping the F77 version of the software, 
-  called **MBDin**, which was sort of a proof-of-concept implementation. He is now the honorary team leader.
+  called **MBDin**, which served as a proof-of-concept implementation. From then on, he remained the honorary
+  team leader until his passing in November 2024.  He will be deeply missed.
+
 * Massimiliano Lanz
   
   coordinated many rotorcraft analysis developments.
