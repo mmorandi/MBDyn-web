@@ -12,30 +12,30 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 
 * For MBDyn in general:
 
-  P. Masarati, M. Morandini, P. Mantegazza
-  "**An Efficient Formulation for General-Purpose Multibody/Multiphysics Analysis**"
+  P. Masarati, M. Morandini, P. Mantegazza,
+  "**An Efficient Formulation for General-Purpose Multibody/Multiphysics Analysis**",
   [_ASME J. Comput. Nonlinear Dyn._](http://journaltool.asme.org/Content/JournalDescriptions.cfm?journalId=21&amp;Journal=CND),
   9(4):041001, October 2014, [doi:10.1115/1.4025628](http://dx.doi.org/10.1115/1.4025628).
 
 * For the integration methods:
 
-  H. Zhang, R. Zhang, A. Zanoni, P. Masarati
+  H. Zhang, R. Zhang, A. Zanoni, P. Masarati,
   "**Performance of implicit A-stable time integration methods for multibody system dynamics**"
-  **(open access)**
+  **(open access)**,
   [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044), 54(3):263-301, 2022,
   [doi:10.1007/s11044-021-09806-9](https://doi.org/10.1007/s11044-021-09806-9).
 
 * For the finite volume beam model:
 
-  O. A. Bauchau, P. Betsch, A. Cardona, J. Gerstmayr, B. Jonker, P. Masarati, V. Sonneville
-  "**Validation of Flexible Multibody Dynamics Beam Formulations using Benchmark Problems**"
+  O. A. Bauchau, P. Betsch, A. Cardona, J. Gerstmayr, B. Jonker, P. Masarati, V. Sonneville,
+  "**Validation of Flexible Multibody Dynamics Beam Formulations using Benchmark Problems**",
   [_Multibody System Dynamics_](http://www.springer.com/engineering/journal/11044),
   37(1):29-48, 2016, [doi:10.1007/s11044-016-9514-y](http://dx.doi.org/10.1007/s11044-016-9514-y).
 
   and
 
-  G. L. Ghiringhelli, P. Masarati, P. Mantegazza
-  "**A Multibody Implementation of Finite Volume C0 Beams**"
+  G. L. Ghiringhelli, P. Masarati, P. Mantegazza,
+  "**A Multibody Implementation of Finite Volume C0 Beams**",
   [_AIAA Journal_](https://arc.aiaa.org/journal/aiaaj),
   Vol. 38(1), January 2000, pp. 131-138,
   [doi:10.2514/2.933](http://dx.doi.org/10.2514/2.933).
@@ -204,40 +204,41 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * P. Masarati "**Travi Piezoelettriche: Modellazione ed Analisi**" ("Piezoelectric Beams: Modelling and Analysis", in Italian) _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 1994-1995.
 
 ## Talking about MBDyn...:
-* Pierangelo Masarati **[Flexible Body Simulation in MBDyn](http://sbel.wisc.edu/documents/mbdyn_magic2.pdf)** Machine Ground Interaction Consortium 2014, Univ. of Wisconsin, Madison, WI, December 9, 2014
-* Wayne Johnson **[Milestones in Rotorcraft Aeromechanics](http://rotorcraft.arc.nasa.gov/Johnson_TP-2011-215971.pdf)** NASA/TP-2011-215971, May 2011.
-* Wayne Johnson **[Milestones in Rotorcraft Aeromechanics](http://dx.doi.org/10.4050/JAHS.56.031001)** (2010's Alexander A. Nikolsky Honorary Lecture) _[Journal of the American Helicopter Society](http://ahsjournal.org/)_, January 2011
-* Frank Colucci **[The Mono Tiltrotor](http://www.baldwintechnology.com/VertifliteSummer2011.pdf)** _[VERTIFLITE](http://www.vtol.org/vertiflite/)_, Summer 2011
-* Kathy Barnstorff "**[The Puffin: A Passion for Personal Flight](http://www.aviationnews.us/articles.php?art_id=10481&start=1)**" [Aviation News](http://www.aviationnews.us/)
-* Giuseppe Carbone "**[Grasping in Robotics](http://books.google.it/books?id=6WpQFWnW17YC)**" Springer, 2010.
-* S. Kume, Y. Kanamiya, D. Sato "**[Towards an open-source integrated development and real-time control platform for robots](http://dx.doi.org/10.1109/ROBIO.2009.4913004)**" Robotics and Biomimetics, 2008. ROBIO 2008. IEEE International Conference on 22-25 Feb. 2009 Page(s):204-209
-* Michael Wenz "**[Automatische Konfiguration der Bewegungssteuerung von Industrierobotern](http://books.google.com/books?id=mtKGNzMCRH4C)**", ([draft](http://digbib.ubka.uni-karlsruhe.de/volltexte/documents/718344)) Logos Verlag Berlin GmbH, 2008
-* Alberto Stochino, Benjamin Abbot, Yoichi Aso, Mark Barton, Alessandro Bertolini, Valerio Boschi, Dennis Coyne, Riccardo DeSalvo, Carlo Galli, Yumei Huang, Alex Ivanov, Szabolcs Marka, David Ottaway, Virginio Sannibale, Chiara Vanni, Hiroaki Yamamoto and Sanichiro Yoshida "**[The Seismic Attenuation System (SAS) for the Advanced LIGO gravitational wave interferometric detectors](http://dx.doi.org/10.1016/j.nima.2008.10.023)**" Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Volume 598, Issue 3, 21 January 2009, Pages 737-753. [doi:10.1016/j.nima.2008.10.023](http://dx.doi.org/10.1016/j.nima.2008.10.023)
-* Gianni Ferretti, Gianantonio Magnani, Paolo Porrati, Gianpaolo Rizzi, Paolo Rocco, and Andrea Rusconi "**[Real-Time Simulation of a Space Robotic Arm](http://www.robot.uji.es/research/events/iros08/contributions/rocco.pdf)**"
-* Gianluca Palli, Luigi Biagiotti, and Claudio Melchiorri "**[An Open Source Distributed Platform for the Control of the PUMA 560 Manipulator](http://www.linuxdevices.com/files/article081/Palli.pdf)**" Ninth Real-Time Linux Workshop, Linz, Austria, Nov. 2-3, 2007
-* Roberto Bucher and Silvano Balemi "**[Rapid controller prototyping with Matlab/Simulink and Linux](http://dx.doi.org/10.1016/j.conengprac.2004.09.009)**" Control Engineering Practice Volume 14, Issue 2, February 2006, Pages 185-192 Special Section on Advances in Control Education
-* Dong Linghua, Yang Weidong, Xia Pinqi "**[MULTI-BODY AEROELASTIC STABILITY ANALYSIS OF TILTROTOR AIRCRAFT IN HELICOPTER MODE](http://www.wanfangdata.com.cn/qikan/periodical.articles/njhkhtdxxb-e/njhk2006/0603/060301.htm)**" TRANSACTIONS OF NANJING UNIVERSITY OF AERONAUTICS AND ASTRONAUTICS 2006 Vol.23 No.3 P.161-167
-* Valerio Boschi "**[MBDyn a time-domain tool for multibody simulations](http://www.ligo.caltech.edu/~citsas/HAM-SAS/Presentations/E2EMeeting2007115.pdf)**",
-* Pedro F. Giffuni, "**[APPLICATIONS FOR THE FREEBSD OS IN MECHANICAL ENGINEERING II](http://people.freebsd.org/~blackend/misc/CIMM2006-FreeBSD.pdf)**",
-* Roberto Bucher and Silvano Balemi "**[Scilab/Scicos and Linux RTAI - A unified approach](http://dx.doi.org/10.1109/CCA.2005.1507281)**" Proceedings of the 2005 IEEE Conference on Control Applications Toronto, Canada, August 28-31, 2005.
-* Yuchen Zhang, "**Real-Time Network for Distributed Control**" Ph.D. Thesis, University of Twente, August 2005.
-* Daniel Iglesias Ibáñez, "**[Un entorno de desarrollo para la dinámica no lineal de mecanismos flexibles](http://w3.mecanica.upm.es/~docto/Dtesis_07/trabajos/dea_dani/dani_trab.pdf)**", Trabajo de investigación (Ph.D. Thesis), Universidad Politécnica de Madrid, October 2005 (in Spanish).
-* Jan Kiszka, Bernardo Wagner, Yuchen Zhang, Jan Broenink, "**[RTnet ­ A Flexible Hard Real-Time Networking Framework](http://www.rts.uni-hannover.de/rtnet/download/RTnet-ETFA05.pdf)**", 0-7803-9402-X/05/$20.00 © 2005.
-* Joris Naudet, "**[Forward Dynamics of Multibody Systems: A Recursive Hamiltonian Approach](http://mech.vub.ac.be/multibody/publications/full_texts/Naudet_2005_PhD.pdf)**", Ph.D. Thesis, Vrije Universiteit Brussel, September 2005.
-* Eric L. Hathaway, "**[Active and Passive Techniques for Tiltrotor Aeroelastic Stability Augmentation](http://www.engr.psu.edu/rcoe/theses/hathaway_phd_thesis.pdf)**", Ph.D. Thesis, Pennsylvania State University, 2005. (Related document [\[.ppt\]](http://www.engr.psu.edu/rcoe/Research%20Projects/RCOE%20Review%202005/Task%201.1b/Task%201.1b_2005_Presentation.ppt); other copy [\[.ppt\]](http://www.courses.psu.edu/aersp/aersp097_ecs5/097/Navy-Breifings/Tiltrotor%20Stability.ppt))
-* G. Ferretti, M. Gritti, G. Magnani, G. Rizzi, P. Rocco, "**[Real-Time Simulation of Modelica Models under Linux/RTAI](http://www.modelica.org/events/Conference2005/online_proceedings/Session4/Session4c1.pdf)**", Proceedings of the 4th International Modelica Conference, Hamburg, March 7-8, 2005, pp. 359-365.
+* Alfredo Gay Neto, **"[GIRAFFE: Generic Interface Readily Accessible for Finite Elements](https://doi.org/10.1016/j.advengsoft.2026.104134)"**, _[Advances in Engineering Software](https://www.sciencedirect.com/journal/advances-in-engineering-software)_, 216:104134, 2026
+* Pierangelo Masarati, **"[Flexible Body Simulation in MBDyn](http://sbel.wisc.edu/documents/mbdyn_magic2.pdf)"**, Machine Ground Interaction Consortium 2014, Univ. of Wisconsin, Madison, WI, December 9, 2014
+* Wayne Johnson, **"[Milestones in Rotorcraft Aeromechanics](http://rotorcraft.arc.nasa.gov/Johnson_TP-2011-215971.pdf)"**, NASA/TP-2011-215971, May 2011.
+* Wayne Johnson, **"[Milestones in Rotorcraft Aeromechanics](http://dx.doi.org/10.4050/JAHS.56.031001)"** (2010's Alexander A. Nikolsky Honorary Lecture), _[Journal of the American Helicopter Society](http://ahsjournal.org/)_, January 2011
+* Frank Colucci, **"[The Mono Tiltrotor](http://www.baldwintechnology.com/VertifliteSummer2011.pdf)"**, _[VERTIFLITE](http://www.vtol.org/vertiflite/)_, Summer 2011
+* Kathy Barnstorff, **"[The Puffin: A Passion for Personal Flight](http://www.aviationnews.us/articles.php?art_id=10481&start=1)"**, [Aviation News](http://www.aviationnews.us/)
+* Giuseppe Carbone, **"[Grasping in Robotics](http://books.google.it/books?id=6WpQFWnW17YC)"**, Springer, 2010.
+* S. Kume, Y. Kanamiya, D. Sato, **"[Towards an open-source integrated development and real-time control platform for robots](http://dx.doi.org/10.1109/ROBIO.2009.4913004)"**, Robotics and Biomimetics, 2008. ROBIO 2008. IEEE International Conference on 22-25 Feb. 2009 Page(s):204-209
+* Michael Wenz **"[Automatische Konfiguration der Bewegungssteuerung von Industrierobotern](http://books.google.com/books?id=mtKGNzMCRH4C)"**, ([draft](http://digbib.ubka.uni-karlsruhe.de/volltexte/documents/718344)) Logos Verlag Berlin GmbH, 2008
+* Alberto Stochino, Benjamin Abbot, Yoichi Aso, Mark Barton, Alessandro Bertolini, Valerio Boschi, Dennis Coyne, Riccardo DeSalvo, Carlo Galli, Yumei Huang, Alex Ivanov, Szabolcs Marka, David Ottaway, Virginio Sannibale, Chiara Vanni, Hiroaki Yamamoto and Sanichiro Yoshida, **"[The Seismic Attenuation System (SAS) for the Advanced LIGO gravitational wave interferometric detectors](http://dx.doi.org/10.1016/j.nima.2008.10.023)"**, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Volume 598, Issue 3, 21 January 2009, Pages 737-753. [doi:10.1016/j.nima.2008.10.023](http://dx.doi.org/10.1016/j.nima.2008.10.023)
+* Gianni Ferretti, Gianantonio Magnani, Paolo Porrati, Gianpaolo Rizzi, Paolo Rocco, and Andrea Rusconi, **"[Real-Time Simulation of a Space Robotic Arm](http://www.robot.uji.es/research/events/iros08/contributions/rocco.pdf)"**
+* Gianluca Palli, Luigi Biagiotti, and Claudio Melchiorri, **"[An Open Source Distributed Platform for the Control of the PUMA 560 Manipulator](http://www.linuxdevices.com/files/article081/Palli.pdf)"**, Ninth Real-Time Linux Workshop, Linz, Austria, Nov. 2-3, 2007
+* Roberto Bucher and Silvano Balemi, **"[Rapid controller prototyping with Matlab/Simulink and Linux](http://dx.doi.org/10.1016/j.conengprac.2004.09.009)"**, Control Engineering Practice, Volume 14, Issue 2, February 2006, Pages 185-192, Special Section on Advances in Control Education
+* Dong Linghua, Yang Weidong, Xia Pinqi, **"[MULTI-BODY AEROELASTIC STABILITY ANALYSIS OF TILTROTOR AIRCRAFT IN HELICOPTER MODE](http://www.wanfangdata.com.cn/qikan/periodical.articles/njhkhtdxxb-e/njhk2006/0603/060301.htm)"**, TRANSACTIONS OF NANJING UNIVERSITY OF AERONAUTICS AND ASTRONAUTICS, 23(3):161-167, 2006
+* Valerio Boschi, **"[MBDyn a time-domain tool for multibody simulations](http://www.ligo.caltech.edu/~citsas/HAM-SAS/Presentations/E2EMeeting2007115.pdf)"**
+* Pedro F. Giffuni, **"[APPLICATIONS FOR THE FREEBSD OS IN MECHANICAL ENGINEERING II](http://people.freebsd.org/~blackend/misc/CIMM2006-FreeBSD.pdf)"**
+* Roberto Bucher and Silvano Balemi, **"[Scilab/Scicos and Linux RTAI - A unified approach](http://dx.doi.org/10.1109/CCA.2005.1507281)"**, Proceedings of the 2005 IEEE Conference on Control Applications Toronto, Canada, August 28-31, 2005
+* Yuchen Zhang, **"Real-Time Network for Distributed Control"**, Ph.D. Thesis, University of Twente, August 2005
+* Daniel Iglesias Ibáñez, **"[Un entorno de desarrollo para la dinámica no lineal de mecanismos flexibles](http://w3.mecanica.upm.es/~docto/Dtesis_07/trabajos/dea_dani/dani_trab.pdf)"**, Trabajo de investigación (Ph.D. Thesis), Universidad Politécnica de Madrid, October 2005 (in Spanish)
+* Jan Kiszka, Bernardo Wagner, Yuchen Zhang, Jan Broenink, **"[RTnet­: A Flexible Hard Real-Time Networking Framework](http://www.rts.uni-hannover.de/rtnet/download/RTnet-ETFA05.pdf)"**, 0-7803-9402-X/05/$20.00 © 2005.
+* Joris Naudet, **"[Forward Dynamics of Multibody Systems: A Recursive Hamiltonian Approach](http://mech.vub.ac.be/multibody/publications/full_texts/Naudet_2005_PhD.pdf)"**, Ph.D. Thesis, Vrije Universiteit Brussel, September 2005
+* Eric L. Hathaway, **"[Active and Passive Techniques for Tiltrotor Aeroelastic Stability Augmentation](http://www.engr.psu.edu/rcoe/theses/hathaway_phd_thesis.pdf)"**, Ph.D. Thesis, Pennsylvania State University, 2005 (Related document [\[.ppt\]](http://www.engr.psu.edu/rcoe/Research%20Projects/RCOE%20Review%202005/Task%201.1b/Task%201.1b_2005_Presentation.ppt); other copy [\[.ppt\]](http://www.courses.psu.edu/aersp/aersp097_ecs5/097/Navy-Breifings/Tiltrotor%20Stability.ppt))
+* G. Ferretti, M. Gritti, G. Magnani, G. Rizzi, P. Rocco, **"[Real-Time Simulation of Modelica Models under Linux/RTAI](http://www.modelica.org/events/Conference2005/online_proceedings/Session4/Session4c1.pdf)"**, Proceedings of the 4th International Modelica Conference, Hamburg, March 7-8, 2005, pp. 359-365
 * A [presentation](http://www-zeuthen.desy.de/acat05/talks/Vollinga.Jens.3/vollinga.pdf) about [GiNaC](http://www.ginac.de/) (also in this dissertation: [Use of Computer Algebra in the Calculation of Feynman Diagrams](http://wwwthep.physik.uni-mainz.de/Publications/theses/dis-cbauer.pdf)).
-* Gianni Ferretti, GianAntonio Magnani, Paolo Rocco, Luca Viganò, Marco Gritti, Andrea Rusconi, "**[Object-Oriented Modeling of a Space Robotic Manipulator](http://robotics.estec.esa.int/Activities/Conferences&Symposia/Astra/Astra2004/Papers/astra2004_L-03.pdf)**", Proceedings of the 8th ESA Workshop on Advanced Space Technologies for Robotics and Automation, 'ASTRA 2004' ESTEC Noordwijk, The Netherlands, November 2-4, 2004.
+* Gianni Ferretti, GianAntonio Magnani, Paolo Rocco, Luca Viganò, Marco Gritti, Andrea Rusconi, **"[Object-Oriented Modeling of a Space Robotic Manipulator](http://robotics.estec.esa.int/Activities/Conferences&Symposia/Astra/Astra2004/Papers/astra2004_L-03.pdf)"**, Proceedings of the 8th ESA Workshop on Advanced Space Technologies for Robotics and Automation, 'ASTRA 2004' ESTEC Noordwijk, The Netherlands, November 2-4, 2004
 * The **[Aeronautical Systems Center - Major Shared Resource Center](http://www.asc.hpc.mil/) (ASC-MSRC)** is using **MBDyn** for distributed vehicle dynamics analysis; read the **[story](http://www.asc.hpc.mil/aboutus/journals/Fall04.pdf)**.
-* Gianni Ferretti, Marco Gritti, Gianantonio Magnani, Paolo Rocco, "**A Remote User Interface to Modelica Robot Models**" [http://www.dei.polimi.it/](http://www.dei.polimi.it/) Proceedings of the 3rd International Modelica Conference, November 3-4, 2003, Linköping (Sweden), pp. 231-240, Peter Fritzson (editor)
-* O. Verlinden, G. Kouroussis, S. Datoussaid, C. Conti, "**[Open Source Symbolic and Numerical Tools for the Simulation of Multibody Systems](http://mecara.fpms.ac.be/EasyDyn/paper.pdf)**" [Faculté Polytechnique de Mons](http://mecara.fpms.ac.be/EasyDyn/) 6th National Congress on Theoretical and Applied Mechanics, 26-27 May 2003, Gent (Belgium).
-* H. van der Ven and O.J. Boelens, "**Affordable CFD Simulations of Rotors in Forward Flight - A Feasibility Study with Future Application to Vibrational Analysis**" Netherlands National Aerospace Laboratory ([NLR](http://nlr.nl)) presented at the _59th Forum of the [American Helicopter Society](http://vtol.org)_, May 6-8 2003, Phoenix, Arizona.
-* "**[Cooperative Research and Development Agreement (CRADA) for Multibody Formulation for Tiltrotor Aeroelastic Analysis](https://www.aero.polimi.it/~ghiro/crada.htm)**" between Vehicle Technology Center (VTC) U.S. Army Research Laboratory (ARL) and [Politenico di Milano](http://polimi.it) (DAE/POLIMI) [Dipartimento di Ingegneria Aerospaziale](http://www.aero.polimi.it).
-* **[GVT Test Plan](http://sonicboom.larc.nasa.gov/wrats/gvtplan.html)** for the WRATS Soft-Inplane Rotor System in the _Wing and Rotor Aeroelastic Testing System_ page at [NASA](http://www.nasa.gov) [LaRC](http://www.larc.nasa.gov)'s Aeroelasticity Branch (sometimes unreachable, sorry)
-* William T. Yeager, Jr., and Raynond G. Kvaternik "**[A Historical Overview of Aeroelasticity Branch and Transonic Dynamics Tunnel Contributions to Rotorcraft Technology and Development](http://techreports.larc.nasa.gov/ltrs/PDF/2001/tm/NASA-2001-tm211054.pdf)**" NASA/TM-2001-211054, ARL-TR-2564, 2001.
-* William T. Yeager Jr., Raymond G. Kvaternik "**[Contributions of the Langley Transonic Dynamics Tunnel to rotorcraft technology and development](http://www.cs.odu.edu/~mln/ltrs-pdfs/NASA-aiaa-2000-1771.pdf)**" AIAA-2000-1771 AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference and Exhibit, 41st, Atlanta, GA, Apr. 3-6, 2000.
-* Thomas Hablowetz "**Advanced Helicopter Flight and Aeroelastic Simulation based on General Purpose Multibody Code**" presented at the _AIAA Modeling and Simulation Technologies Conference and Exhibit_ Denver, CO, USA, August 14-17, 2000 (AIAA 2000-4299)
-* William T. Yeager, Jr., and Raynond G. Kvaternik "**[Contributions of the Langley Transonic Dynamics Tunnel to Rotorcraft Technology and Development](http://techreports.larc.nasa.gov/ltrs/PDF/2000/aiaa/NASA-aiaa-2000-1771.pdf)**" presented at the _AIAA Dynamics Specialists Conference_ Atlanta, GA, USA, April 5-6, 2000 (AIAA 2000-1771)
+* Gianni Ferretti, Marco Gritti, Gianantonio Magnani, Paolo Rocco, **"A Remote User Interface to Modelica Robot Models"** [http://www.dei.polimi.it/](http://www.dei.polimi.it/) Proceedings of the 3rd International Modelica Conference, November 3-4, 2003, Linköping (Sweden), pp. 231-240, Peter Fritzson (editor)
+* O. Verlinden, G. Kouroussis, S. Datoussaid, C. Conti, **"[Open Source Symbolic and Numerical Tools for the Simulation of Multibody Systems](http://mecara.fpms.ac.be/EasyDyn/paper.pdf)"** [Faculté Polytechnique de Mons](http://mecara.fpms.ac.be/EasyDyn/) 6th National Congress on Theoretical and Applied Mechanics, 26-27 May 2003, Gent (Belgium)
+* H. van der Ven and O.J. Boelens, **"Affordable CFD Simulations of Rotors in Forward Flight - A Feasibility Study with Future Application to Vibrational Analysis"**, Netherlands National Aerospace Laboratory ([NLR](http://nlr.nl)) presented at the _59th Forum of the [American Helicopter Society](http://vtol.org)_, May 6-8 2003, Phoenix, Arizona.
+* **"[Cooperative Research and Development Agreement (CRADA) for Multibody Formulation for Tiltrotor Aeroelastic Analysis](https://www.aero.polimi.it/~ghiro/crada.htm)"** between Vehicle Technology Center (VTC) U.S. Army Research Laboratory (ARL) and [Politenico di Milano](http://polimi.it) (DAE/POLIMI) [Dipartimento di Ingegneria Aerospaziale](http://www.aero.polimi.it).
+* **"[GVT Test Plan](http://sonicboom.larc.nasa.gov/wrats/gvtplan.html)"** for the WRATS Soft-Inplane Rotor System in the _Wing and Rotor Aeroelastic Testing System_ page at [NASA](http://www.nasa.gov) [LaRC](http://www.larc.nasa.gov)'s Aeroelasticity Branch (sometimes unreachable, sorry)
+* William T. Yeager, Jr., and Raynond G. Kvaternik, **"[A Historical Overview of Aeroelasticity Branch and Transonic Dynamics Tunnel Contributions to Rotorcraft Technology and Development](http://techreports.larc.nasa.gov/ltrs/PDF/2001/tm/NASA-2001-tm211054.pdf)"**, NASA/TM-2001-211054, ARL-TR-2564, 2001.
+* William T. Yeager Jr., Raymond G. Kvaternik, **"[Contributions of the Langley Transonic Dynamics Tunnel to rotorcraft technology and development](http://www.cs.odu.edu/~mln/ltrs-pdfs/NASA-aiaa-2000-1771.pdf)"**, AIAA-2000-1771 AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference and Exhibit, 41st, Atlanta, GA, Apr. 3-6, 2000.
+* Thomas Hablowetz, **"Advanced Helicopter Flight and Aeroelastic Simulation based on General Purpose Multibody Code"**, presented at the _AIAA Modeling and Simulation Technologies Conference and Exhibit_ Denver, CO, USA, August 14-17, 2000 (AIAA 2000-4299)
+* William T. Yeager, Jr., and Raynond G. Kvaternik, **"[Contributions of the Langley Transonic Dynamics Tunnel to Rotorcraft Technology and Development](http://techreports.larc.nasa.gov/ltrs/PDF/2000/aiaa/NASA-aiaa-2000-1771.pdf)"**, presented at the _AIAA Dynamics Specialists Conference_ Atlanta, GA, USA, April 5-6, 2000 (AIAA 2000-1771)
 
 ## See also
 [this page](https://home.aero.polimi.it/masarati/Publications/index.html)
