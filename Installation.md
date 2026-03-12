@@ -11,7 +11,7 @@ download/clone it from the project's git repository,
 The favourite installation method is by compiling it yourself. You can compile **MBDyn**
 - natively in Linux (instructions follow below), or
 - in Windows, for 
-    - Windows 10: using Linux in the Windows Subsystem for Linux (WSL; instructions at the bottom)
+    - Windows 10 and later: using Linux in the Windows Subsystem for Linux (WSL; instructions at the bottom)
     - most Windows versions: using specific build environments (Cygwin, MSYS/MinGW; instructions at the very bottom; warning: obsolete)
 - in Mac: see [https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/macOS-build](https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/macOS-build) for more details. 
 
