@@ -13,7 +13,7 @@ The favourite installation method is by compiling it yourself. You can compile *
 - in Windows, for 
     - Windows 10: using Linux in the Windows Subsystem for Linux (WSL; instructions at the bottom)
     - most Windows versions: using specific build environments (Cygwin, MSYS/MinGW; instructions at the very bottom; warning: obsolete)
-- in Mac: **(in progress...)**. 
+- in Mac: see [https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/macOS-build](https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/macOS-build) for more details. 
 
 **MBDyn** compilation and installation is based on GNU's autotools. You need:
 - (GNU's) make,
