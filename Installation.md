@@ -19,7 +19,7 @@ The favourite installation method is by compiling it yourself. You can compile *
 - (GNU's) make,
 - a C++ compiler (e.g. GNU's g++) and
 - a C compiler (e.g. GNU's gcc);
-(Until **MBDyn** 1.7.3 you also needed a Fortran compiler, which is now optional; if not available, some legacy Fortran code - of little usefulness - will not be built.)
+(Until **MBDyn** 1.7.3 you also needed a Fortran compiler, which is now optional; if not available, some legacy Fortran code - of limited usefulness - will not be built.)
  
 ## Linux users:
 
@@ -27,30 +27,41 @@ Note: in command examples below, a `$` prefix means you can run the command as a
 
 - required tools: make sure GNU make, gcc, g++ and gfortran are installed
     - in Ubuntu:
+      
       `# apt update`
+      
       `# apt install make gcc g++ gfortran`
 - (strongly!) recommended optional packages: optionally install libltdl, lapack, suitesparse, netcdf (>= 4 is preferred)
     - in Ubuntu:
+      
       `# apt update`
       
-      `# apt install libltdl-dev liblapack-dev libsuitesparse-dev libnetcdf-dev libnetcdf-cxx-dev`
+      `# apt install libltdl-dev liblapack-dev libsuitesparse-dev`
+
+      `# apt install libnetcdf-dev libnetcdf-cxx-dev`
       
-      (Note: the name of the latter package might change; for example, `libnetcdf-c++4-dev`)
-        - in other distros you should be able to locate the corresponding packages.
+	  If `libnetcdf-cxx-dev` is not available, try
+
+	  `# apt install libnetcdf-dev libnetcdf-c++4-dev`
+      
+	- in other distros you should be able to locate the corresponding packages.
     - get **MBDyn**'s source code: you can use tarballs of official releases, or snapshots from the git repository
         - either **(preferred!)** obtain a snapshot from the git repository:
             - visit the website https://gitlab.polimi.it/Pub/mbdyn
             - either
-                - **(preferred!)** copy the URL required to clone it with git, then change directory into the source tree and checkout the `develop` branch
+                - **(preferred! so it can be easily updated)** copy the URL required to clone it with git, then change directory into the source tree and checkout the `develop` branch
 
                   `$ git clone https://public.gitlab.polimi.it/DAER/mbdyn.git`
+
+				  (if git is not available, `# apt install git`)
 
                   `$ cd mbdyn`
 
                   `$ git checkout develop`
-                - or alternatively select the develop branch from the menu, download a tarball, unpack it, and change directory into the source tree
+                - or alternatively **(not recommended)** select the develop branch from the menu, download a tarball, unpack it, and change directory into the source tree
 
                   `$ tar xzvf mbdyn-develop.tar.gz`
+                  
                   `$ cd mbdyn-develop`
             - if not yet available on your system, you may need to install GNU autotools; in Ubuntu:
 	    
