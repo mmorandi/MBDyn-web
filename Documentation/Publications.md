@@ -41,6 +41,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
   [doi:10.2514/2.933](http://dx.doi.org/10.2514/2.933).
 
 ## Journal Papers:
+* R. Resch, "**A monolithic component mode synthesis two-way fluid-structure interaction approach for hydrodynamic lubricated journal and slider plain bearings**", [_Multibody System Dynamics_](https://link.springer.com/journal/11044), 2026, [10.1007/s11044-026-10193-2](https://doi.org/10.1007/s11044-026-10193-2)
 * G. Cassoni, A. Zanoni, A. Tamer, P. Masarati, "**Stability Analysis of Nonlinear Rotating Systems Using Lyapunov Characteristic Exponents Estimated From Multibody Dynamics**", [_ASME J. Comput. Nonlinear Dyn._](http://journaltool.asme.org/Content/JournalDescriptions.cfm?journalId=21&amp;Journal=CND), 2023, [doi:10.1115/1.4056591](https://doi.org/10.1115/1.4056591)
 * Y. Wei, A. Incecik, T. Tezdogan, "**A hydroelasticity analysis of a damaged ship based on a two-way coupled CFD-DMB method**",[_Ocean Engineering_](https://www.sciencedirect.com/journal/ocean-engineering), 274:114075, 2023, [doi:10.1016/j.oceaneng.2023.114075](https://doi.org/10.1016/j.oceaneng.2023.114075)
 * S. Conti, E. Tschopp, O. Mateus, A. Zanoni, P. Masarati, G. Sala, "**Multibody analysis and soft tissue strength refute supersonic dinosaur tail**", [_Scientific Reports_](https://www.nature.com/srep/), 12:19245, 2022, [doi:10.1038/s41598-022-21633-2](https://doi.org/10.1038/s41598-022-21633-2)
