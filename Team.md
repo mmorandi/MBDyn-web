@@ -16,10 +16,10 @@ development, while some independent users contributed portions of software.
 * Massimiliano Lanz
   
   coordinated many rotorcraft analysis developments.
-* [Gian Luca Ghiringhelli](https://www.aero.polimi.it/index.php?id=263&amp;uid=898)
+* Gian Luca Ghiringhelli
   
   coordinated many multidisciplinary analysis developments.
-* [Giampiero Bindolino](https://www.aero.polimi.it/index.php?id=263&amp;uid=18628)
+* Giampiero Bindolino
 
   had an important role in interfacing the initial F77 version with free wake aerodynamics. He is also contributing his continuous support to the current version.
 * Gabriele Gilardi
@@ -31,20 +31,20 @@ development, while some independent users contributed portions of software.
 * Stefano Marazzani
 
   worked as an undergrad student at the beam, rotor and aerodynamic elements in the F77 version of the code.
-* [Pierangelo Masarati](https://www.aero.polimi.it/index.php?id=263&amp;uid=102934)
+* [Pierangelo Masarati](https://www.aero.polimi.it/en/staff/pierangelo.masarati)
 
   in 1995 joined the **MBDin** team while undergraduate student, developing the 
   control-related genels and the piezoelectric beam elements. 
   In 1997, while Ph.D. student, he started recoding **MBDyn** in its current form (from F77 to C++). 
-  He currently coordinates the development and maintenance of **MBDyn** and other related projects 
-  ([personal home page](https://home.aero.polimi.it/masarati/)).
+  He currently coordinates the development and maintenance of **MBDyn** and other related projects.
+  
 * Felice Felippone
 
   as undergrad student, implemented the modal body back in the new version of the code.
 * Lamberto Puggelli
 
   as undergrad student, implemented the hydraulic components library.
-* [Giuseppe Quaranta](https://www.aero.polimi.it/index.php?id=263&amp;uid=134997)
+* [Giuseppe Quaranta](https://www.aero.polimi.it/en/staff/giuseppe.quaranta)
 
   as undergrad student, parallelized the code by adding a Schur domain decomposition 
   solver and incorporating Metis as a partitioning tool, all under the MPI umbrella. 
@@ -57,11 +57,10 @@ development, while some independent users contributed portions of software.
   as undergrad student, worked at the ADAMS2MBDyn project, a translator 
   from [ADAMS](http://www.mscsoftware.com/) models in adm format into **MBDyn** 
   raw input files. You can find what's available in `contrib/a2m` (essentially abandoned).
-* [Marco Morandini](https://www.aero.polimi.it/index.php?id=263&amp;uid=112071)
+* [Marco Morandini](https://www.aero.polimi.it/en/staff/marco.morandini)
 
   developed advanced elasticity models, working on the data structure, new integration 
-  schemes, friction, tire and brake models and shell elements. He is a stable member of the team
-  ([personal home page](https://home.aero.polimi.it/morandini/)).
+  schemes, friction, tire and brake models and shell elements. He is a stable member of the team.
 * Stefania Gualdi
 
   as Post Doc., worked at aircraft landing and ground handling qualities: 
@@ -102,7 +101,7 @@ development, while some independent users contributed portions of software.
   as undergraduate student, interfaced **MBDyn** with 
   [Scicos](http://www.scilab.org/); as Ph.D. student, interfaced **MBDyn** with 
   [OpenFOAM](http://www.openfoam.com/)/[AeroFOAM](https://www.aero.polimi.it/freecase/).
-* Riccardo Vescovini
+* [Riccardo Vescovini](https://www.aero.polimi.it/en/staff/riccardo.vescovini)
 
   as Ph.D. student, helped Marco Morandini in the development of the shell element.
 * [Reinhard Resch](https://www.researchgate.net/profile/Reinhard-Resch-2)
@@ -111,14 +110,14 @@ development, while some independent users contributed portions of software.
   In the meantime, however, his main focus is on leveraging existing ideas, theories, libraries and frameworks from other researchers to bring MBDyn to a higher level of robustness, quality and abstraction.
   Ultimately, the main goal is to achieve maximum benefit with minimal effort.
 
-* [Louis Gagnon](http://louisgagnon.com/research/)
+* [Louis Gagnon](https://www.iag.uni-stuttgart.de/en/institute/team/Gagnon/)
 
   as visiting Ph.D. student, worked at tire models and vehicle simulation 
   ([video interview about his stage](http://youtu.be/iXXCCSZ4O3w), in French). 
   He spent a few yeas as a postdoctoral fellow at Polimi and collaboratee to various **MBDyn** aspects. 
   He is also a mentor and administrator for the _Google Summer of Code_. He is now at
   [Stuttgard's univeristy](https://www.uni-stuttgart.de/).
-* [Andrea Zanoni](https://www.aero.polimi.it/index.php?id=263&amp;uid=260632)
+* [Andrea Zanoni](https://www.aero.polimi.it/en/staff/andrea.zanoni)
 
   as undergrad student, contributed to inverse dynamics of underdetermined systems 
   and muscle modeling, and is now contributing several other features. 
@@ -144,7 +143,7 @@ development, while some independent users contributed portions of software.
 
   developed the Functional Mockup Interface (FMI) model exchange and 
   co-simulation standard code within Google Summer of Code 2016.
-* Alessandro Cocco
+* [Alessandro Cocco](https://www.aero.polimi.it/en/staff/alessandro.cocco)
 
   worked at the interface with DUST using preCICE
 * Huimin Zhang
