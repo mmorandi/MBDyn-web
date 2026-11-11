@@ -207,7 +207,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 ## Talking about MBDyn...:
 * Alfredo Gay Neto, **"[GIRAFFE: Generic Interface Readily Accessible for Finite Elements](https://doi.org/10.1016/j.advengsoft.2026.104134)"**, _[Advances in Engineering Software](https://www.sciencedirect.com/journal/advances-in-engineering-software)_, 216:104134, 2026
 * Pierangelo Masarati, **"[Flexible Body Simulation in MBDyn](http://sbel.wisc.edu/documents/mbdyn_magic2.pdf)"**, Machine Ground Interaction Consortium 2014, Univ. of Wisconsin, Madison, WI, December 9, 2014
-* Wayne Johnson, **"[Milestones in Rotorcraft Aeromechanics](http://rotorcraft.arc.nasa.gov/Johnson_TP-2011-215971.pdf)"**, NASA/TP-2011-215971, May 2011.
+* Wayne Johnson, **"[Milestones in Rotorcraft Aeromechanics](https://rotorcraft.arc.nasa.gov/Johnson_TP-2011-215971_final.pdf)"**, NASA/TP-2011-215971, May 2011.
 * Wayne Johnson, **"[Milestones in Rotorcraft Aeromechanics](http://dx.doi.org/10.4050/JAHS.56.031001)"** (2010's Alexander A. Nikolsky Honorary Lecture), _[Journal of the American Helicopter Society](http://ahsjournal.org/)_, January 2011
 * Frank Colucci, **"[The Mono Tiltrotor](http://www.baldwintechnology.com/VertifliteSummer2011.pdf)"**, _[VERTIFLITE](http://www.vtol.org/vertiflite/)_, Summer 2011
 * Kathy Barnstorff, **"[The Puffin: A Passion for Personal Flight](http://www.aviationnews.us/articles.php?art_id=10481&start=1)"**, [Aviation News](http://www.aviationnews.us/)
