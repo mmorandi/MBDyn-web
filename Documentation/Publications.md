@@ -240,7 +240,3 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * William T. Yeager Jr., Raymond G. Kvaternik, **"[Contributions of the Langley Transonic Dynamics Tunnel to rotorcraft technology and development](http://www.cs.odu.edu/~mln/ltrs-pdfs/NASA-aiaa-2000-1771.pdf)"**, AIAA-2000-1771 AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference and Exhibit, 41st, Atlanta, GA, Apr. 3-6, 2000.
 * Thomas Hablowetz, **"Advanced Helicopter Flight and Aeroelastic Simulation based on General Purpose Multibody Code"**, presented at the _AIAA Modeling and Simulation Technologies Conference and Exhibit_ Denver, CO, USA, August 14-17, 2000 (AIAA 2000-4299)
 * William T. Yeager, Jr., and Raynond G. Kvaternik, **"[Contributions of the Langley Transonic Dynamics Tunnel to Rotorcraft Technology and Development](http://techreports.larc.nasa.gov/ltrs/PDF/2000/aiaa/NASA-aiaa-2000-1771.pdf)"**, presented at the _AIAA Dynamics Specialists Conference_ Atlanta, GA, USA, April 5-6, 2000 (AIAA 2000-1771)
-
-## See also
-[this page](https://home.aero.polimi.it/masarati/Publications/index.html)
-for a more up-to-date list of publications.
