@@ -205,7 +205,7 @@ _If your work uses **MBDyn**, please cite these papers as appropriate_:
 * P. Masarati "**Travi Piezoelettriche: Modellazione ed Analisi**" ("Piezoelectric Beams: Modelling and Analysis", in Italian) _Dipartimento di Ingegneria Aerospaziale, Politecnico di Milano_, A.A. 1994-1995.
 
 ## Talking about MBDyn...:
-* Jiping Xin uses **MBDyn** in co-simulation with **FENGSim** for metal forming simulations _[FENGSim](https://fengsim.github.io/)_, 2026 
+* Jiping Xin uses **MBDyn** in co-simulation with _[**FENGSim**](https://fengsim.github.io/)_ for metal forming simulations, 2026 
 * Alfredo Gay Neto, **"[GIRAFFE: Generic Interface Readily Accessible for Finite Elements](https://doi.org/10.1016/j.advengsoft.2026.104134)"**, _[Advances in Engineering Software](https://www.sciencedirect.com/journal/advances-in-engineering-software)_, 216:104134, 2026
 * Pierangelo Masarati, **"[Flexible Body Simulation in MBDyn](http://sbel.wisc.edu/documents/mbdyn_magic2.pdf)"**, Machine Ground Interaction Consortium 2014, Univ. of Wisconsin, Madison, WI, December 9, 2014
 * Wayne Johnson, **"[Milestones in Rotorcraft Aeromechanics](https://rotorcraft.arc.nasa.gov/Johnson_TP-2011-215971_final.pdf)"**, NASA/TP-2011-215971, May 2011.
